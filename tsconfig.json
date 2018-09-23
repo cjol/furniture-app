@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@data": ["./types/data"],
+      "@assets/*": ["./assets/*"],
+      "@style": ["./src/style/index"],
+      "Components/*": ["./src/components/*"]
+    },
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "lib": ["es5", "es6", "dom"]
+  },
+  "include": ["./src/**/*"]
+}

@@ -1,0 +1,7 @@
+query FetchThings {
+  listChatGroups {
+    items {
+      title
+    }
+  }
+}

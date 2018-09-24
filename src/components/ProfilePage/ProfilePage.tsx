@@ -8,27 +8,24 @@ export class ProfilePage extends React.PureComponent<{}> {
   render() {
     return (
       <Placeholder description="ProfilePageHeader" orientation="column">
-        <Placeholder description="HeaderComponent" orientation="row">
-          <Placeholder description="MenuIcon" />
-          <Placeholder description="MyProfile" />
-        </Placeholder>
+        <AppHeader />
         <Placeholder description="ProfileDetails" orientation="column">
           <Placeholder description="Image" />
           <Placeholder description="Ratings" />
           <Placeholder description="FullName">
-            <Placeholder description = "TextField"/> 
+            <Placeholder description="TextField" />
           </Placeholder>
           <Placeholder description="EmailAddress">
-            <Placeholder description = "TextField"/> 
+            <Placeholder description="TextField" />
           </Placeholder>
           <Placeholder description="Location">
-              <Placeholder description = "LocationField"/> 
+            <Placeholder description="LocationField" />
           </Placeholder>
           <Placeholder description="PhoneNumber">
-              <Placeholder description = "PhoneNumberField"/> 
+            <Placeholder description="PhoneNumberField" />
           </Placeholder>
           <Placeholder description="Password">
-              <Placeholder description = "PasswordField"/> 
+            <Placeholder description="PasswordField" />
           </Placeholder>
         </Placeholder>
         <Placeholder description="EditSaveComponent" orientation="row">

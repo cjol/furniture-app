@@ -36,7 +36,7 @@ export default class App extends React.Component {
           <Placeholder description="Sharifah" />
           <Placeholder description="Threza" />
           <Placeholder description="0.0-Hakim" />
-         <Placeholder description="Jonathan" />
+          <Placeholder description="Jonathan" />
         </AppStyle>
       </ApolloProvider>
     );

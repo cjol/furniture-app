@@ -5,10 +5,6 @@ export class RectangularButton extends React.PureComponent<{}> {
   static defaultProps: RectangularButton["props"] = {};
 
   render() {
-    return (
-      <Placeholder description="Home Page">
-        <Placeholder description="Button Label" orientation="row" />
-      </Placeholder>
-    );
+    return <Placeholder description="Button Label" />;
   }
 }

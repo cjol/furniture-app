@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Placeholder } from "../../style/Placeholder";
+import { Placeholder } from "Components/Placeholder";
 
 export class BidDetail extends React.PureComponent<{}> {
   static defaultProps: BidDetail["props"] = {};

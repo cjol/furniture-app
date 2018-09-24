@@ -1,6 +1,10 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import { ProjectHeader } from "Components/ProjectHeader/ProjectHeader";
+import { ChevronLeft } from "@material-ui/icons";
+import { ChevronRight } from "@material-ui/icons";
+import { ArrowDropDown } from "@material-ui/icons";
+import { ArrowDropUp } from "@material-ui/icons";
 
 export class DetailedProjectPage extends React.PureComponent<{}> {
   static defaultProps: DetailedProjectPage["props"] = {};
@@ -21,9 +25,11 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
           <Placeholder description="AuctionCloses" />
         </Placeholder>
         <Placeholder description="Image" orientation="row">
+          <ChevronLeft />
           <Placeholder description="Image1" />
           <Placeholder description="Image2" />
           <Placeholder description="Image3" />
+          <ChevronRight />
         </Placeholder>
         <Placeholder description="AddDescription" />
         <Placeholder description="ClarificationBoard" orientation="column">
@@ -50,6 +56,10 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
 
         <Placeholder description="ActiveBids" orientation="column">
           <Placeholder description="ActiveBidsTitle" />
+          <Placeholder description="arrows" orientation="row">
+            <ArrowDropDown />
+            <ArrowDropUp />
+          </Placeholder>
 
           <Placeholder description="AmountDurations" orientation="row">
             <Placeholder description="ActiveBidImage1" />

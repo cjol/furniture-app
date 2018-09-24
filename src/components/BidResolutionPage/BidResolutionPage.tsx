@@ -1,18 +1,28 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
+import { AppHeader } from "Components/AppHeader/AppHeader";
+import { RoundButton } from "Components/RoundButton/RoundButton";
+import { Star } from "@material-ui/icons";
+import { StarBorder } from "@material-ui/icons";
+import { Call } from "@material-ui/icons";
+import { Email } from "@material-ui/icons";
 export class BidResolutionPage extends React.PureComponent<{}> {
   static defaultProps: BidResolutionPage["props"] = {};
 
   render() {
     return (
       <Placeholder description="Header" orientation="column">
-        <Placeholder description="Sub-Header">
-          <Placeholder description="menu" orientation="row" />
-          <Placeholder description="Bid Resolution" orientation="row" />
-        </Placeholder>
+        <AppHeader />
         <Placeholder description="Result" />
         <Placeholder description="Result Message" />
-        <Placeholder description="Project Title" />
+        <Placeholder description="Project Title">
+          <Placeholder description="Image" />
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+        </Placeholder>
         <Placeholder description="Cost-Due">
           <Placeholder description="Project Cost" orientation="row" />
           <Placeholder description="Project Due" orientation="row" />
@@ -29,20 +39,20 @@ export class BidResolutionPage extends React.PureComponent<{}> {
           <Placeholder description="Contact 1" orientation="row">
             <Placeholder description="Picture" orientation="row" />
             <Placeholder description="name" orientation="row">
-              <Placeholder description="Phone line 1" />
+              <Call />
             </Placeholder>
-
-            <Placeholder description="Call" orientation="row">
-              <Placeholder description="Call sign" />
-            </Placeholder>
+            <RoundButton>
+              <Call />
+            </RoundButton>
           </Placeholder>
           <Placeholder description="email">
+            <Email />
             <Placeholder description="email address" orientation="row" />
             <Placeholder description="email notation" orientation="row" />
           </Placeholder>
-          <Placeholder description="Phone line 2">
-            <Placeholder description="Phone No 2" orientation="row" />
-            <Placeholder description="Call sign" orientation="row" />
+          <Placeholder description="Phone line 2" orientation="row">
+            <Placeholder description="Phone No 2" />
+            <Call />
           </Placeholder>
 
           <Placeholder description="Workshop address">
@@ -53,7 +63,11 @@ export class BidResolutionPage extends React.PureComponent<{}> {
           <Placeholder description="Rating Supplier" />
           <Placeholder description="Picture" />
           <Placeholder description="Name of Project Owner" />
-          <Placeholder description="no.Of.Stars" />
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+          <Star />
         </Placeholder>
       </Placeholder>
     );

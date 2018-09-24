@@ -42,26 +42,38 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
           </Placeholder>
         </Placeholder>
 
+        <Placeholder description="PendingQueries" orientation="column">
+          <Placeholder description="PendingQueriesTitle" />
+          <Placeholder description="PendingQueriesQuestion" />
+          <Placeholder description="PendingQueriesAnswer" />
+        </Placeholder>
+
         <Placeholder description="ActiveBids" orientation="column">
           <Placeholder description="ActiveBidsTitle" />
-          <Placeholder description="ActiveBidImage" orientation="column">
+
+          <Placeholder description="AmountDurations" orientation="row">
             <Placeholder description="ActiveBidImage1" />
-            <Placeholder description="ActiveBidImage2" />
-            <Placeholder description="ActiveBidImage3" />
+            <Placeholder description="AmountAndDuration" orientation="column">
+              <Placeholder description="AmountTime" />
+              <Placeholder description="AmountTimeDescription" />
+            </Placeholder>
+            <Placeholder description="SelectBid1" />
           </Placeholder>
-          <Placeholder description="AmountDurations" orientation="column">
+          <Placeholder description="AmountDurations" orientation="row">
+            <Placeholder description="ActiveBidImage2" />
             <Placeholder description="AmountAndDuration" orientation="column">
               <Placeholder description="AmountTime" />
               <Placeholder description="AmountTimeDescription" />
             </Placeholder>
+            <Placeholder description="SelectBid2" />
+          </Placeholder>
+          <Placeholder description="AmountDurations" orientation="row">
+            <Placeholder description="ActiveBidImage3" />
             <Placeholder description="AmountAndDuration" orientation="column">
               <Placeholder description="AmountTime" />
               <Placeholder description="AmountTimeDescription" />
             </Placeholder>
-            <Placeholder description="AmountAndDuration" orientation="column">
-              <Placeholder description="AmountTime" />
-              <Placeholder description="AmountTimeDescription" />
-            </Placeholder>
+            <Placeholder description="SelectBid3" />
           </Placeholder>
         </Placeholder>
         <Placeholder description="PlaceBid" />

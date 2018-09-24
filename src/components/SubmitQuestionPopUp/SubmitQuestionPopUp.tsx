@@ -6,10 +6,13 @@ export class SubmitQuestionPopUp extends React.PureComponent<{}> {
 
   render() {
     return (
-      <Placeholder description="SubmitQuestion" orientation="column">
-        <Placeholder description="x" />
-        <Placeholder description="Have A Question" />
-        <Placeholder description="SubmitQuery" />
+      <Placeholder description="SubmitQuestionPage" orientation="row">
+        <Placeholder description = "header" orientation = "row">
+            <Placeholder description="Have A Question" />
+            <Placeholder description="x" />
+        </Placeholder>
+      <Placeholder description ="Textfield">
+      <Placeholder description="SubmitQuery" />
       </Placeholder>
     );
   }

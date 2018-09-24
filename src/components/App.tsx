@@ -30,7 +30,8 @@ export default class App extends React.Component {
     return (
       <ApolloProvider client={client}>
         <AppStyle>
-        <Placeholder description="App Goes Here!" />
+          <Placeholder description="App Goes Here!" />
+          <Placeholder description="0.0-Hakim" />
          <Placeholder description="Jonathan" />
         </AppStyle>
       </ApolloProvider>

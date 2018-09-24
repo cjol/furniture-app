@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
-import { ProjectHeader } from "Components/projectHeader/projectHeader";
+import { ProjectHeader } from "Components/ProjectHeader/ProjectHeader";
 
 export class DetailedProjectPage extends React.PureComponent<{}> {
   static defaultProps: DetailedProjectPage["props"] = {};
@@ -13,7 +13,7 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
           <Placeholder description="DetailedProjectView" />
         </Placeholder>
         <ProjectHeader />
-        <Placeholder description="AboutBid">
+        <Placeholder description="AboutBid" orientation="column">
           <Placeholder description="BidInfo" orientation="row">
             <Placeholder description="NoOfBids" />
             <Placeholder description="AverageBid" />
@@ -28,11 +28,11 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
         <Placeholder description="AddDescription" />
         <Placeholder description="ClarificationBoard" orientation="column">
           <Placeholder description="ClarificationBoardTitle" />
-          <Placeholder description="Question1">
+          <Placeholder description="Question1" orientation="column">
             <Placeholder description="Question1Title" />
             <Placeholder description="Question1Description" />
           </Placeholder>
-          <Placeholder description="Question2">
+          <Placeholder description="Question2" orientation="column">
             <Placeholder description="Question2Title" />
             <Placeholder description="Question2Description" />
           </Placeholder>

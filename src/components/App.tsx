@@ -7,6 +7,7 @@ import { Placeholder } from "Components/Placeholder";
 import { mainFont } from "@style";
 
 import "@assets/scss/App.scss";
+import { SubmitQuestionPopUp } from "Components/SubmitQuestionPopUp/SubmitQuestionPopUp";
 
 const client = new ApolloClient({
   uri:
@@ -30,13 +31,7 @@ export default class App extends React.Component {
     return (
       <ApolloProvider client={client}>
         <AppStyle>
-          <Placeholder description="App Goes Here!" />
-          <Placeholder description="Hama" />
-          <Placeholder description="Joe" />
-          <Placeholder description="Sharifah" />
-          <Placeholder description="Threza" />
-          <Placeholder description="0.0-Hakim" />
-          <Placeholder description="Jonathan" />
+          <SubmitQuestionPopUp />
         </AppStyle>
       </ApolloProvider>
     );

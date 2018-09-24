@@ -8,6 +8,7 @@ import { mainFont } from "@style";
 import { SubmitQuestionPopUp } from "Components/SubmitQuestionPopUp/SubmitQuestionPopUp";
 
 import "@assets/scss/App.scss";
+import { RoundButton } from "Components/AppHeader/RoundButton.tsx/RoundButton";
 
 const client = new ApolloClient({
   uri:

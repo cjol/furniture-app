@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 
+
 export class ProjectHeader extends React.PureComponent<{}> {
   static defaultProps: ProjectHeader["props"] = {};
 

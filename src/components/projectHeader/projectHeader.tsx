@@ -9,12 +9,17 @@ export class ProjectHeader extends React.PureComponent<{}> {
       <Placeholder description="Project header" orientation="column">
         <Placeholder description="ProjectTitle" orientation="column">
           <Placeholder description="SelectProject" />
-          <Placeholder description="Underline" />
         </Placeholder>
         <Placeholder description="ProjectOwner" orientation="column">
           <Placeholder description="OwnerPicture" />
           <Placeholder description="OwnerName" />
-          <Placeholder description="OwnerRating" />
+          <Placeholder description="OwnerRating" orientation="row">
+            <Placeholder description="RatingStar" />
+            <Placeholder description="RatingStar" />
+            <Placeholder description="RatingStar" />
+            <Placeholder description="RatingStar" />
+            <Placeholder description="RatingStar" />
+          </Placeholder>
         </Placeholder>
       </Placeholder>
     );

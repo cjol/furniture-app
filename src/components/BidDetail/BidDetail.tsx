@@ -6,12 +6,16 @@ export class BidDetail extends React.PureComponent<{}> {
 
   render() {
     return (
-      <Placeholder description="BidPageComponent" orientation="row">
+      <Placeholder description="BidPageComponent" orientation="column">
         <Placeholder description="PriceAndTime" orientation="row">
           <Placeholder description="BidPrice" />
           <Placeholder description="TimeTaken" />
+          <Placeholder description="image" />
         </Placeholder>
-        <Placeholder description="BidText" />
+        <Placeholder description="BidDetails" orientation="row">
+          <Placeholder description="BidText" />
+          <Placeholder description="BidTextImage" />
+        </Placeholder>
         <Placeholder description="Select Supplier" />
       </Placeholder>
     );

@@ -11,7 +11,7 @@ export class ProjectHeader extends React.PureComponent<{}> {
           <Placeholder description="SelectProject" />
           <Placeholder description="Underline" />
         </Placeholder>
-        <Placeholder description="ProjectOwner">
+        <Placeholder description="ProjectOwner" orientation="column">
           <Placeholder description="OwnerPicture" />
           <Placeholder description="OwnerName" />
           <Placeholder description="OwnerRating" />

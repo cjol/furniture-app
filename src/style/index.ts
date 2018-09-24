@@ -20,4 +20,4 @@ export const squareButtonRadius = "2px";
 
 export const whiteButtonColor = "#FAFAFA";
 
-export const greyButtonColor = "#e7e7e7";
+export const greyButtonColor = "#E7E7E7";

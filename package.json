@@ -52,6 +52,8 @@
     "apollo-client": "^2.4.2",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.9.2",
-    "react-apollo": "^2.1.11"
+    "react-apollo": "^2.1.11",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
   }
 }

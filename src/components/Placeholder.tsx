@@ -34,14 +34,14 @@ export class Placeholder extends React.PureComponent<{
   }
 }
 
-export class DataError extends React.Component<{ message?: string }> {
+export class DataError extends React.PureComponent<{ message?: string }> {
   static defaultProps: DataError["props"] = { message: "Error" };
   render() {
     return <div>{this.props.message}</div>;
   }
 }
 
-export class Loading extends React.Component<{}> {
+export class Loading extends React.PureComponent<{}> {
   static defaultProps: Loading["props"] = {};
   render() {
     return <div>Loading...</div>;

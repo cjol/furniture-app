@@ -5,10 +5,6 @@ export class RoundButton extends React.PureComponent<{}> {
   static defaultProps: RoundButton["props"] = {};
 
   render() {
-    return (
-      <Placeholder description="page">
-        <Placeholder description="Round Button" />
-      </Placeholder>
-    );
+    return <Placeholder description="Round Button" />;
   }
 }

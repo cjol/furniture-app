@@ -1,8 +1,7 @@
-import * as React from "react";
+import { Add, Close } from "@material-ui/icons";
 import { Placeholder } from "Components/Placeholder";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
-import { Close } from "@material-ui/icons";
-import { Add } from "@material-ui/icons";
+import * as React from "react";
 
 export class PhotoUploadPopUp extends React.PureComponent<{}> {
   static defaultProps: PhotoUploadPopUp["props"] = {};

@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
-import { platform } from "os";
 
 export class ProjectSummary extends React.PureComponent<{}> {
   static defaultProps: ProjectSummary["props"] = {};

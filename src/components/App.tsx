@@ -1,14 +1,12 @@
 import * as React from "react";
 
+import { Placeholder } from "Components/Placeholder";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import styled from "styled-components";
-import { Placeholder } from "Components/Placeholder";
 import { mainFont } from "@style";
-import { SubmitQuestionPopUp } from "Components/SubmitQuestionPopUp/SubmitQuestionPopUp";
 
 import "@assets/scss/App.scss";
-import { RoundButton } from "Components/AppHeader/RoundButton.tsx/RoundButton";
 
 const client = new ApolloClient({
   uri:
@@ -32,7 +30,7 @@ export default class App extends React.Component {
     return (
       <ApolloProvider client={client}>
         <AppStyle>
-          <SubmitQuestionPopUp />
+          <Placeholder description="Watch this space!" />
         </AppStyle>
       </ApolloProvider>
     );

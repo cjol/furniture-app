@@ -1,7 +1,9 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import { ProjectHeader } from "Components/projectHeader/projectHeader";
-
+import { ChevronRight } from "@material-ui/icons";
+import { ChevronLeft } from "@material-ui/icons";
+import { RoundButton } from "Components/RoundButton/RoundButton";
 export class CreateProjectPage extends React.PureComponent<{}> {
   static defaultProps: CreateProjectPage["props"] = {};
 
@@ -13,14 +15,14 @@ export class CreateProjectPage extends React.PureComponent<{}> {
           <Placeholder description="Upload Photos" orientation="column">
             <Placeholder description="Photos Message" />
           </Placeholder>
-          <Placeholder description="Round Button" />
+          <RoundButton />
         </Placeholder>
         <Placeholder description="Images Available" orientation="row">
-          <Placeholder description="Backward scroll" />
+          <ChevronLeft />
           <Placeholder description="Image1" />
           <Placeholder description="Image2" />
           <Placeholder description="Image3" />
-          <Placeholder description="Forward scroll" />
+          <ChevronRight />
         </Placeholder>
         <Placeholder description="Project Description" orientation="column">
           <Placeholder description="Add Project Description">

@@ -9,10 +9,7 @@ export class PlaceBidPage extends React.PureComponent<{}> {
     return (
       <Placeholder description="Page" orientation="column">
         <AppHeader />
-        <Placeholder description="MenuBar" orientation="row">
-          <Placeholder description="MenuButton" />
-          <Placeholder description="Title" />
-        </Placeholder>
+
         <Placeholder description="Bids" orientation="row">
           <Placeholder description="BidsNumber" />
           <Placeholder description="AverageBid" />
@@ -24,16 +21,26 @@ export class PlaceBidPage extends React.PureComponent<{}> {
           <Placeholder description="Image1" />
           <Placeholder description="Image2" />
           <Placeholder description="Image3" />
+          <Placeholder description="RightButton" />
         </Placeholder>
 
         <Placeholder description="ProjectDescription" />
 
         <Placeholder description="PlaceBid" orientation="column">
-          <Placeholder description="Price" />
+          <Placeholder description="PriceRow" orientation="row">
+            <Placeholder description="Price" />
+            <Placeholder description="PriceBid" />
+          </Placeholder>
+
+          <Placeholder description="TimeRow" orientation="row">
+            <Placeholder description="Time" />
+            <Placeholder description="TimeBid" />
+          </Placeholder>
+
           <Placeholder description="TimeToComplete" />
           <Placeholder description="AddBidDescription">
-            <Placeholder description="Description1" />
-            <Placeholder description="Description2" />
+            <Placeholder description="Description" />
+            <Placeholder description="DescriptionField" />
             <Placeholder description="PlaceBidButton" />
           </Placeholder>
         </Placeholder>

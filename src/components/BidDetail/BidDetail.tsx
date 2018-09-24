@@ -13,8 +13,8 @@ export class BidDetail extends React.PureComponent<{}> {
           <Placeholder description="image" />
         </Placeholder>
         <Placeholder description="BidDetails" orientation="row">
-          <Placeholder description="BidText" />
           <Placeholder description="BidTextImage" />
+          <Placeholder description="BidText" />
         </Placeholder>
         <Placeholder description="Select Supplier" />
       </Placeholder>

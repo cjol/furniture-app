@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
+import { TagsContainer } from "./TagsContainer/TagsContainer";
 
 export class ActiveProjectBids extends React.PureComponent<{}> {
   static defaultProps: ActiveProjectBids["props"] = {};
@@ -9,13 +10,8 @@ export class ActiveProjectBids extends React.PureComponent<{}> {
       <Placeholder description="Activeprojects/Bids" orientation="row">
         <Placeholder description="Projectdetails">
           <Placeholder description=" ProjectImage" />
-          <Placeholder description="ProjectTitle" orientation="column">
-            <Placeholder description="Tags Container" orientation="row">
-              <Placeholder description="Tags: " />
-              <Placeholder description="Tag 1" />
-              <Placeholder description="Tag 2" />
-            </Placeholder>
-          </Placeholder>
+          <Placeholder description="ProjectTitle" orientation="column" />
+          <TagsContainer />
           <Placeholder description="Amount" />
         </Placeholder>
       </Placeholder>

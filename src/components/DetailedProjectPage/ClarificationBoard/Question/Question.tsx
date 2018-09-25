@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 
-export class Question1 extends React.PureComponent<{}> {
-  static defaultProps: Question1["props"] = {};
+export class Question extends React.PureComponent<{}> {
+  static defaultProps: Question["props"] = {};
 
   render() {
     return (

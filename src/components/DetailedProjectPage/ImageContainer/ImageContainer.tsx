@@ -3,8 +3,8 @@ import { Placeholder } from "Components/Placeholder";
 import { ChevronLeft } from "@material-ui/icons";
 import { ChevronRight } from "@material-ui/icons";
 
-export class Image extends React.PureComponent<{}> {
-  static defaultProps: Image["props"] = {};
+export class ImageContainer extends React.PureComponent<{}> {
+  static defaultProps: ImageContainer["props"] = {};
 
   render() {
     return (

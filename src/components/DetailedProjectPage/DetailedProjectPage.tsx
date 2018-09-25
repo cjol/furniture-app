@@ -11,7 +11,7 @@ import { RectangularButton } from "Components/RectangularButton/RectangularButto
 import { PlaceBidPage } from "Components/PlaceBidPage/PlaceBidPage";
 
 import { AboutBid } from "./AboutBid/AboutBid";
-import { Image } from "./Image/image";
+import { ImageContainer } from "./ImageContainer/ImageContainer";
 import { ClarificationBoard } from "./ClarificationBoard/ClarificationBoard";
 import { PendingQueries } from "./PendingQueries/PendingQueries";
 import { ActiveBids } from "./ActiveBids/ActiveBids";
@@ -24,7 +24,7 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
         <AppHeader />
         <ProjectHeader />
         <AboutBid />
-        <Image />
+        <ImageContainer />
         <Placeholder description="AddDescription" />
         <Placeholder description="ClarificationBoard" orientation="column">
           <Placeholder description="ClarificationBoardTitle" />

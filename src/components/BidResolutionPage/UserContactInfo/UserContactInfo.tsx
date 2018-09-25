@@ -3,8 +3,8 @@ import { Placeholder } from "Components/Placeholder";
 import { Call, ChevronLeft, ChevronRight } from "@material-ui/icons";
 import { RoundButton } from "Components/RoundButton/RoundButton";
 import { Email } from "@material-ui/icons";
-export class CarpenterInfo extends React.PureComponent<{}> {
-  static defaultProps: CarpenterInfo["props"] = {};
+export class UserContactInfo extends React.PureComponent<{}> {
+  static defaultProps: UserContactInfo["props"] = {};
 
   render() {
     return (

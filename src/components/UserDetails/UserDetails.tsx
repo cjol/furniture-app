@@ -10,6 +10,7 @@ const UserDetailsStyled = styled.div`
 const UserNameStyled = styled.div`
   display: flex;
   border-radius: 30px;
+  font-size:14px;
 `;
 const UserPictureStyled = styled.div`
   display: flex;

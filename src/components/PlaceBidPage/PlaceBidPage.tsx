@@ -1,6 +1,12 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import { AppHeader } from "Components/AppHeader/AppHeader";
+import { ProjectHeader } from "Components/ProjectHeader/ProjectHeader";
+
+import { ChevronRight } from "@material-ui/icons";
+import { ChevronLeft } from "@material-ui/icons";
+
+import { RectangularButton } from "Components/RectangularButton/RectangularButton";
 
 export class PlaceBidPage extends React.PureComponent<{}> {
   static defaultProps: PlaceBidPage["props"] = {};
@@ -9,7 +15,7 @@ export class PlaceBidPage extends React.PureComponent<{}> {
     return (
       <Placeholder description="Page" orientation="column">
         <AppHeader />
-
+        <ProjectHeader />
         <Placeholder description="Bids" orientation="row">
           <Placeholder description="BidsNumber" />
           <Placeholder description="AverageBid" />
@@ -17,11 +23,11 @@ export class PlaceBidPage extends React.PureComponent<{}> {
         <Placeholder description="AuctionClosing" />
 
         <Placeholder description="ImageBar" orientation="row">
-          <Placeholder description="LeftButton" />
+          <ChevronLeft />
           <Placeholder description="Image1" />
           <Placeholder description="Image2" />
           <Placeholder description="Image3" />
-          <Placeholder description="RightButton" />
+          <ChevronRight />
         </Placeholder>
 
         <Placeholder description="ProjectDescription" />
@@ -37,11 +43,10 @@ export class PlaceBidPage extends React.PureComponent<{}> {
             <Placeholder description="TimeBid" />
           </Placeholder>
 
-          <Placeholder description="TimeToComplete" />
-          <Placeholder description="AddBidDescription">
+          <Placeholder description="AddBidDescription" orientation="column">
             <Placeholder description="Description" />
             <Placeholder description="DescriptionField" />
-            <Placeholder description="PlaceBidButton" />
+            <RectangularButton />
           </Placeholder>
         </Placeholder>
       </Placeholder>

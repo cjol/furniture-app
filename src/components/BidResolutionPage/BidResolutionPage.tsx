@@ -1,16 +1,13 @@
-import * as React from "react";
-import { Placeholder } from "Components/Placeholder";
 import { AppHeader } from "Components/AppHeader/AppHeader";
-import { RoundButton } from "Components/RoundButton/RoundButton";
-import { Star } from "@material-ui/icons";
-import { StarBorder } from "@material-ui/icons";
-import { Call, ChevronLeft, ChevronRight } from "@material-ui/icons";
-import { Email } from "@material-ui/icons";
-import { CostDue } from "./CostDue/CostDue";
+import { Placeholder } from "Components/Placeholder";
 import { ProjectHeader } from "Components/ProjectHeader/ProjectHeader";
-import { ProjectPictures } from "./ProjectPictures/ProjectPictures";
-import { UserContactInfo } from "./UserContactInfo/UserContactInfo";
+import { ImageBar } from "Components/ImageBar/ImageBar";
+import * as React from "react";
+
+import { CostDue } from "./CostDue/CostDue";
 import { RatingSupplier } from "./RatingSupplier/RatingSupplier";
+import { UserContactInfo } from "./UserContactInfo/UserContactInfo";
+
 export class BidResolutionPage extends React.PureComponent<{}> {
   static defaultProps: BidResolutionPage["props"] = {};
 
@@ -22,7 +19,7 @@ export class BidResolutionPage extends React.PureComponent<{}> {
         <Placeholder description="Result Message" />
         <ProjectHeader />
         <CostDue />
-        <ProjectPictures />
+        <ImageBar />
         <UserContactInfo />
         <RatingSupplier />
       </Placeholder>

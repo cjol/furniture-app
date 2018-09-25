@@ -1,7 +1,6 @@
 import { Placeholder } from "Components/Placeholder";
-import * as React from "react";
-
 import { ProjectTag } from "./ProjectTag/ProjectTag";
+import * as React from "react";
 
 export class FilterResultsProjectTags extends React.PureComponent<{}> {
   static defaultProps: FilterResultsProjectTags["props"] = {};

@@ -24,10 +24,6 @@ import { SubmitQuestionPopUp } from "Components/SubmitQuestionPopUp/SubmitQuesti
 import { FilterResultsPopUp } from "Components/FilterResultsPopUp/FilterResultsPopUp";
 
 import "@assets/scss/App.scss";
-<<<<<<< master
-
-=======
->>>>>>> 1.3-SubmitQuestionPage
 const client = new ApolloClient({
   uri:
     "https://c75qikhalrhnnf3awz3npbdspy.appsync-api.eu-west-1.amazonaws.com/graphql",

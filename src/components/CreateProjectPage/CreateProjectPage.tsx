@@ -6,7 +6,7 @@ import { RectangularButton } from "Components/RectangularButton/RectangularButto
 import * as React from "react";
 
 import { PhotoContainer } from "./PhotoContainer/PhotoContainer";
-import { ProjectDescription } from "./ProjectDescription/ProjectDescription";
+import { ProjectDescription } from "Components/ProjectDescription/ProjectDescription";
 import { TaggingProject } from "./TaggingProject/TaggingProject";
 
 export class CreateProjectPage extends React.PureComponent<{}> {

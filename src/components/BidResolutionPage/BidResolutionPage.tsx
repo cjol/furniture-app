@@ -5,8 +5,8 @@ import { ImageBar } from "Components/ImageBar/ImageBar";
 import * as React from "react";
 
 import { CostDue } from "./CostDue/CostDue";
-import { RatingSupplier } from "./RatingSupplier/RatingSupplier";
 import { UserContactInfo } from "./UserContactInfo/UserContactInfo";
+import { UserDetails } from "Components/UserDetails/UserDetails";
 
 export class BidResolutionPage extends React.PureComponent<{}> {
   static defaultProps: BidResolutionPage["props"] = {};
@@ -21,7 +21,8 @@ export class BidResolutionPage extends React.PureComponent<{}> {
         <CostDue />
         <ImageBar />
         <UserContactInfo />
-        <RatingSupplier />
+        <Placeholder description="Rate Supplier Header" />
+        <UserDetails />
       </Placeholder>
     );
   }

@@ -7,7 +7,7 @@ import { ProjectHeader } from "Components/ProjectHeader/ProjectHeader";
 import { AuctionClosing } from "./AuctionClosing/AuctionClosing";
 import { Bids } from "./Bids/Bids";
 import { PlaceBid } from "./PlaceBid/PlaceBid";
-import { ProjectDescription } from "./ProjectDescription/ProjectDescription";
+import { ProjectDescription } from "Components/ProjectDescription/ProjectDescription";
 
 export class PlaceBidPage extends React.PureComponent<{}> {
   static defaultProps: PlaceBidPage["props"] = {};

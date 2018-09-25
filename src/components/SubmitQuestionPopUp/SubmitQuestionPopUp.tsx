@@ -1,20 +1,18 @@
-import * as React from "react";
-import { Placeholder } from "Components/Placeholder";
-import { Close } from "@material-ui/icons";
+import { Popup } from "Components/Popup/Popup";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
+import * as React from "react";
+
 import { TextField } from "./TextField/TextField";
-import { Header } from "./Header/Header";
 
 export class SubmitQuestionPopUp extends React.PureComponent<{}> {
   static defaultProps: SubmitQuestionPopUp["props"] = {};
 
   render() {
     return (
-      <Placeholder description="SubmitQuestionPage" orientation="column">
-        <Header />
+      <Popup>
         <TextField />
         <RectangularButton>SUBMIT QUERY</RectangularButton>
-      </Placeholder>
+      </Popup>
     );
   }
 }

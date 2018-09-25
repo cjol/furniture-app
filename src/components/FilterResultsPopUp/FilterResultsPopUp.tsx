@@ -17,7 +17,14 @@ export class FilterResultsPopUp extends React.PureComponent<{}> {
         </Placeholder>
         <Placeholder description="FilterResultsBid">
           <Placeholder description="FilterResultsBidPrice" />
-          <Placeholder description="FilterResultsBidPriceScale" />
+          <Placeholder
+            description="FilterResultsBidPriceScale"
+            orientation="row"
+          >
+            <Placeholder description="Left Circle" />
+            <Placeholder description="Filled Bar" />
+            <Placeholder description="Right Circle" />
+          </Placeholder>
         </Placeholder>
         <Placeholder
           description="FilterResultsProjectTags"

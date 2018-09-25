@@ -24,8 +24,8 @@ export class BidDetails extends React.PureComponent<{}> {
     return (
       <BidDetailsStyled>
         <AmountAndDurationStyled>
-          <AmountStyled />
-          <TimeStyled />
+          <AmountStyled>Amount</AmountStyled>
+          <TimeStyled>Time</TimeStyled>
         </AmountAndDurationStyled>
         <PlainText />
       </BidDetailsStyled>

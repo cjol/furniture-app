@@ -4,7 +4,7 @@ import { AppHeader } from "Components/AppHeader/AppHeader";
 import { RoundButton } from "Components/RoundButton/RoundButton";
 import { Star } from "@material-ui/icons";
 import { StarBorder } from "@material-ui/icons";
-import { Call } from "@material-ui/icons";
+import { Call, ChevronLeft, ChevronRight } from "@material-ui/icons";
 import { Email } from "@material-ui/icons";
 export class BidResolutionPage extends React.PureComponent<{}> {
   static defaultProps: BidResolutionPage["props"] = {};
@@ -29,11 +29,11 @@ export class BidResolutionPage extends React.PureComponent<{}> {
         </Placeholder>
 
         <Placeholder description="Project Pictures" orientation="row">
-          <Placeholder description="<" orientation="row" />
+          <ChevronLeft />
           <Placeholder description="Picture 1" orientation="row" />
           <Placeholder description="Picture 2" orientation="row" />
           <Placeholder description="Picture 3" orientation="row" />
-          <Placeholder description=">" orientation="row" />
+          <ChevronRight />
         </Placeholder>
         <Placeholder description="Carpenter Info" orientation="column">
           <Placeholder description="Contact 1" orientation="row">

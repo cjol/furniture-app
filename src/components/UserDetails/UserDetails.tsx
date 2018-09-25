@@ -8,10 +8,14 @@ const UserDetailsStyled = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const UserPicturestyled = styled.div`
+const UserNameStyled = styled.div`
   display: flex;
   border-radius: 30px;
 `;
+const UserPictureStyled = styled.div`
+display:flex;
+`;
+
 const RatingStarsStyled = styled.div`
   display: flex;
   flex-direction: row;
@@ -21,11 +25,18 @@ export class UserDetails extends React.PureComponent<{}> {
 
   render() {
     return (
-      <Placeholder description="User Details" orientation="column">
-        <Placeholder description="User Picture" />
-        <Placeholder description="User Name" />
-        <ProfileRatings />
-      </Placeholder>
+      <UserDetailsStyled>
+        <UserPictureStyled />
+        <UserNameStyled />
+        <RatingStarsStyled>
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+          <StarBorder />
+          <StarBorder />
+        </RatingStarsStyled>
+      </UserDetailsStyled>
     );
   }
 }

@@ -6,7 +6,11 @@ import { Subheading } from "Components/Subheading/Subheading";
 import styled from "styled-components";
 const PhotoContainerStyled = styled.div`
   display: flex;
-  flex-direction: rowS;
+  flex-direction: row;
+`;
+const PhotoContainerPlaceholderStyled = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 export class PhotoContainer extends React.PureComponent<{}> {
   static defaultProps: PhotoContainer["props"] = {};
@@ -14,10 +18,10 @@ export class PhotoContainer extends React.PureComponent<{}> {
   render() {
     return (
       <PhotoContainerStyled>
-        <Placeholder orientation="column">
+        <PhotoContainerPlaceholderStyled>
           <Subheading />
           <PlainText />
-        </Placeholder>
+        </PhotoContainerPlaceholderStyled>
         <RoundButton />
       </PhotoContainerStyled>
     );

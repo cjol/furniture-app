@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
-
+import { Close } from "@material-ui/icons";
 export class BidDetail extends React.PureComponent<{}> {
   static defaultProps: BidDetail["props"] = {};
 
@@ -10,6 +10,7 @@ export class BidDetail extends React.PureComponent<{}> {
         <Placeholder description="PriceAndTime" orientation="row">
           <Placeholder description="BidPrice" />
           <Placeholder description="TimeTaken" />
+          <Close />
           <Placeholder description="image" />
         </Placeholder>
         <Placeholder description="BidDetails" orientation="row">

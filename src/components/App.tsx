@@ -17,13 +17,14 @@ import { PhotoUploadPopUp } from "Components/PhotoUploadPopUp/PhotoUploadPopUp";
 import { PlaceBidPage } from "Components/PlaceBidPage/PlaceBidPage";
 import { ProfilePage } from "Components/ProfilePage/ProfilePage";
 import { ProjectHeader } from "Components/ProjectHeader/ProjectHeader";
-import { ProjectListings } from "Components/ProjectListings/ProjectListings";
+import { ProjectListingsPage } from "Components/ProjectListingsPage/ProjectListingsPage";
+import { ProjectSummary } from "Components/ProjectSummary/ProjectSummary";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
 import { RoundButton } from "Components/RoundButton/RoundButton";
 import { SubmitQuestionPopUp } from "Components/SubmitQuestionPopUp/SubmitQuestionPopUp";
-import { FilterResultsPopUp } from "Components/FilterResultsPopUp/FilterResultsPopUp";
 
 import "@assets/scss/App.scss";
+
 const client = new ApolloClient({
   uri:
     "https://c75qikhalrhnnf3awz3npbdspy.appsync-api.eu-west-1.amazonaws.com/graphql",
@@ -61,10 +62,6 @@ export default class App extends React.Component {
                   component={BidResolutionPage}
                 />
                 <Route path="/BidDetail" component={BidDetail} />
-                <Route
-                  path="/FilterResultsPopUp"
-                  component={FilterResultsPopUp}
-                />
                 <Route path="/AppHeader" component={AppHeader} />
                 <Route
                   path="/DetailedProjectPage"
@@ -74,7 +71,11 @@ export default class App extends React.Component {
                 <Route path="/PlaceBidPage" component={PlaceBidPage} />
                 <Route path="/ProfilePage" component={ProfilePage} />
                 <Route path="/ProjectHeader" component={ProjectHeader} />
-                <Route path="/ProjectListings" component={ProjectListings} />
+                <Route
+                  path="/ProjectListingsPage"
+                  component={ProjectListingsPage}
+                />
+                <Route path="/ProjectSummary" component={ProjectSummary} />
                 <Route
                   path="/RectangularButton"
                   component={RectangularButton}
@@ -100,9 +101,6 @@ export default class App extends React.Component {
                         <Link to="/BidResolutionPage">BidResolutionPage</Link>
                       </li>
                       <li>
-                        <Link to="/FilterResultsPopUp">FilterResultsPopUp</Link>
-                      </li>
-                      <li>
                         <Link to="/BidDetail">BidDetail</Link>
                       </li>
                       <li>
@@ -126,7 +124,12 @@ export default class App extends React.Component {
                         <Link to="/ProjectHeader">ProjectHeader</Link>
                       </li>
                       <li>
-                        <Link to="/ProjectListings">ProjectListings</Link>
+                        <Link to="/ProjectListingsPage">
+                          ProjectListingsPage
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/ProjectSummary">ProjectSummary</Link>
                       </li>
                       <li>
                         <Link to="/RectangularButton">RectangularButton</Link>

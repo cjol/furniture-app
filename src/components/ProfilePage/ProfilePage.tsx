@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import { AppHeader } from "Components/AppHeader/AppHeader";
+import { RectangularButton } from "Components/RectangularButton/RectangularButton";
+import { Star, StarBorder } from "@material-ui/icons";
 
 export class ProfilePage extends React.PureComponent<{}> {
   static defaultProps: ProfilePage["props"] = {};
@@ -11,7 +13,13 @@ export class ProfilePage extends React.PureComponent<{}> {
         <AppHeader />
         <Placeholder description="ProfileDetails" orientation="column">
           <Placeholder description="Image" />
-          <Placeholder description="Ratings" />
+          <Placeholder description="Ratings">
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <StarBorder />
+          </Placeholder>
           <Placeholder description="FullName">
             <Placeholder description="TextField" />
           </Placeholder>
@@ -29,8 +37,8 @@ export class ProfilePage extends React.PureComponent<{}> {
           </Placeholder>
         </Placeholder>
         <Placeholder description="EditSaveComponent" orientation="row">
-          <Placeholder description="EditButton" />
-          <Placeholder description="SaveButton" />
+          <RectangularButton>Edit</RectangularButton>
+          <RectangularButton>Save</RectangularButton>
         </Placeholder>
         <Placeholder description="Activeprojects/Bids" orientation="row">
           <Placeholder description="Projectdetails">

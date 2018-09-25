@@ -34,7 +34,7 @@ export class FilterResultsPopUp extends React.PureComponent<{}> {
             </Placeholder>
             <Placeholder description="FilterResultsProjectTagTable">
               <Placeholder description="FilterResultTagTable" />
-              <CheckBox />
+              <CheckBoxOutlineBlank />
             </Placeholder>
           </Placeholder>
           <Placeholder description="FilterResultsProjectTagsRow2">

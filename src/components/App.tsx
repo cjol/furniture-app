@@ -21,6 +21,7 @@ import { ProjectListings } from "Components/ProjectListings/ProjectListings";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
 import { RoundButton } from "Components/RoundButton/RoundButton";
 import { SubmitQuestionPopUp } from "Components/SubmitQuestionPopUp/SubmitQuestionPopUp";
+import { FilterResultsPopUp } from "Components/FilterResultsPopUp/FilterResultsPopUp";
 
 import "@assets/scss/App.scss";
 
@@ -61,6 +62,10 @@ export default class App extends React.Component {
                   component={BidResolutionPage}
                 />
                 <Route path="/BidDetail" component={BidDetail} />
+                <Route
+                  path="/FilterResultsPopUp"
+                  component={FilterResultsPopUp}
+                />
                 <Route path="/AppHeader" component={AppHeader} />
                 <Route
                   path="/DetailedProjectPage"
@@ -94,6 +99,9 @@ export default class App extends React.Component {
                       </li>
                       <li>
                         <Link to="/BidResolutionPage">BidResolutionPage</Link>
+                      </li>
+                      <li>
+                        <Link to="/FilterResultsPopUp">FilterResultsPopUp</Link>
                       </li>
                       <li>
                         <Link to="/BidDetail">BidDetail</Link>

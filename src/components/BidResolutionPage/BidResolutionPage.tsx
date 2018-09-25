@@ -32,7 +32,9 @@ export class BidResolutionPage extends React.PureComponent<{}> {
               <Placeholder description="Phone line 1" />
             </Placeholder>
 
-            <Placeholder description="Call sign" orientation="row" />
+            <Placeholder description="Call" orientation="row">
+              <Placeholder description="Call sign" />
+            </Placeholder>
           </Placeholder>
           <Placeholder description="email">
             <Placeholder description="email address" orientation="row" />
@@ -40,7 +42,7 @@ export class BidResolutionPage extends React.PureComponent<{}> {
           </Placeholder>
           <Placeholder description="Phone line 2">
             <Placeholder description="Phone No 2" orientation="row" />
-            <Placeholder description="call sign" orientation="row" />
+            <Placeholder description="Call sign" orientation="row" />
           </Placeholder>
 
           <Placeholder description="Workshop address">
@@ -50,6 +52,7 @@ export class BidResolutionPage extends React.PureComponent<{}> {
         <Placeholder description="Rate" orientation="column">
           <Placeholder description="Rating Supplier" />
           <Placeholder description="Picture" />
+          <Placeholder description="Name of Project Owner" />
           <Placeholder description="no.Of.Stars" />
         </Placeholder>
       </Placeholder>

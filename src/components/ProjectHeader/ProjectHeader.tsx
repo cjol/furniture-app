@@ -12,13 +12,14 @@ export class ProjectHeader extends React.PureComponent<{}> {
         <Placeholder description="ProjectOwner" orientation="column">
           <Placeholder description="OwnerPicture" />
           <Placeholder description="OwnerName" />
-          <Star>
-            <Placeholder description="RatingStar" />
-            <Placeholder description="RatingStar" />
-            <Placeholder description="RatingStar" />
-            <Placeholder description="RatingStar" />
-            <Placeholder description="RatingStar" />
-          </Star>
+          <Placeholder description="RatingStars">
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+          </Placeholder>
         </Placeholder>
       </Placeholder>
     );

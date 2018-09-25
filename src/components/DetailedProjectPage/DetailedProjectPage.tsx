@@ -16,10 +16,7 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
   render() {
     return (
       <Placeholder description="PageContent" orientation="column">
-        <AppHeader>
-          <Placeholder description="ReadMore" />
-          <Placeholder description="DetailedProjectView" />
-        </AppHeader>
+        <AppHeader />
         <ProjectHeader />
         <Placeholder description="AboutBid" orientation="column">
           <Placeholder description="BidInfo" orientation="row">
@@ -57,16 +54,19 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
           <Placeholder description="PendingQueriesAnswer" />
         </Placeholder>
         <Placeholder description="ActiveBids" orientation="column">
-          <Placeholder description="ActiveBidsTitle" />
-          <Placeholder description="arrows" orientation="row">
-            <ArrowDropDown />
-            <ArrowDropUp />
+          <Placeholder description="Active Bids Header" orientation="row">
+            <Placeholder description="ActiveBidsTitle" />
+            <Placeholder description="arrows" orientation="row">
+              <ArrowDropDown />
+              <ArrowDropUp />
+            </Placeholder>
           </Placeholder>
 
-          <Placeholder description="AmountDurations" orientation="row">
+          <Placeholder description="IndividualBid" orientation="row">
             <Placeholder description="ActiveBidImage1" />
             <Placeholder description="AmountAndDuration" orientation="column">
-              <Placeholder description="AmountTime" />
+              <Placeholder description="Amount" />
+              <Placeholder description="Time" />
               <Placeholder description="AmountTimeDescription" />
             </Placeholder>
             <RectangularButton />
@@ -83,7 +83,8 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
           <Placeholder description="IndividualBid" orientation="row">
             <Placeholder description="ActiveBidImage3" />
             <Placeholder description="IndividulBid" orientation="column">
-              <Placeholder description="AmountTime" />
+              <Placeholder description="Amount" />
+              <Placeholder description="Time" />
               <Placeholder description="AmountTimeDescription" />
             </Placeholder>
             <RectangularButton />

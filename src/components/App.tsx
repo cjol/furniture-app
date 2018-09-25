@@ -24,6 +24,7 @@ import { RoundButton } from "Components/RoundButton/RoundButton";
 import { SubmitQuestionPopUp } from "Components/SubmitQuestionPopUp/SubmitQuestionPopUp";
 
 import "@assets/scss/App.scss";
+import { ProfilePage } from "Components/ProfilePage/Profilepage";
 
 const client = new ApolloClient({
   uri:

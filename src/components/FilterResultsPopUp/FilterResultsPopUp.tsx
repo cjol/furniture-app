@@ -3,6 +3,7 @@ import { Placeholder } from "Components/Placeholder";
 import { Close } from "@material-ui/icons";
 import { CheckBox } from "@material-ui/icons";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
+import { CheckBoxOutlineBlank } from "@material-ui/icons";
 
 export class FilterResultsPopUp extends React.PureComponent<{}> {
   static defaultProps: FilterResultsPopUp["props"] = {};
@@ -39,19 +40,19 @@ export class FilterResultsPopUp extends React.PureComponent<{}> {
           <Placeholder description="FilterResultsProjectTagsRow2">
             <Placeholder description="FilterResultsProjectTagBedSideTable">
               <Placeholder description="FilterResultTagBedSideTable" />
-              <CheckBox />
+              <CheckBoxOutlineBlank />
             </Placeholder>
             <Placeholder description="FilterResultsProjectTagDesk">
               <Placeholder description="FilterResultTagDesk" />
-              <CheckBox />
+              <CheckBoxOutlineBlank />
             </Placeholder>
             <Placeholder description="FilterResultsProjectTagSofa">
               <Placeholder description="FilterResultTagSofa" />
-              <CheckBox />
+              <CheckBoxOutlineBlank />
             </Placeholder>
           </Placeholder>
         </Placeholder>
-        <RectangularButton>ApplyFilterButton</RectangularButton>
+        <RectangularButton>Apply Filter</RectangularButton>
       </Placeholder>
     );
   }

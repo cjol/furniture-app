@@ -8,7 +8,13 @@ export class PendingQueries extends React.PureComponent<{}> {
     return (
       <Placeholder description="PendingQueries" orientation="column">
         <Placeholder description="PendingQueriesTitle" />
-        <Placeholder description="PendingQueriesContainer">
+
+        <Placeholder description="PendingQueriesContainer" orientation="column">
+          <Placeholder description="PendingQueriesQuestion" />
+          <Placeholder description="PendingQueriesAnswer" />
+        </Placeholder>
+
+        <Placeholder description="PendingQueriesContainer" orientation="column">
           <Placeholder description="PendingQueriesQuestion" />
           <Placeholder description="PendingQueriesAnswer" />
         </Placeholder>

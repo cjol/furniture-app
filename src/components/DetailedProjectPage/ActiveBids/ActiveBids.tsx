@@ -2,7 +2,7 @@ import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import { ArrowDropDown } from "@material-ui/icons";
 import { ArrowDropUp } from "@material-ui/icons";
-import { AmountsDurations } from "./AmountsDurations/AmountsDurations";
+import { RectangularButton } from "Components/RectangularButton/RectangularButton";
 
 export class ActiveBids extends React.PureComponent<{}> {
   static defaultProps: ActiveBids["props"] = {};
@@ -10,32 +10,46 @@ export class ActiveBids extends React.PureComponent<{}> {
   render() {
     return (
       <Placeholder description="ActiveBids" orientation="column">
-        <Placeholder description="ActiveBidsTitle" />
-        <Placeholder description="arrows" orientation="row">
-          <ArrowDropDown />
-          <ArrowDropUp />
+        <Placeholder description="ActiveBidsHeader">
+          <Placeholder description="ActiveBidsTitle" />
+          <Placeholder description="arrows" orientation="row">
+            <ArrowDropDown />
+            <ArrowDropUp />
+          </Placeholder>
         </Placeholder>
 
-        <Placeholder description="AmountDurations" orientation="row">
-          <Placeholder description="ActiveBidImage1" />
-          <Placeholder description="AmountAndDuration" orientation="column">
-            <Placeholder description="AmountTime" />
+        <Placeholder description="IndividualBid" orientation="row">
+          <Placeholder description="ActiveBidImage" />
+          <Placeholder description="BidDetails" orientation="column">
+            <Placeholder description="AmountAndDuration">
+              <Placeholder description="Amount" />
+              <Placeholder description="Time" />
+            </Placeholder>
             <Placeholder description="AmountTimeDescription" />
           </Placeholder>
-          <Placeholder description="SelectBid1" />
+          <RectangularButton />
         </Placeholder>
-        <Placeholder description="AmountDurations" orientation="row">
+
+        <Placeholder description="IndividualBid" orientation="row">
+          <Placeholder description="ActiveBidImage" />
+          <Placeholder description="BidDetails" orientation="column">
+            <Placeholder description="AmountAndDuration">
+              <Placeholder description="Amount" />
+              <Placeholder description="Time" />
+            </Placeholder>
+            <Placeholder description="AmountTimeDescription" />
+          </Placeholder>
+          <RectangularButton />
+        </Placeholder>
+
+        <Placeholder description="IndividualBid" orientation="row">
           <Placeholder description="ActiveBidImage2" />
-          <AmountsDurations />
-          <Placeholder description="SelectBid2" />
-        </Placeholder>
-        <Placeholder description="AmountDurations" orientation="row">
-          <Placeholder description="ActiveBidImage3" />
           <Placeholder description="AmountAndDuration" orientation="column">
-            <Placeholder description="AmountTime" />
+            <Placeholder description="Amount" />
+            <Placeholder description="Time" />
             <Placeholder description="AmountTimeDescription" />
           </Placeholder>
-          <Placeholder description="SelectBid3" />
+          <RectangularButton />
         </Placeholder>
       </Placeholder>
     );

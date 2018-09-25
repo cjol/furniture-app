@@ -1,8 +1,8 @@
-import * as React from "react";
+import { Call, Email } from "@material-ui/icons";
 import { Placeholder } from "Components/Placeholder";
-import { Call, ChevronLeft, ChevronRight } from "@material-ui/icons";
 import { RoundButton } from "Components/RoundButton/RoundButton";
-import { Email } from "@material-ui/icons";
+import * as React from "react";
+
 export class UserContactInfo extends React.PureComponent<{}> {
   static defaultProps: UserContactInfo["props"] = {};
 

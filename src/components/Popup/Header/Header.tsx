@@ -8,7 +8,7 @@ export class Header extends React.PureComponent<{}> {
   render() {
     return (
       <Placeholder description="Header" orientation="row">
-        <Placeholder description="Have A Question" />
+        <Placeholder description="Popup Title" />
         <Close />
       </Placeholder>
     );

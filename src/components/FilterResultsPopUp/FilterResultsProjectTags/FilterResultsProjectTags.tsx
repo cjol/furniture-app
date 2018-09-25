@@ -7,7 +7,7 @@ export class FilterResultsProjectTags extends React.PureComponent<{}> {
 
   render() {
     return (
-      <Placeholder description="FilterResultsProjectTags" orientation="column">
+      <Placeholder description="FilterResultsProjectTags" orientation="row">
         <ProjectTag />
         <ProjectTag />
         <ProjectTag />

@@ -3,6 +3,8 @@ import { Placeholder } from "Components/Placeholder";
 import { ArrowDropDown } from "@material-ui/icons";
 import { ArrowDropUp } from "@material-ui/icons";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
+import { Subheading } from "Components/Subheading/Subheading";
+import { PlainText } from "Components/PlainText/PlainText";
 
 export class ActiveBids extends React.PureComponent<{}> {
   static defaultProps: ActiveBids["props"] = {};
@@ -11,7 +13,7 @@ export class ActiveBids extends React.PureComponent<{}> {
     return (
       <Placeholder description="ActiveBids" orientation="column">
         <Placeholder description="ActiveBidsHeader">
-          <Placeholder description="ActiveBidsTitle" />
+          <Subheading />
           <Placeholder description="arrows" orientation="row">
             <ArrowDropDown />
             <ArrowDropUp />
@@ -25,7 +27,7 @@ export class ActiveBids extends React.PureComponent<{}> {
               <Placeholder description="Amount" />
               <Placeholder description="Time" />
             </Placeholder>
-            <Placeholder description="AmountTimeDescription" />
+            <PlainText />
           </Placeholder>
           <RectangularButton />
         </Placeholder>
@@ -37,17 +39,19 @@ export class ActiveBids extends React.PureComponent<{}> {
               <Placeholder description="Amount" />
               <Placeholder description="Time" />
             </Placeholder>
-            <Placeholder description="AmountTimeDescription" />
+            <PlainText />
           </Placeholder>
           <RectangularButton />
         </Placeholder>
 
         <Placeholder description="IndividualBid" orientation="row">
-          <Placeholder description="ActiveBidImage2" />
-          <Placeholder description="AmountAndDuration" orientation="column">
-            <Placeholder description="Amount" />
-            <Placeholder description="Time" />
-            <Placeholder description="AmountTimeDescription" />
+          <Placeholder description="ActiveBidImage" />
+          <Placeholder description="BidDetails" orientation="column">
+            <Placeholder description="AmountAndDuration">
+              <Placeholder description="Amount" />
+              <Placeholder description="Time" />
+            </Placeholder>
+            <PlainText />
           </Placeholder>
           <RectangularButton />
         </Placeholder>

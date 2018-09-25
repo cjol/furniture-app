@@ -6,9 +6,9 @@ export class CostDue extends React.PureComponent<{}> {
 
   render() {
     return (
-      <Placeholder description="Cost-Due">
-        <Placeholder description="Project Cost" orientation="row" />
-        <Placeholder description="Project Due" orientation="row" />
+      <Placeholder description="Cost-Due" orientation="row">
+        <Placeholder description="Project Cost" />
+        <Placeholder description="Project Due" />
       </Placeholder>
     );
   }

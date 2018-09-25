@@ -8,27 +8,27 @@ export class UserContactInfo extends React.PureComponent<{}> {
 
   render() {
     return (
-      <Placeholder description="Carpenter Info" orientation="column">
-        <Placeholder description="Contact 1" orientation="row">
-          <Placeholder description="Picture" orientation="row" />
-          <Placeholder description="name" orientation="row">
-            <Call />
+      <Placeholder description="User Info" orientation="column">
+        <Placeholder orientation="row">
+          <Placeholder description="Picture" />
+          <Placeholder orientation="column">
+            <Placeholder description="Name" />
+            <Placeholder description="Phone Number" />
           </Placeholder>
           <RoundButton>
             <Call />
           </RoundButton>
         </Placeholder>
         <Placeholder description="email">
-          <Email />
           <Placeholder description="email address" orientation="row" />
-          <Placeholder description="email notation" orientation="row" />
+          <Email />
         </Placeholder>
         <Placeholder description="Phone line 2" orientation="row">
           <Placeholder description="Phone No 2" />
           <Call />
         </Placeholder>
 
-        <Placeholder description="Workshop address">
+        <Placeholder description="Address Heading">
           <Placeholder description="Address" />
         </Placeholder>
       </Placeholder>

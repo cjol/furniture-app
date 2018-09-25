@@ -6,7 +6,7 @@ export class TimeRow extends React.PureComponent<{}> {
 
   render() {
     return (
-      <Placeholder description="TimeRow" orientation="row">
+      <Placeholder orientation="row">
         <Placeholder description="Time" />
         <Placeholder description="TimeBid" />
       </Placeholder>

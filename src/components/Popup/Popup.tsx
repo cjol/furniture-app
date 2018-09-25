@@ -7,7 +7,7 @@ export class Popup extends React.PureComponent<{}> {
 
   render() {
     return (
-      <Placeholder description="Popup">
+      <Placeholder description="Popup" orientation="column">
         <Header />
         <Placeholder description="Popup Contents" orientation="column">
           {this.props.children}

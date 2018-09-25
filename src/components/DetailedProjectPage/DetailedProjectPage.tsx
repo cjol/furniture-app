@@ -9,6 +9,7 @@ import { AboutBid } from "./AboutBid/AboutBid";
 import { ActiveBids } from "./ActiveBids/ActiveBids";
 import { ClarificationBoard } from "./ClarificationBoard/ClarificationBoard";
 import { PendingQueries } from "./PendingQueries/PendingQueries";
+import { PlainText } from "Components/PlainText/PlainText";
 
 export class DetailedProjectPage extends React.PureComponent<{}> {
   static defaultProps: DetailedProjectPage["props"] = {};
@@ -20,7 +21,7 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
         <ProjectHeader />
         <AboutBid />
         <ImageBar />
-        <Placeholder description="AddDescription" />
+        <PlainText />
 
         <ClarificationBoard />
         <PendingQueries />

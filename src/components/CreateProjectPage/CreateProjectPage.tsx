@@ -6,8 +6,8 @@ import { RectangularButton } from "Components/RectangularButton/RectangularButto
 import * as React from "react";
 
 import { PhotoContainer } from "./PhotoContainer/PhotoContainer";
-import { ProjectDescription } from "Components/ProjectDescription/ProjectDescription";
 import { TaggingProject } from "./TaggingProject/TaggingProject";
+import { ProjectDescription } from "./ProjectDescription/ProjectDescription";
 
 export class CreateProjectPage extends React.PureComponent<{}> {
   static defaultProps: CreateProjectPage["props"] = {};
@@ -19,8 +19,11 @@ export class CreateProjectPage extends React.PureComponent<{}> {
         <ProjectHeader />
         <PhotoContainer />
         <ImageBar />
+
         <ProjectDescription />
+
         <TaggingProject />
+
         <RectangularButton>POST PROJECT</RectangularButton>
       </Placeholder>
     );

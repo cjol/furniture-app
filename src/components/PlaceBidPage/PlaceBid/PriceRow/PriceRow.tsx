@@ -6,7 +6,7 @@ export class PriceRow extends React.PureComponent<{}> {
 
   render() {
     return (
-      <Placeholder description="PriceRow" orientation="row">
+      <Placeholder orientation="row">
         <Placeholder description="Price" />
         <Placeholder description="PriceBid" />
       </Placeholder>

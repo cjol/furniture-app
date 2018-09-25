@@ -5,8 +5,8 @@ import { AppHeader } from "Components/AppHeader/AppHeader";
 import { SearchContainer } from "./SearchContainer/SearchContainer";
 import { ListingsContainer } from "./ListingsContainer/ListingsContainer";
 
-export class ProjectListings extends React.PureComponent<{}> {
-  static defaultProps: ProjectListings["props"] = {};
+export class ProjectListingsPage extends React.PureComponent<{}> {
+  static defaultProps: ProjectListingsPage["props"] = {};
 
   render() {
     return (

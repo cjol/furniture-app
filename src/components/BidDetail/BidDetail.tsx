@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import { Close } from "@material-ui/icons";
+import { RectangularButton } from "Components/RectangularButton/RectangularButton";
 export class BidDetail extends React.PureComponent<{}> {
   static defaultProps: BidDetail["props"] = {};
 
@@ -17,7 +18,7 @@ export class BidDetail extends React.PureComponent<{}> {
           <Placeholder description="BidTextImage" />
           <Placeholder description="BidText" />
         </Placeholder>
-        <Placeholder description="Select Supplier" />
+        <RectangularButton />
       </Placeholder>
     );
   }

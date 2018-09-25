@@ -10,6 +10,11 @@ import { RoundButton } from "Components/RoundButton/RoundButton";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
 import { PlaceBidPage } from "Components/PlaceBidPage/PlaceBidPage";
 
+import { AboutBid } from "./AboutBid/AboutBid";
+import { Image } from "./Image/image";
+import { ClarificationBoard } from "./ClarificationBoard/ClarificationBoard";
+import { PendingQueries } from "./PendingQueries/PendingQueries";
+import { ActiveBids } from "./ActiveBids/ActiveBids";
 export class DetailedProjectPage extends React.PureComponent<{}> {
   static defaultProps: DetailedProjectPage["props"] = {};
 
@@ -18,20 +23,8 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
       <Placeholder description="PageContent" orientation="column">
         <AppHeader />
         <ProjectHeader />
-        <Placeholder description="AboutBid" orientation="column">
-          <Placeholder description="BidInfo" orientation="row">
-            <Placeholder description="NoOfBids" />
-            <Placeholder description="AverageBid" />
-          </Placeholder>
-          <Placeholder description="AuctionCloses" />
-        </Placeholder>
-        <Placeholder description="Image" orientation="row">
-          <ChevronLeft />
-          <Placeholder description="Image1" />
-          <Placeholder description="Image2" />
-          <Placeholder description="Image3" />
-          <ChevronRight />
-        </Placeholder>
+        <AboutBid />
+        <Image />
         <Placeholder description="AddDescription" />
         <Placeholder description="ClarificationBoard" orientation="column">
           <Placeholder description="ClarificationBoardTitle" />
@@ -45,7 +38,6 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
           </Placeholder>
           <Placeholder description="QuestionMore">
             <Placeholder description="QuestionSubmit" />
-            <RoundButton />
           </Placeholder>
         </Placeholder>
         <Placeholder description="PendingQueries" orientation="column">
@@ -91,6 +83,10 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
           </Placeholder>
         </Placeholder>
         <PlaceBidPage />" />
+        <ClarificationBoard />
+        <PendingQueries />
+        <ActiveBids />
+        <Placeholder description="PlaceBid" />
       </Placeholder>
     );
   }

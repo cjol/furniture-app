@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 
-import { Header } from "./Header/Header";
+import { AppHeader } from "Components/AppHeader/AppHeader";
 import { SearchContainer } from "./SearchContainer/SearchContainer";
 import { ListingsContainer } from "./ListingsContainer/ListingsContainer";
 
@@ -11,7 +11,7 @@ export class ProjectListings extends React.PureComponent<{}> {
   render() {
     return (
       <Placeholder description="Page" orientation="column">
-        <Header />
+        <AppHeader />
         <SearchContainer />
         <ListingsContainer />
       </Placeholder>

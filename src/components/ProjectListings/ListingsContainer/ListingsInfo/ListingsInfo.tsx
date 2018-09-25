@@ -1,10 +1,19 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
+import { ArrowDropDown } from "@material-ui/icons";
+import { ArrowDropUp } from "@material-ui/icons";
 
-export class __ComponentName__ extends React.PureComponent<{}> {
-  static defaultProps: __ComponentName__["props"] = {};
+export class ListingsInfo extends React.PureComponent<{}> {
+  static defaultProps: ListingsInfo["props"] = {};
 
   render() {
-    return <Placeholder description="Component replaces this" />;
+    return (
+      <Placeholder description="Listings Info" orientation="row">
+        <Placeholder description="Listings Title" />
+        <ArrowDropUp />
+        <ArrowDropDown />
+        <Placeholder description="Avg. Bid" />
+      </Placeholder>
+    );
   }
 }

@@ -10,9 +10,8 @@ export class ActiveProjectBids extends React.PureComponent<{}> {
       <Placeholder description="Activeprojects/Bids" orientation="row">
         <Placeholder description="Projectdetails">
           <Placeholder description=" ProjectImage" />
-          <Placeholder description="ProjectTitle" orientation="column">
-            <TagsContainer />
-          </Placeholder>
+          <Placeholder description="ProjectTitle" orientation="column" />
+          <TagsContainer />
           <Placeholder description="Amount" />
         </Placeholder>
       </Placeholder>

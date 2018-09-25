@@ -1,7 +1,5 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
-import { TagsRow1 } from "./TagsRow1/TagsRow1";
-import { TagsRow2 } from "./TagsRow2/TagsRow2";
 import { CheckBox } from "@material-ui/icons";
 import { CheckBoxOutlineBlank } from "@material-ui/icons";
 

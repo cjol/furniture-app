@@ -1,6 +1,8 @@
 import { Add, Close } from "@material-ui/icons";
 import { Placeholder } from "Components/Placeholder";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
+import { PhotoUploadHeader } from "./PhotoUploadHeader/PhotoUploadHeader";
+import { PhotoUrl } from "./PhotoUrl/PhotoUrl";
 import * as React from "react";
 
 export class PhotoUploadPopUp extends React.PureComponent<{}> {
@@ -9,13 +11,13 @@ export class PhotoUploadPopUp extends React.PureComponent<{}> {
   render() {
     return (
       <Placeholder description="PhotoUploadBox" orientation="column">
-        <Placeholder description="PhotoUploadHeader" orientation="row">
+        <PhotoUploadHeader>
           <Placeholder description="PhotoUploadTitle" />
           <Close />
-        </Placeholder>
-        <Placeholder description="PhotoUrl" />
+        </PhotoUploadHeader>
+        <PhotoUrl />
         <Add />
-        <RectangularButton>UPLOAD PHOTOS</RectangularButton>
+        <RectangularButton/>
       </Placeholder>
     );
   }

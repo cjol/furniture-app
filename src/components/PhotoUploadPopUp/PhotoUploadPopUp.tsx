@@ -11,13 +11,10 @@ export class PhotoUploadPopUp extends React.PureComponent<{}> {
   render() {
     return (
       <Placeholder description="PhotoUploadBox" orientation="column">
-        <PhotoUploadHeader>
-          <Placeholder description="PhotoUploadTitle" />
-          <Close />
-        </PhotoUploadHeader>
+        <PhotoUploadHeader />
         <PhotoUrl />
         <Add />
-        <RectangularButton/>
+        <RectangularButton />
       </Placeholder>
     );
   }

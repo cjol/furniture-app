@@ -17,8 +17,7 @@ import { PhotoUploadPopUp } from "Components/PhotoUploadPopUp/PhotoUploadPopUp";
 import { PlaceBidPage } from "Components/PlaceBidPage/PlaceBidPage";
 import { ProfilePage } from "Components/ProfilePage/ProfilePage";
 import { ProjectHeader } from "Components/ProjectHeader/ProjectHeader";
-import { ProjectListingsPage } from "Components/ProjectListingsPage/ProjectListingsPage";
-import { ProjectSummary } from "Components/ProjectSummary/ProjectSummary";
+import { ProjectListings } from "Components/ProjectListings/ProjectListings";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
 import { RoundButton } from "Components/RoundButton/RoundButton";
 import { SubmitQuestionPopUp } from "Components/SubmitQuestionPopUp/SubmitQuestionPopUp";
@@ -71,11 +70,7 @@ export default class App extends React.Component {
                 <Route path="/PlaceBidPage" component={PlaceBidPage} />
                 <Route path="/ProfilePage" component={ProfilePage} />
                 <Route path="/ProjectHeader" component={ProjectHeader} />
-                <Route
-                  path="/ProjectListingsPage"
-                  component={ProjectListingsPage}
-                />
-                <Route path="/ProjectSummary" component={ProjectSummary} />
+                <Route path="/ProjectListings" component={ProjectListings} />
                 <Route
                   path="/RectangularButton"
                   component={RectangularButton}
@@ -124,12 +119,7 @@ export default class App extends React.Component {
                         <Link to="/ProjectHeader">ProjectHeader</Link>
                       </li>
                       <li>
-                        <Link to="/ProjectListingsPage">
-                          ProjectListingsPage
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/ProjectSummary">ProjectSummary</Link>
+                        <Link to="/ProjectListings">ProjectListings</Link>
                       </li>
                       <li>
                         <Link to="/RectangularButton">RectangularButton</Link>

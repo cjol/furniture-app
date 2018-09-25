@@ -5,10 +5,6 @@ export class PhotoUrl extends React.PureComponent<{}> {
   static defaultProps: PhotoUrl["props"] = {};
 
   render() {
-    return (
-      <Placeholder description="PhotoUploadBox" orientation="column">
-        <Placeholder description="PhotoUrl" />
-      </Placeholder>
-    );
+    return <Placeholder description="PhotoUrl" />;
   }
 }

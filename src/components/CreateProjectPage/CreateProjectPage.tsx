@@ -4,12 +4,14 @@ import { ProjectHeader } from "Components/ProjectHeader/ProjectHeader";
 import { ChevronRight } from "@material-ui/icons";
 import { ChevronLeft } from "@material-ui/icons";
 import { RoundButton } from "Components/RoundButton/RoundButton";
+import {AppHeader} from "Components/AppHeader/AppHeader";
 export class CreateProjectPage extends React.PureComponent<{}> {
   static defaultProps: CreateProjectPage["props"] = {};
 
   render() {
     return (
       <Placeholder description="Page" orientation="column">
+      <AppHeader/>
         <ProjectHeader />
         <Placeholder description="Photos container" orientation="row">
           <Placeholder description="Upload Photos" orientation="column">
@@ -39,7 +41,7 @@ export class CreateProjectPage extends React.PureComponent<{}> {
             </Placeholder>
           </Placeholder>
         </Placeholder>
-        <Placeholder description="Post Project" />
+        <RectangularButton/>
       </Placeholder>
     );
   }

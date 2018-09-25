@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 
-export class ProjectSummary extends React.PureComponent<{}> {
-  static defaultProps: ProjectSummary["props"] = {};
+export class ProjectListings extends React.PureComponent<{}> {
+  static defaultProps: ProjectListings["props"] = {};
 
   render() {
     return (
@@ -26,7 +26,11 @@ export class ProjectSummary extends React.PureComponent<{}> {
             <Placeholder description="Project Image" />
             <Placeholder description="Project Info" orientation="column">
               <Placeholder description="Project Title" orientation="row" />
-              <Placeholder description="Project Tags" />
+              <Placeholder description="Tag Container" orientation="row">
+                <Placeholder description="Tags:" />
+                <Placeholder description="Tag 1" />
+                <Placeholder description="Tag 2" />
+              </Placeholder>
             </Placeholder>
             <Placeholder description="Project Price" />
           </Placeholder>
@@ -35,7 +39,11 @@ export class ProjectSummary extends React.PureComponent<{}> {
             <Placeholder description="Project Image" />
             <Placeholder description="Project Info" orientation="column">
               <Placeholder description="Project Title" orientation="row" />
-              <Placeholder description="Project Tags" />
+              <Placeholder description="Tag Container" orientation="row">
+                <Placeholder description="Tags:" />
+                <Placeholder description="Tag 1" />
+                <Placeholder description="Tag 2" />
+              </Placeholder>
             </Placeholder>
             <Placeholder description="Project Price" />
           </Placeholder>
@@ -44,7 +52,11 @@ export class ProjectSummary extends React.PureComponent<{}> {
             <Placeholder description="Project Image" />
             <Placeholder description="Project Info" orientation="column">
               <Placeholder description="Project Title" orientation="row" />
-              <Placeholder description="Project Tags" />
+              <Placeholder description="Tag Container" orientation="row">
+                <Placeholder description="Tags:" />
+                <Placeholder description="Tag 1" />
+                <Placeholder description="Tag 2" />
+              </Placeholder>
             </Placeholder>
             <Placeholder description="Project Price" />
           </Placeholder>

@@ -5,6 +5,7 @@ import { ChevronRight } from "@material-ui/icons";
 import { ChevronLeft } from "@material-ui/icons";
 import { RoundButton } from "Components/RoundButton/RoundButton";
 import {AppHeader} from "Components/AppHeader/AppHeader";
+import {RectangularButton}from "Components/RectangularButton/RectangularButton";
 export class CreateProjectPage extends React.PureComponent<{}> {
   static defaultProps: CreateProjectPage["props"] = {};
 

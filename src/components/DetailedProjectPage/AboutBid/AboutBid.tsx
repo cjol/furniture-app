@@ -1,13 +1,24 @@
 import * as React from "react";
 import styled from "styled-components";
+import { grey, mainFont, black } from "@style";
 
 const AboutBidStyle = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 11px;
+  font-family: ${mainFont};
 `;
-const NoOfBidsStyle = styled.div``;
-const AverageBidStyle = styled.div``;
-const AuctionClosesStyle = styled.div``;
+const TagStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+const LabelStyle = styled.div`
+  color: ${grey};
+`;
+const ValueStyle = styled.div`
+  font-weight: bold;
+`;
 
 export class AboutBid extends React.PureComponent<{
   numberOfBids: number;
@@ -23,9 +34,18 @@ export class AboutBid extends React.PureComponent<{
   render() {
     return (
       <AboutBidStyle>
-        <NoOfBidsStyle />
-        <AverageBidStyle />
-        <AuctionClosesStyle />
+        <TagStyle>
+          <LabelStyle>Number of bids: </LabelStyle>
+          <ValueStyle>7</ValueStyle>
+        </TagStyle>
+        <TagStyle>
+          <LabelStyle>Average Bid: </LabelStyle>
+          <ValueStyle>500,000UGX</ValueStyle>
+        </TagStyle>
+        <TagStyle>
+          <LabelStyle>Auction Closes in :</LabelStyle>
+          <ValueStyle>7 days</ValueStyle>
+        </TagStyle>
       </AboutBidStyle>
     );
   }

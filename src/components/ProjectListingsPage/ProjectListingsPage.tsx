@@ -4,17 +4,19 @@ import { Placeholder } from "Components/Placeholder";
 import { AppHeader } from "Components/AppHeader/AppHeader";
 import { SearchContainer } from "./SearchContainer/SearchContainer";
 import { ListingsContainer } from "./ListingsContainer/ListingsContainer";
+import styled from "styled-components";
+const PageStyle = styled.div``;
 
 export class ProjectListingsPage extends React.PureComponent<{}> {
   static defaultProps: ProjectListingsPage["props"] = {};
 
   render() {
     return (
-      <Placeholder description="Page" orientation="column">
+      <PageStyle>
         <AppHeader />
         <SearchContainer />
         <ListingsContainer />
-      </Placeholder>
+      </PageStyle>
     );
   }
 }

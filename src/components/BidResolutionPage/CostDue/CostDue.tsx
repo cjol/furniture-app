@@ -5,6 +5,7 @@ import styled from "styled-components";
 const CostDueStyle = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 `;
 
 const ProjectCostStyle = styled.div`
@@ -17,15 +18,15 @@ const ProjectDueStyle = styled.div`
   justify-content: flex-end;
 `;
 
-const LabelStyle=styled.div`
-display:flex;
-flex-direction:row;
-`
+const LabelStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
-const ValueStyle=styled.div`
-display:flex;
-flex-direction:row;
-`
+const ValueStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 export class CostDue extends React.PureComponent<{}> {
   static defaultProps: CostDue["props"] = {};
@@ -34,12 +35,12 @@ export class CostDue extends React.PureComponent<{}> {
     return (
       <CostDueStyle>
         <ProjectCostStyle>
-         <LabelStyle/>
-         <ValueStyle/> 
+          <LabelStyle>Price:</LabelStyle>
+          <ValueStyle>XXX</ValueStyle>
         </ProjectCostStyle>
         <ProjectDueStyle>
-          <LabelStyle/>
-          <ValueStyle/> 
+          <LabelStyle>Due:</LabelStyle>
+          <ValueStyle>XXX</ValueStyle>
         </ProjectDueStyle>
       </CostDueStyle>
     );

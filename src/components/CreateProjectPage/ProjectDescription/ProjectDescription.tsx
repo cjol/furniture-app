@@ -4,20 +4,34 @@ import { Placeholder } from "Components/Placeholder";
 import { ProjectHeader } from "Components/ProjectHeader/ProjectHeader";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
 import * as React from "react";
-
 import { PlainText } from "Components/PlainText/PlainText";
 import { Subheading } from "Components/Subheading/Subheading";
+import styled from "styled-components";
+
+const ProjectDescriptionStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+`;
+
+const ProjectDescriptionFeildStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
 
 export class ProjectDescription extends React.PureComponent<{}> {
   static defaultProps: ProjectDescription["props"] = {};
 
   render() {
     return (
-      <Placeholder description="Project Description" orientation="column">
+      <ProjectDescriptionStyle>
         <Subheading />
         <PlainText>Description Instructions</PlainText>
-        <Placeholder description="Description Field" />
-      </Placeholder>
+        <ProjectDescriptionFeildStyle>
+          Make sure you include what the item is and the directions{" "}
+        </ProjectDescriptionFeildStyle>
+      </ProjectDescriptionStyle>
     );
   }
 }

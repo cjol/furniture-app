@@ -1,15 +1,23 @@
 import * as React from "react";
-import { Placeholder } from "Components/Placeholder";
+import styled from "styled-components";
+
+const NameAndPhoneNumberStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+const NameStyle = styled.div``;
+const PhoneNumberStyle = styled.div``;
 
 export class InfoNameAndNumber extends React.PureComponent<{}> {
   static defaultProps: InfoNameAndNumber["props"] = {};
 
   render() {
     return (
-      <Placeholder orientation="column">
-        <Placeholder description="Name" />
-        <Placeholder description="Phone Number" />
-      </Placeholder>
+      <NameAndPhoneNumberStyle>
+        <NameStyle>Carpenter Name</NameStyle>
+        <PhoneNumberStyle>+256 Phone Number</PhoneNumberStyle>
+      </NameAndPhoneNumberStyle>
     );
   }
 }

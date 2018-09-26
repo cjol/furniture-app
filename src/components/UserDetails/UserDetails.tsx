@@ -1,19 +1,20 @@
-import { Placeholder } from "Components/Placeholder";
-import { Star, StarBorder } from "@material-ui/icons";
-import styled from "styled-components";
 import { ProfileRatings } from "Components/ProfilePage/ProfileDetails/ProfileRatings/ProfileRatings";
 import * as React from "react";
+import styled from "styled-components";
 
 const UserDetailsStyled = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 const UserNameStyled = styled.div`
   display: flex;
   border-radius: 30px;
 `;
 const UserPictureStyled = styled.div`
-display:flex;
+  display: flex;
+  height: 50px;
+  width: 50px;
 `;
 
 const RatingStarsStyled = styled.div`
@@ -27,15 +28,8 @@ export class UserDetails extends React.PureComponent<{}> {
     return (
       <UserDetailsStyled>
         <UserPictureStyled />
-        <UserNameStyled />
-        <RatingStarsStyled>
-          <Star />
-          <Star />
-          <Star />
-          <Star />
-          <StarBorder />
-          <StarBorder />
-        </RatingStarsStyled>
+        <UserNameStyled>John Doe</UserNameStyled>
+        <ProfileRatings />
       </UserDetailsStyled>
     );
   }

@@ -9,7 +9,7 @@ const CostDueStyle = styled.div`
   flex-direction: row;
   justify-content: space-around;
   size: 15px;
-  text-decoration: undeline;
+  text-decoration: underline;
 `;
 
 const ProjectCostStyle = styled.div`

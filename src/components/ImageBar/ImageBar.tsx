@@ -8,6 +8,11 @@ const ImageBarStyle = styled.div`
   display: flex;
   flex-direction: row;
 `;
+
+const ImageStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 export class ImageBar extends React.PureComponent<{}> {
   static defaultProps: ImageBar["props"] = {};
 
@@ -15,9 +20,9 @@ export class ImageBar extends React.PureComponent<{}> {
     return (
       <ImageBarStyle>
         <ChevronLeft />
-        <Placeholder description="Image1" />
-        <Placeholder description="Image2" />
-        <Placeholder description="Image3" />
+        <ImageStyle />
+        <ImageStyle />
+        <ImageStyle />
         <ChevronRight />
       </ImageBarStyle>
     );

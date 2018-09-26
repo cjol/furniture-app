@@ -18,8 +18,14 @@ const FilledBarStyle = styled.div`
   flex-grow: 1;
 `;
 
-export class FilterResultsBidPriceScale extends React.PureComponent<{}> {
-  static defaultProps: FilterResultsBidPriceScale["props"] = {};
+export class FilterResultsBidPriceScale extends React.PureComponent<{
+  bidRangeSetBottom: (bottom: number) => void;
+  bidRangeSetTop: (top: number) => void;
+}> {
+  static defaultProps: FilterResultsBidPriceScale["props"] = {
+    bidRangeSetBottom: bottom => alert("Lower Bid Range" + bottom),
+    bidRangeSetTop: top => alert("Upper Bid Range: " + top)
+  };
 
   render() {
     return (

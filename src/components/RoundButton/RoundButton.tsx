@@ -4,17 +4,13 @@ import { Add } from "@material-ui/icons";
 import styled from "styled-components";
 import { greenMain, white } from "@style";
 
-const RoundButtonStyled = styled.div`
+export const RoundButton = styled.div`
   display: flex;
   background-color: ${greenMain};
   color: ${white};
+  justify-content: center;
+  align-items: center;
+  border-radius: 36px;
+  height: 36px;
+  width: 36px;
 `;
-export class RoundButton extends React.PureComponent<{}> {
-  static defaultProps: RoundButton["props"] = {
-    children: <Add />
-  };
-
-  render() {
-    return <RoundButtonStyled>{this.props.children}</RoundButtonStyled>;
-  }
-}

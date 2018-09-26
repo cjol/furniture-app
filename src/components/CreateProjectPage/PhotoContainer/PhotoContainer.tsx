@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Add } from "@material-ui/icons";
 import { Placeholder } from "Components/Placeholder";
 import { RoundButton } from "Components/RoundButton/RoundButton";
 import { PlainText } from "Components/PlainText/PlainText";
@@ -22,7 +23,9 @@ export class PhotoContainer extends React.PureComponent<{}> {
           <Subheading />
           <PlainText />
         </PhotoContainerPlaceholderStyled>
-        <RoundButton />
+        <RoundButton>
+          <Add />
+        </RoundButton>
       </PhotoContainerStyled>
     );
   }

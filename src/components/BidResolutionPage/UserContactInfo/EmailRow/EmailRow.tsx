@@ -4,6 +4,7 @@ import { Call, Email } from "@material-ui/icons";
 import styled from "styled-components";
 const EmailStyle = styled.div`
   display: flex;
+  flex-grow: 1;
   flex-direction: row;
   justify-content: stretch;
 `;
@@ -16,7 +17,7 @@ export class EmailRow extends React.PureComponent<{}> {
   render() {
     return (
       <EmailStyle>
-        <EmailaddressStyle>Email@email.com</EmailaddressStyle>
+        <EmailaddressStyle>email@email.com</EmailaddressStyle>
         <Email />
       </EmailStyle>
     );

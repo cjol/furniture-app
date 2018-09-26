@@ -7,7 +7,7 @@ import styled from "styled-components";
 const ActiveProjectBidsStyle = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: strech;
 `;
 
 export class ActiveProjectBids extends React.PureComponent<{}> {

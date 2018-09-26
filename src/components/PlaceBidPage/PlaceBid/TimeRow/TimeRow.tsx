@@ -8,7 +8,7 @@ const TimeRowStyle = styled.div`
 `;
 
 export class TimeRow extends React.PureComponent<{ time: string }> {
-  static defaultProps: TimeRow["props"] = { time: "submit Bid" };
+  static defaultProps: TimeRow["props"] = { time: "4 Days" };
 
   render() {
     return (

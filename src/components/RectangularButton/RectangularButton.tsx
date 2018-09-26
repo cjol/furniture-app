@@ -14,7 +14,7 @@ export class RectangularButton extends React.PureComponent<{}> {
   render() {
     return (
       <RectangularButtonStyle>
-        <ButtonLabelStyle>BUTTON</ButtonLabelStyle>
+        <ButtonLabelStyle>{this.props.children || "BUTTON"}</ButtonLabelStyle>
       </RectangularButtonStyle>
     );
   }

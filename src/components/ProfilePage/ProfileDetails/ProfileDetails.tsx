@@ -4,10 +4,10 @@ import { ProfileImage } from "./ProfileImage/ProfileImage";
 import { ProfileRatings } from "./ProfileRatings/ProfileRatings";
 import { UserCredentials } from "./UserCredentials/UserCredentials";
 import styled from "styled-components";
-const ProfileDetailsStyle =styled.div`
-display:flex;
-flex-direction:column;
-justify-content:center;
+const ProfileDetailsStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export class ProfileDetails extends React.PureComponent<{}> {

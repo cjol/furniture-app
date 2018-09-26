@@ -4,6 +4,8 @@ import { Placeholder } from "Components/Placeholder";
 
 const ImageStyle = styled.div`
   display: flex;
+  height: 100px;
+  width: 100px;
 `;
 export class ProfileImage extends React.PureComponent<{}> {
   static defaultProps: ProfileImage["props"] = {};

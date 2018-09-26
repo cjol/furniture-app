@@ -5,19 +5,30 @@ import * as React from "react";
 import { AddBidDescription } from "./AddBidDescription/AddBidDescription";
 import { PriceRow } from "./PriceRow/PriceRow";
 import { TimeRow } from "./TimeRow/TimeRow";
+import styled from "styled-components";
+
+const PlaceBidStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const PlaceBidHeaderStyle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 export class PlaceBid extends React.PureComponent<{}> {
   static defaultProps: PlaceBid["props"] = {};
 
   render() {
     return (
-      <Placeholder orientation="column">
-        <Placeholder description="Place Bid Header" />
+      <PlaceBidStyle>
+        <PlaceBidHeaderStyle >Place Bid</PlaceBidHeaderStyle>
         <PriceRow />
         <TimeRow />
         <AddBidDescription />
         <RectangularButton />
-      </Placeholder>
+      </PlaceBidStyle>
     );
   }
 }

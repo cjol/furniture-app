@@ -16,10 +16,6 @@ const TitleStyle = styled.div`
   font-weight: bold;
 `;
 
-const MenuStyle = styled.div`
-  display: flex;
-  justify-content: flex-start;
-`;
 
 export class AppHeader extends React.PureComponent<{}> {
   static defaultProps: AppHeader["props"] = {};
@@ -27,8 +23,8 @@ export class AppHeader extends React.PureComponent<{}> {
   render() {
     return (
       <MenuBarStyle>
-        <MenuStyle />
-        <TitleStyle />
+        <Menu/>
+        <TitleStyle>MyTitle</TitleStyle>
       </MenuBarStyle>
     );
   }

@@ -8,6 +8,11 @@ const PopupStyle = styled.div`
   flex-direction: column;
 `;
 
+const PopupContentsStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export class Popup extends React.PureComponent<{}> {
   static defaultProps: Popup["props"] = {};
 
@@ -15,9 +20,7 @@ export class Popup extends React.PureComponent<{}> {
     return (
       <PopupStyle>
         <Header />
-        <Placeholder description="Popup Contents" orientation="column">
-          {this.props.children}
-        </Placeholder>
+        <PopupContentsStyle>{this.props.children}</PopupContentsStyle>
       </PopupStyle>
     );
   }

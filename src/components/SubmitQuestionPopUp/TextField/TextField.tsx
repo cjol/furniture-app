@@ -8,6 +8,6 @@ export class TextField extends React.PureComponent<{}> {
   static defaultProps: TextField["props"] = {};
 
   render() {
-    return <TextFieldStyle />;
+    return <TextFieldStyle>Question Text</TextFieldStyle>;
   }
 }

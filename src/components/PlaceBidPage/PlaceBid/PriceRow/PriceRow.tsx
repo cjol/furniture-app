@@ -20,8 +20,8 @@ export class PriceRow extends React.PureComponent<{}> {
   render() {
     return (
       <RowStyle>
-        <PriceStyle />
-        <PriceBidStyle />
+        <PriceStyle> Price: </PriceStyle>
+        <PriceBidStyle> PriceBid: </PriceBidStyle>
       </RowStyle>
     );
   }

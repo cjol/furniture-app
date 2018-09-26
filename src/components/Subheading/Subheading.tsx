@@ -8,6 +8,6 @@ export class Subheading extends React.PureComponent<{}> {
   static defaultProps: Subheading["props"] = {};
 
   render() {
-    return <SubHeadingStyled />;
+    return <SubHeadingStyled>{this.props.children}</SubHeadingStyled>;
   }
 }

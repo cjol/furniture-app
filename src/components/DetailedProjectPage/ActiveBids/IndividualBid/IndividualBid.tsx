@@ -11,8 +11,12 @@ const IndividualBidStyle = styled.div`
   align-items: center;
 `;
 
-export class IndividualBid extends React.PureComponent<{}> {
-  static defaultProps: IndividualBid["props"] = {};
+export class IndividualBid extends React.PureComponent<{
+  activeBidImage: string;
+}> {
+  static defaultProps: IndividualBid["props"] = {
+    activeBidImage: "www.tyrohq.com/logo.png"
+  };
 
   render() {
     return (

@@ -11,11 +11,11 @@ const PhoneNumberStyle = styled.div``;
 
 export class InfoNameAndNumber extends React.PureComponent<{
   name: string;
-  number: number;
+  number: string;
 }> {
   static defaultProps: InfoNameAndNumber["props"] = {
     name: "Jonathan",
-    number: +256700187418
+    number: "+256700187418"
   };
 
   render() {

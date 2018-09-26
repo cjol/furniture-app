@@ -2,8 +2,16 @@ import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
 
-const UserCredentialsStyle = styled.div``;
-const UserCredentialsTitleStyle = styled.div``;
+const UserCredentialsStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`;
+const UserCredentialsTitleStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`;
 
 export class UserCredentials extends React.PureComponent<{}> {
   static defaultProps: UserCredentials["props"] = {};

@@ -1,7 +1,9 @@
-import { Call, Email } from "@material-ui/icons";
 import { Placeholder } from "Components/Placeholder";
-import { RoundButton } from "Components/RoundButton/RoundButton";
 import * as React from "react";
+import { InfoRow } from "./InfoRow/InfoRow";
+import { EmailRow } from "./EmailRow/EmailRow";
+import { PhoneLine } from "./PhoneLine/PhoneLine";
+import { Address } from "./Address/Address";
 
 export class UserContactInfo extends React.PureComponent<{}> {
   static defaultProps: UserContactInfo["props"] = {};
@@ -9,28 +11,12 @@ export class UserContactInfo extends React.PureComponent<{}> {
   render() {
     return (
       <Placeholder description="User Info" orientation="column">
-        <Placeholder orientation="row">
-          <Placeholder description="Picture" />
-          <Placeholder orientation="column">
-            <Placeholder description="Name" />
-            <Placeholder description="Phone Number" />
-          </Placeholder>
-          <RoundButton>
-            <Call />
-          </RoundButton>
-        </Placeholder>
-        <Placeholder description="email">
-          <Placeholder description="email address" orientation="row" />
-          <Email />
-        </Placeholder>
-        <Placeholder description="Phone line 2" orientation="row">
-          <Placeholder description="Phone No 2" />
-          <Call />
-        </Placeholder>
+        <InfoRow />
 
-        <Placeholder description="Address Heading">
-          <Placeholder description="Address" />
-        </Placeholder>
+        <EmailRow />
+        <PhoneLine />
+
+        <Address />
       </Placeholder>
     );
   }

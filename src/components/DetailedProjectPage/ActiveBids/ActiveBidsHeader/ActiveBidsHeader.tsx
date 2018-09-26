@@ -9,8 +9,14 @@ const ActiveBidsHeaderStyle = styled.div`
 `;
 const ArrowsStyle = styled.div``;
 
-export class ActiveBidsHeader extends React.PureComponent<{}> {
-  static defaultProps: ActiveBidsHeader["props"] = {};
+export class ActiveBidsHeader extends React.PureComponent<{
+  arrowDropDown: () => void;
+  arrowDropUp: () => void;
+}> {
+  static defaultProps: ActiveBidsHeader["props"] = {
+    arrowDropDown: () => alert("Moving to Lower Bids "),
+    arrowDropUp: () => alert("Moving to the Upper Bids ")
+  };
 
   render() {
     return (

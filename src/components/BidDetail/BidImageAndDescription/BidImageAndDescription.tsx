@@ -7,20 +7,26 @@ const BidDetailsStyle = styled.div`
 `;
 const BidTextImageStyle = styled.div`
   justify-content: flex-start;
-  width:30px;
-  height:35px;
-  background-size:cover;
+  width: 30px;
+  height: 35px;
+  background-size: cover;
 `;
 const BidTextStyle = styled.div``;
 
-export class BidImageAndDescription extends React.PureComponent<{}> {
-  static defaultProps: BidImageAndDescription["props"] = {};
+export class BidImageAndDescription extends React.PureComponent<{
+  bidImage: string;
+  bidDescriptionText: string;
+}> {
+  static defaultProps: BidImageAndDescription["props"] = {
+    bidImage: "www.tyrohq.com",
+    bidDescriptionText: "Lorem ipsum dora sit ameti"
+  };
 
   render() {
     return (
       <BidDetailsStyle>
         <BidTextImageStyle />
-        <BidTextStyle >Bid Desription </BidTextStyle>
+        <BidTextStyle>Bid Desription </BidTextStyle>
       </BidDetailsStyle>
     );
   }

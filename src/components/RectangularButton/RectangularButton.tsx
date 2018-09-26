@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
-import  {darkerGreen} "@style";
-import {mainFont} "@style";
+import { darkerGreen } from "@style";
+import { mainFont } from "@style";
 const RectangularButtonStyle = styled.div`
   display: flex;
 `;

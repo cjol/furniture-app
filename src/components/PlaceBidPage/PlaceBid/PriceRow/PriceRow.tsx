@@ -3,7 +3,7 @@ import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
 const RowStyle = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 `;
 const PriceStyle = styled.div`
   display: flex;

@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
+import { FilterResultsBidPrice } from "./FilterResultsBidPrice/FilterResultsBidPrice";
+import { FilterResultsBidPriceScale } from "./FilterResultsBidPriceScale/FilterResultsBidPriceScale";
 
 export class FilterResultsBid extends React.PureComponent<{}> {
   static defaultProps: FilterResultsBid["props"] = {};
@@ -7,12 +9,8 @@ export class FilterResultsBid extends React.PureComponent<{}> {
   render() {
     return (
       <Placeholder description="FilterResultsBid">
-        <Placeholder description="FilterResultsBidPrice" />
-        <Placeholder description="FilterResultsBidPriceScale" orientation="row">
-          <Placeholder description="Left Circle" />
-          <Placeholder description="Filled Bar" />
-          <Placeholder description="Right Circle" />
-        </Placeholder>
+        <FilterResultsBidPrice />
+        <FilterResultsBidPriceScale />
       </Placeholder>
     );
   }

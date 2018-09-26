@@ -17,8 +17,16 @@ const AmountStyled = styled.div`
 const TimeStyled = styled.div`
   display: flex;
 `;
-export class BidDetails extends React.PureComponent<{}> {
-  static defaultProps: BidDetails["props"] = {};
+export class BidDetails extends React.PureComponent<{
+  amount: string;
+  time: string;
+  description: string;
+}> {
+  static defaultProps: BidDetails["props"] = {
+    amount: "250000 UGX",
+    time: "14 days",
+    description: "Fred Blogs"
+  };
 
   render() {
     return (
@@ -27,7 +35,7 @@ export class BidDetails extends React.PureComponent<{}> {
           <AmountStyled>Amount</AmountStyled>
           <TimeStyled>Time</TimeStyled>
         </AmountAndDurationStyled>
-        <PlainText />
+        <PlainText>Bidder Name</PlainText>
       </BidDetailsStyled>
     );
   }

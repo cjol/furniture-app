@@ -4,16 +4,18 @@ import styled from "styled-components";
 const FilterResultsBidPriceScaleStyle = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: stretch;
+  position: relative;
+  flex-grow: 1;
 `;
-const LeftCircleStyle = styled.div`
-  border-radius: 40px;
+const CircleStyle = styled.div`
+  border-radius: 10px;
+  height: 10px;
+  width: 10px;
+  position: absolute;
 `;
 const FilledBarStyle = styled.div`
-  justify-content: stretch;
-`;
-
-const RightCircleStyle = styled.div`
-  border-radius: 40px;
+  flex-grow: 1;
 `;
 
 export class FilterResultsBidPriceScale extends React.PureComponent<{}> {
@@ -22,9 +24,9 @@ export class FilterResultsBidPriceScale extends React.PureComponent<{}> {
   render() {
     return (
       <FilterResultsBidPriceScaleStyle>
-        <LeftCircleStyle />
+        <CircleStyle />
         <FilledBarStyle />
-        <RightCircleStyle />
+        <CircleStyle />
       </FilterResultsBidPriceScaleStyle>
     );
   }

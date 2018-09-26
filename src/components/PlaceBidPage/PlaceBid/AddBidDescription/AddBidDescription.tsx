@@ -16,8 +16,13 @@ const DescriptionFieldStyle = styled.div`
   flex-grow: 1;
 `;
 
-export class AddBidDescription extends React.PureComponent<{}> {
-  static defaultProps: AddBidDescription["props"] = {};
+export class AddBidDescription extends React.PureComponent<{
+  description: string;
+}> {
+  static defaultProps: AddBidDescription["props"] = {
+    description:
+      "Salut! Je vend de produits de grande qualite's et mes pris sont tres favorable. Je rends un service rapide et fiable pour tout mes clients. Faites moi cette chance et vous verrez les merveilles"
+  };
 
   render() {
     return (

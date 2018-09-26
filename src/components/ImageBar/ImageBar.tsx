@@ -7,14 +7,20 @@ import styled from "styled-components";
 const ImageBarStyle = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+`;
+
+const ChevronStyle = styled.div`
+  flex-grow: 0;
 `;
 
 const ImageStyle = styled.div`
   display: flex;
+  flex-grow: 1;
   flex-direction: row;
   justify-content: center;
-  max-height:50%;
-  max-height:25%;
+  height: 50px;
 `;
 export class ImageBar extends React.PureComponent<{}> {
   static defaultProps: ImageBar["props"] = {};
@@ -22,11 +28,15 @@ export class ImageBar extends React.PureComponent<{}> {
   render() {
     return (
       <ImageBarStyle>
-        <ChevronLeft />
+        <ChevronStyle>
+          <ChevronLeft />
+        </ChevronStyle>
         <ImageStyle />
         <ImageStyle />
         <ImageStyle />
-        <ChevronRight />
+        <ChevronStyle>
+          <ChevronRight />
+        </ChevronStyle>
       </ImageBarStyle>
     );
   }

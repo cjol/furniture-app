@@ -1,6 +1,7 @@
 import { ProfileRatings } from "Components/ProfilePage/ProfileDetails/ProfileRatings/ProfileRatings";
 import * as React from "react";
 import styled from "styled-components";
+import { mainFont } from "@style";
 
 const UserDetailsStyled = styled.div`
   display: flex;
@@ -10,6 +11,9 @@ const UserDetailsStyled = styled.div`
 const UserNameStyled = styled.div`
   display: flex;
   border-radius: 30px;
+  font-size: 14px;
+  font: ${mainFont};
+  color: black;
 `;
 const UserPictureStyled = styled.div`
   display: flex;

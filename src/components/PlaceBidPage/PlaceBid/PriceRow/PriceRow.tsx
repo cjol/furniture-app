@@ -9,7 +9,6 @@ const PriceStyle = styled.div`
   display: flex;
   flex-direction: column;
 `;
-
 const PriceBidStyle = styled.div`
   display: flex;
   flex-direction: column;

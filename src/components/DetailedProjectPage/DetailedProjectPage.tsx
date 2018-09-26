@@ -28,8 +28,6 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
         <ImageBar />
         <PlainText />
 
-        <ClarificationBoard />
-        <PendingQueries />
         <ActiveBids />
         <RectangularButton />
       </PageContentStyle>

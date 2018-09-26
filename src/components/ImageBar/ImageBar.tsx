@@ -12,6 +12,9 @@ const ImageBarStyle = styled.div`
 const ImageStyle = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  max-height:50%;
+  max-height:25%;
 `;
 export class ImageBar extends React.PureComponent<{}> {
   static defaultProps: ImageBar["props"] = {};

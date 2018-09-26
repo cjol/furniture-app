@@ -13,8 +13,12 @@ const PriceBidStyle = styled.div`
   display: flex;
   flex-direction: column;
 `;
-export class PriceRow extends React.PureComponent<{}> {
-  static defaultProps: PriceRow["props"] = {};
+export class PriceRow extends React.PureComponent<{
+  price: string;
+}> {
+  static defaultProps: PriceRow["props"] = {
+    price: "500 Ugx"
+  };
 
   render() {
     return (

@@ -5,7 +5,6 @@ const ProjectTitleStyle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 1px, green, solid;
   font: ${mainFont};
   font-size: 24px;
 `;

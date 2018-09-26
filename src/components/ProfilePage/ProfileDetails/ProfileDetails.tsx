@@ -10,8 +10,12 @@ const ProfileDetailsStyle = styled.div`
   align-items: center;
 `;
 
-export class ProfileDetails extends React.PureComponent<{}> {
-  static defaultProps: ProfileDetails["props"] = {};
+export class ProfileDetails extends React.PureComponent<{
+  profileRatingsprops: ProfileRatings["props"];
+}> {
+  static defaultProps: ProfileDetails["props"] = {
+    profileRatingsprops: ProfileRatings.defaultProps
+  };
 
   render() {
     return (

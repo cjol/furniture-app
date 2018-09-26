@@ -3,17 +3,24 @@ import { Placeholder } from "Components/Placeholder";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
 import { ActiveBidImage } from "./ActiveBidImage/ActiveBidImage";
 import { BidDetails } from "./BidDetails/BidDetails";
+import styled from "styled-components";
+
+const IndividualBidStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
 
 export class IndividualBid extends React.PureComponent<{}> {
   static defaultProps: IndividualBid["props"] = {};
 
   render() {
     return (
-      <Placeholder description="IndividualBid" orientation="row">
+      <IndividualBidStyle>
         <ActiveBidImage />
         <BidDetails />
-        <RectangularButton />
-      </Placeholder>
+        <RectangularButton>SELECT</RectangularButton>
+      </IndividualBidStyle>
     );
   }
 }

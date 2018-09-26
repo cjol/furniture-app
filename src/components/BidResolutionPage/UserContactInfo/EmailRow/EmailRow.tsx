@@ -11,8 +11,8 @@ const EmailStyle = styled.div`
 const EmailaddressStyle = styled.div`
   flex-grow: 1;
 `;
-export class EmailRow extends React.PureComponent<{}> {
-  static defaultProps: EmailRow["props"] = {};
+export class EmailRow extends React.PureComponent<{ email: string }> {
+  static defaultProps: EmailRow["props"] = { email: "address@email.com" };
 
   render() {
     return (

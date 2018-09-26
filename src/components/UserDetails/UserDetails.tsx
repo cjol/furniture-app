@@ -1,6 +1,6 @@
-import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
-import { Star, StarBorder } from "@material-ui/icons";
+import { ProfileRatings } from "Components/ProfilePage/ProfileDetails/ProfileRatings/ProfileRatings";
+import * as React from "react";
 
 export class UserDetails extends React.PureComponent<{}> {
   static defaultProps: UserDetails["props"] = {};
@@ -10,14 +10,7 @@ export class UserDetails extends React.PureComponent<{}> {
       <Placeholder description="User Details" orientation="column">
         <Placeholder description="User Picture" />
         <Placeholder description="User Name" />
-        <Placeholder description="RatingStars">
-          <Star />
-          <Star />
-          <Star />
-          <Star />
-          <StarBorder />
-          <StarBorder />
-        </Placeholder>
+        <ProfileRatings />
       </Placeholder>
     );
   }

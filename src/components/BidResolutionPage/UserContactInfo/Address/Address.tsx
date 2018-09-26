@@ -14,8 +14,12 @@ const AddressStyle = styled.div`
   align-items: flex-start;
 `;
 
-export class Address extends React.PureComponent<{}> {
-  static defaultProps: Address["props"] = {};
+export class Address extends React.PureComponent<{
+  address: string;
+}> {
+  static defaultProps: Address["props"] = {
+    address: "31 Chwa II Road, Mbuya"
+  };
 
   render() {
     return (

@@ -8,13 +8,14 @@ flex-direction:row;
 align-items:flex-start;
 flex-grow:0;
 border:solid;
-border-radius:20px
 `
 
 export class ActiveBidImage extends React.PureComponent<{}> {
   static defaultProps: ActiveBidImage["props"] = {};
 
   render() {
-    return <ActiveBidImageStyle>Image</ActiveBidImageStyle>;
+    return (
+      <ActiveBidImageStyle>Image</ActiveBidImageStyle>;
+    )
   }
 }

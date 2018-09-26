@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
-
+import { mainFont } from "@style";
 const UserCredentialsStyle = styled.div`
   display: flex;
   flex-direction: column;
@@ -12,6 +12,8 @@ const UserCredentialsTitleStyle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  font: ${mainFont};
+  font-size: 16px;
 `;
 
 export class UserCredentials extends React.PureComponent<{}> {

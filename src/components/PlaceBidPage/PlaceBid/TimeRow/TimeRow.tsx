@@ -7,8 +7,8 @@ const TimeRowStyle = styled.div`
   flex-direction: row;
 `;
 
-export class TimeRow extends React.PureComponent<{}> {
-  static defaultProps: TimeRow["props"] = {};
+export class TimeRow extends React.PureComponent<{ time: string }> {
+  static defaultProps: TimeRow["props"] = { time: "4 Days" };
 
   render() {
     return (

@@ -16,14 +16,17 @@ const TitleStyle = styled.div`
   font-weight: bold;
 `;
 
-
-export class AppHeader extends React.PureComponent<{}> {
-  static defaultProps: AppHeader["props"] = {};
+export class AppHeader extends React.PureComponent<{
+  Title: String;
+}> {
+  static defaultProps: AppHeader["props"] = {
+    Title: "Project Listings"
+  };
 
   render() {
     return (
       <MenuBarStyle>
-        <Menu/>
+        <Menu />
         <TitleStyle>MyTitle</TitleStyle>
       </MenuBarStyle>
     );

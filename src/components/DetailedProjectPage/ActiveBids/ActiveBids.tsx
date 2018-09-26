@@ -9,9 +9,9 @@ import { ActiveBidsHeader } from "./ActiveBidsHeader/ActiveBidsHeader";
 import { IndividualBid } from "./IndividualBid/IndividualBid";
 import styled from "styled-components";
 const ActiveBidsStyle = styled.div`
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 `;
 
 export class ActiveBids extends React.PureComponent<{}> {
@@ -27,6 +27,8 @@ export class ActiveBids extends React.PureComponent<{}> {
         <IndividualBid />
 
         <IndividualBid />
+
+        <RectangularButton>Place Bid</RectangularButton>
       </ActiveBidsStyle>
     );
   }

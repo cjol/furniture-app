@@ -7,6 +7,6 @@ export class PlainText extends React.PureComponent<{}> {
   static defaultProps: PlainText["props"] = {};
 
   render() {
-    return <SomeTextStyle>Text Area</SomeTextStyle>;
+    return <SomeTextStyle>{this.props.children}</SomeTextStyle>;
   }
 }

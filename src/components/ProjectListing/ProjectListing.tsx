@@ -8,17 +8,24 @@ const ProjectListingStyle = styled.div`
   flex-direction: column;
 `;
 
+const ProjectImageStyle = styled.div`
+  display: flex;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+`;
+
+const AmountStyle = styled.div``;
+
 export class ProjectListing extends React.PureComponent<{}> {
   static defaultProps: ProjectListing["props"] = {};
 
   render() {
     return (
       <ProjectListingStyle>
-        <Placeholder description="Projectdetails">
-          <Placeholder description="ProjectImage" />
-          <ProjectInfo />
-          <Placeholder description="Amount" />
-        </Placeholder>
+        <ProjectImageStyle />
+        <ProjectInfo />
+        <AmountStyle>Amount</AmountStyle>
       </ProjectListingStyle>
     );
   }

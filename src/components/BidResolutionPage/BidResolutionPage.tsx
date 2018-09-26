@@ -8,7 +8,7 @@ import { CostDue } from "./CostDue/CostDue";
 import { UserContactInfo } from "./UserContactInfo/UserContactInfo";
 import { UserDetails } from "Components/UserDetails/UserDetails";
 import { PlainText } from "Components/PlainText/PlainText";
-import styled from "Styled-Components";
+import styled from "styled-components";
 const HeaderStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@ export class BidResolutionPage extends React.PureComponent<{}> {
         <CostDue />
         <ImageBar />
         <UserContactInfo />
-        <RateUserHereStyled />
+        <RateUserHereStyled>Rate User</RateUserHereStyled>
         <UserDetails />
       </HeaderStyled>
     );

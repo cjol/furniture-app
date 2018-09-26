@@ -6,6 +6,7 @@ const UserCredentialsStyle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-self: stretch;
 `;
 const UserCredentialsTitleStyle = styled.div`
   display: flex;

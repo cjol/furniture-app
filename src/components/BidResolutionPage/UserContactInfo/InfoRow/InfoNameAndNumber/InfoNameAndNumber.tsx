@@ -6,14 +6,15 @@ const NameAndPhoneNumberStyle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  align-items: center;
+  color: white;
 `;
 const NameStyle = styled.div`
-  display: flex;
   font: ${mainFont};
   font-size: 16px;
 `;
 const PhoneNumberStyle = styled.div`
-  display: flex;
   font-size: 14px;
 `;
 

@@ -7,8 +7,12 @@ const ImageStyle = styled.div`
   height: 100px;
   width: 100px;
 `;
-export class ProfileImage extends React.PureComponent<{}> {
-  static defaultProps: ProfileImage["props"] = {};
+export class ProfileImage extends React.PureComponent<{
+  image: string;
+}> {
+  static defaultProps: ProfileImage["props"] = {
+    image: "https://tyro.ug/logo.png"
+  };
 
   render() {
     return <ImageStyle />;

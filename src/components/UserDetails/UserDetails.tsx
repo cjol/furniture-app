@@ -13,7 +13,7 @@ const UserNameStyled = styled.div`
   border-radius: 30px;
   font-size: 14px;
   font: ${mainFont};
-  color: black;
+  color: white;
 `;
 const UserPictureStyled = styled.div`
   display: flex;

@@ -7,10 +7,10 @@ import styled from "styled-components";
 const AddBidDescriptionStyle = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
 `;
 
-const DescriptionFeildStyle = styled.div`
+const DescriptionFieldStyle = styled.div`
   display: flex;
   align-items: flex-start;
   flex-grow: 1;
@@ -24,10 +24,7 @@ export class AddBidDescription extends React.PureComponent<{}> {
       <AddBidDescriptionStyle>
         <Subheading />
         <PlainText />
-        <DescriptionFeildStyle>
-          Make sure your bid is submitted by describing what you will do and why
-          you are the best choice.
-        </DescriptionFeildStyle>
+        <DescriptionFieldStyle>Description goes here</DescriptionFieldStyle>
       </AddBidDescriptionStyle>
     );
   }

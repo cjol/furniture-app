@@ -18,10 +18,10 @@ export class ListingsInfo extends React.PureComponent<{}> {
   render() {
     return (
       <ListingsInfoStyle>
-        <ListingsTitleStyle />
+        <ListingsTitleStyle>Listings</ListingsTitleStyle>
         <ArrowDropUp />
         <ArrowDropDown />
-        <AvgBidStyle />
+        <AvgBidStyle>Avg. Bid</AvgBidStyle>
       </ListingsInfoStyle>
     );
   }

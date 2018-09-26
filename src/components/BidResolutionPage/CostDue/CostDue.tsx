@@ -17,14 +17,30 @@ const ProjectDueStyle = styled.div`
   justify-content: flex-end;
 `;
 
+const LabelStyle=styled.div`
+display:flex;
+flex-direction:row;
+`
+
+const ValueStyle=styled.div`
+display:flex;
+flex-direction:row;
+`
+
 export class CostDue extends React.PureComponent<{}> {
   static defaultProps: CostDue["props"] = {};
 
   render() {
     return (
       <CostDueStyle>
-        <ProjectCostStyle>text</ProjectCostStyle>
-        <ProjectDueStyle>text</ProjectDueStyle>
+        <ProjectCostStyle>
+         <LabelStyle/>
+         <ValueStyle/> 
+        </ProjectCostStyle>
+        <ProjectDueStyle>
+          <LabelStyle/>
+          <ValueStyle/> 
+        </ProjectDueStyle>
       </CostDueStyle>
     );
   }

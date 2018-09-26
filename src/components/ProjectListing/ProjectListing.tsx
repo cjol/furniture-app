@@ -5,7 +5,8 @@ import styled from "styled-components";
 
 const ProjectListingStyle = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
 `;
 
 const ProjectImageStyle = styled.div`

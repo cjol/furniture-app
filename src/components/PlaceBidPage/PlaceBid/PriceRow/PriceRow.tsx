@@ -1,15 +1,28 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
+import styled from "styled-components";
+const RowStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const PriceStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
+const PriceBidStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 export class PriceRow extends React.PureComponent<{}> {
   static defaultProps: PriceRow["props"] = {};
 
   render() {
     return (
-      <Placeholder orientation="row">
-        <Placeholder description="Price" />
-        <Placeholder description="PriceBid" />
-      </Placeholder>
+      <RowStyle>
+        <PriceStyle />
+        <PriceBidStyle />
+      </RowStyle>
     );
   }
 }

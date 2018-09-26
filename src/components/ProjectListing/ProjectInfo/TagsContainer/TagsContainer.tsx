@@ -1,16 +1,26 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
+import styled from "styled-components";
+
+const TagsContainerStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-grow: 1;
+`;
+const TagsLabelStyle = styled.div``;
+const TagStyle = styled.div``;
 
 export class TagsContainer extends React.PureComponent<{}> {
   static defaultProps: TagsContainer["props"] = {};
 
   render() {
     return (
-      <Placeholder description="Tags Container" orientation="row">
-        <Placeholder description="Tags: " />
-        <Placeholder description="Tag 1" />
-        <Placeholder description="Tag 2" />
-      </Placeholder>
+      <TagsContainerStyle>
+        <TagsLabelStyle>Tags:</TagsLabelStyle>
+        <TagStyle>Bed</TagStyle>
+        <TagStyle>Bedside Table</TagStyle>
+      </TagsContainerStyle>
     );
   }
 }

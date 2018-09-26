@@ -8,23 +8,33 @@ import { CostDue } from "./CostDue/CostDue";
 import { UserContactInfo } from "./UserContactInfo/UserContactInfo";
 import { UserDetails } from "Components/UserDetails/UserDetails";
 import { PlainText } from "Components/PlainText/PlainText";
-
+import styled from "styled-components";
+const HeaderStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const MatchFoundStyled = styled.div`
+  display: flex;
+`;
+const RateUserHereStyled = styled.div`
+  display: flex;
+`;
 export class BidResolutionPage extends React.PureComponent<{}> {
   static defaultProps: BidResolutionPage["props"] = {};
 
   render() {
     return (
-      <Placeholder description="Header" orientation="column">
+      <HeaderStyled>
         <AppHeader />
-        <Placeholder description="You've Found your match!" />
+        <MatchFoundStyled> You've Found your match!</MatchFoundStyled>
         <PlainText />
         <ProjectHeader />
         <CostDue />
         <ImageBar />
         <UserContactInfo />
-        <Placeholder description="Rate User Header" />
+        <RateUserHereStyled>Rate User</RateUserHereStyled>
         <UserDetails />
-      </Placeholder>
+      </HeaderStyled>
     );
   }
 }

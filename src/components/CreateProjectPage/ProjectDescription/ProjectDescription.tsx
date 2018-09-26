@@ -14,7 +14,7 @@ const ProjectDescriptionStyle = styled.div`
   align-items: stretch;
 `;
 
-const ProjectDescriptionFeildStyle = styled.div`
+const ProjectDescriptionFieldStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -27,10 +27,12 @@ export class ProjectDescription extends React.PureComponent<{}> {
     return (
       <ProjectDescriptionStyle>
         <Subheading />
-        <PlainText>Description Instructions</PlainText>
-        <ProjectDescriptionFeildStyle>
+        <PlainText>
           Make sure you include what the item is and the directions{" "}
-        </ProjectDescriptionFeildStyle>
+        </PlainText>
+        <ProjectDescriptionFieldStyle>
+          Description here
+        </ProjectDescriptionFieldStyle>
       </ProjectDescriptionStyle>
     );
   }

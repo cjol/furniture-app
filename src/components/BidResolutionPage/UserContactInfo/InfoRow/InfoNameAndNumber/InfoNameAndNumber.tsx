@@ -9,8 +9,14 @@ const NameAndPhoneNumberStyle = styled.div`
 const NameStyle = styled.div``;
 const PhoneNumberStyle = styled.div``;
 
-export class InfoNameAndNumber extends React.PureComponent<{}> {
-  static defaultProps: InfoNameAndNumber["props"] = {};
+export class InfoNameAndNumber extends React.PureComponent<{
+  name: string;
+  number: number;
+}> {
+  static defaultProps: InfoNameAndNumber["props"] = {
+    name: "Jonathan",
+    number: +256700187418
+  };
 
   render() {
     return (

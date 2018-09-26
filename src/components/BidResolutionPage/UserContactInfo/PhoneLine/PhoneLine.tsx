@@ -12,8 +12,8 @@ const PhoneLine2Styled = styled.div`
 const PhoneNo2Styled = styled.div`
   flex-grow: 1;
 `;
-export class PhoneLine extends React.PureComponent<{}> {
-  static defaultProps: PhoneLine["props"] = {};
+export class PhoneLine extends React.PureComponent<{ phoneline: string }> {
+  static defaultProps: PhoneLine["props"] = { phoneline: "+256 Phone Number " };
 
   render() {
     return (

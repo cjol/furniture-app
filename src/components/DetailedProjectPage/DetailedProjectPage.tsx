@@ -26,7 +26,7 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
         <ProjectHeader />
         <AboutBid />
         <ImageBar />
-        <PlainText />
+        <PlainText>Project Description</PlainText>
 
         <ActiveBids />
         <RectangularButton />

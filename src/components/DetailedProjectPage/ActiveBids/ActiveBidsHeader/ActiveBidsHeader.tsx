@@ -6,8 +6,14 @@ import styled from "styled-components";
 const ActiveBidsHeaderStyle = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: stretch;
+  flex-grow: 1;
 `;
 const ArrowsStyle = styled.div``;
+
+const SubheadingStyled = styled(Subheading)`
+  flex-grow: 1;
+`;
 
 export class ActiveBidsHeader extends React.PureComponent<{
   arrowDropDown: () => void;
@@ -21,7 +27,7 @@ export class ActiveBidsHeader extends React.PureComponent<{
   render() {
     return (
       <ActiveBidsHeaderStyle>
-        <Subheading />
+        <SubheadingStyled>Active Bid</SubheadingStyled>
         <ArrowsStyle>
           <ArrowDropDown />
           <ArrowDropUp />

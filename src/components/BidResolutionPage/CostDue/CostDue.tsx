@@ -2,10 +2,15 @@ import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
 
+import { mainFont, grey } from "@style";
+
 const CostDueStyle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  size: 15px;
+  color: ${grey};
+  font-family: ${mainFont};
 `;
 
 const ProjectCostStyle = styled.div`
@@ -21,11 +26,14 @@ const ProjectDueStyle = styled.div`
 const LabelStyle = styled.div`
   display: flex;
   flex-direction: row;
+  color: ${grey};
+  font-family: ${mainFont};
 `;
 
 const ValueStyle = styled.div`
   display: flex;
   flex-direction: row;
+  font-weight: bold;
 `;
 
 export class CostDue extends React.PureComponent<{}> {
@@ -35,11 +43,11 @@ export class CostDue extends React.PureComponent<{}> {
     return (
       <CostDueStyle>
         <ProjectCostStyle>
-          <LabelStyle>Price:</LabelStyle>
+          <LabelStyle>Price: </LabelStyle>
           <ValueStyle>XXX</ValueStyle>
         </ProjectCostStyle>
         <ProjectDueStyle>
-          <LabelStyle>Due:</LabelStyle>
+          <LabelStyle>Due: </LabelStyle>
           <ValueStyle>XXX</ValueStyle>
         </ProjectDueStyle>
       </CostDueStyle>

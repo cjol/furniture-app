@@ -1,11 +1,14 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
+import { mainColor } from "@style";
+import {mainFont} from "@style";
 
 const CostDueStyle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  size: 11px;
 `;
 
 const ProjectCostStyle = styled.div`
@@ -21,11 +24,15 @@ const ProjectDueStyle = styled.div`
 const LabelStyle = styled.div`
   display: flex;
   flex-direction: row;
+color:${mainColor};
+font-family:${mainFont};
 `;
 
 const ValueStyle = styled.div`
   display: flex;
   flex-direction: row;
+  color:${mainColor};
+font-family:${mainFont};
 `;
 
 export class CostDue extends React.PureComponent<{}> {

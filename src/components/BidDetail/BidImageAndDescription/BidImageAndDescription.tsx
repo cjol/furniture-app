@@ -20,7 +20,7 @@ export class BidImageAndDescription extends React.PureComponent<{}> {
     return (
       <BidDetailsStyle>
         <BidTextImageStyle />
-        <BidTextStyle />
+        <BidTextStyle >Bid Desription </BidTextStyle>
       </BidDetailsStyle>
     );
   }

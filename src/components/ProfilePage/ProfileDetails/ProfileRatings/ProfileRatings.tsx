@@ -13,8 +13,8 @@ const RatingsStyle = styled.div`
 const StarStyle = styled(Star)`
   color: ${greenMain};
 `;
-const StarBorderStyle = styled.div`
-  border-color: ${grey};
+const StarBorderStyle = styled(StarBorder)`
+  color: ${greenMain};
 `;
 export class ProfileRatings extends React.PureComponent<{}> {
   static defaultProps: ProfileRatings["props"] = {};

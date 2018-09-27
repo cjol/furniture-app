@@ -5,11 +5,12 @@ const BidDetailsStyle = styled.div`
   display: flex;
   flex-direction: row;
 `;
-const BidTextImageStyle = styled.div`
+const BidTextImageStyle = styled.div<{bidImage:string}>`
   justify-content: flex-start;
   width: 30px;
   height: 35px;
   background-size: cover;
+  background-image:url(${props=>{return props.bidImage;}});
 `;
 const BidTextStyle = styled.div``;
 
@@ -25,8 +26,8 @@ export class BidImageAndDescription extends React.PureComponent<{
   render() {
     return (
       <BidDetailsStyle>
-        <BidTextImageStyle />
-        <BidTextStyle>Bid Desription </BidTextStyle>
+        <BidTextImageStyle bidImage={this.props.bidImage}/>
+        <BidTextStyle>{this.props.bidDescriptionText}</BidTextStyle>
       </BidDetailsStyle>
     );
   }

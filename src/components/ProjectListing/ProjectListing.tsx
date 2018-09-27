@@ -34,8 +34,17 @@ const AmountStyle = styled.div`
   color: ${grey};
 `;
 
-export class ProjectListing extends React.PureComponent<{}> {
-  static defaultProps: ProjectListing["props"] = {};
+export class ProjectListing extends React.PureComponent<{
+  ProjectImagetitle:string;
+  ProjectInfoProps:ProjectInfo["props"];
+  Amounttitle:number;
+
+}> {
+  static defaultProps: ProjectListing["props"] = {
+    ProjectImagetitle:"Image Image",
+    ProjectInfoProps:ProjectInfo.defaultProps,
+    Amounttitle:1000,
+  };
 
   render() {
     return (

@@ -1,10 +1,5 @@
 import { Email } from "@material-ui/icons";
 import * as React from "react";
-<<<<<<< HEAD
-import { Call, Email } from "@material-ui/icons";
-import { Placeholder } from "Components/Placeholder";
-=======
->>>>>>> Optimise imports
 import styled from "styled-components";
 
 const EmailStyle = styled.div`

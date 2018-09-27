@@ -8,9 +8,14 @@ const TagsContainerStyle = styled.div`
   justify-content: flex-start;
   flex-grow: 1;
   font-size: 13px;
+  margin-top:4px;
 `;
-const TagsLabelStyle = styled.div``;
-const TagStyle = styled.div``;
+const TagsLabelStyle = styled.div`
+  margin-right: 4px;
+`;
+const TagStyle = styled.div`
+  margin-right: 2px;
+`;
 
 export class TagsContainer extends React.PureComponent<{}> {
   static defaultProps: TagsContainer["props"] = {};
@@ -19,8 +24,8 @@ export class TagsContainer extends React.PureComponent<{}> {
     return (
       <TagsContainerStyle>
         <TagsLabelStyle>Tags:</TagsLabelStyle>
-        <TagStyle>Bed</TagStyle>
-        <TagStyle>Bedside Table</TagStyle>
+        <TagStyle>Bed, </TagStyle>
+        <TagStyle>Bedside Table </TagStyle>
       </TagsContainerStyle>
     );
   }

@@ -5,11 +5,15 @@ import { EmailRow } from "./EmailRow/EmailRow";
 import { PhoneLine } from "./PhoneLine/PhoneLine";
 import { Address } from "./Address/Address";
 import styled from "styled-components";
+import { whiteButtonColor, normalBoxShadow } from "@style";
 
 const UserInfoStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  padding: 2px;
+  background-color: ${whiteButtonColor};
+  box-shadow: ${normalBoxShadow};
 `;
 
 export class UserContactInfo extends React.PureComponent<{

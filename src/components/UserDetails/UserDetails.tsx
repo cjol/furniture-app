@@ -14,11 +14,14 @@ const UserNameStyled = styled.div`
   font-size: 14px;
   font: ${mainFont};
   color: white;
+  margin-top:8px;
+  margin-Bottom;8px;
 `;
 const UserPictureStyled = styled.div`
   display: flex;
   height: 50px;
   width: 50px;
+  border-radius:50px;
 `;
 
 const RatingStarsStyled = styled.div`

@@ -8,14 +8,16 @@ import { mainFont, greenMain, grey } from "@style";
 const ListingsInfoStyle = styled.div`
   display: flex;
   font-family: ${mainFont};
-  flex-direction: column;
+  flex-direction: row;
   justify-content: stretch;
+  align-items: center;
 `;
 
 const ListingsTitleStyle = styled.div`
   font-size: 18px;
   color: ${greenMain};
   justify-content: flex-start;
+  flex-grow: 1;
 `;
 const AvgBidStyle = styled.div`
   font-size: 13px;

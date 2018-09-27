@@ -30,8 +30,8 @@ export class InfoNameAndNumber extends React.PureComponent<{
   render() {
     return (
       <NameAndPhoneNumberStyle>
-        <NameStyle>Carpenter Name</NameStyle>
-        <PhoneNumberStyle>+256 Phone Number</PhoneNumberStyle>
+        <NameStyle>{this.props.name}</NameStyle>
+        <PhoneNumberStyle>{this.props.number}</PhoneNumberStyle>
       </NameAndPhoneNumberStyle>
     );
   }

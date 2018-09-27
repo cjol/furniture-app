@@ -9,6 +9,7 @@ const RatingsStyle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top:16px;
 `;
 const StarStyle = styled(Star)`
   color: ${greenMain};

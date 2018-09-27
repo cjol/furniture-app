@@ -11,8 +11,18 @@ const IndividualBidStyle = styled.div`
   align-items: center;
 `;
 
-export class IndividualBid extends React.PureComponent<{}> {
-  static defaultProps: IndividualBid["props"] = {};
+export class IndividualBid extends React.PureComponent<{
+  activeBidprops: ActiveBidImage["props"];
+  bidProps: BidDetails["props"];
+  rectangularButton: (id: string) => void;
+  id: string;
+}> {
+  static defaultProps: IndividualBid["props"] = {
+    activeBidprops: ActiveBidImage.defaultProps,
+    bidProps: BidDetails.defaultProps,
+    rectangularButton: id => alert("Select"),
+    id: "100"
+  };
 
   render() {
     return (

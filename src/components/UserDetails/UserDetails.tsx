@@ -25,8 +25,16 @@ const RatingStarsStyled = styled.div`
   display: flex;
   flex-direction: row;
 `;
-export class UserDetails extends React.PureComponent<{}> {
-  static defaultProps: UserDetails["props"] = {};
+export class UserDetails extends React.PureComponent<{
+  image: string;
+  userName: string;
+  profileRatingsProps: ProfileRatings["props"];
+}> {
+  static defaultProps: UserDetails["props"] = {
+    image: "tyro.org/logo.png",
+    userName: "John Doe",
+    profileRatingsProps: ProfileRatings.defaultProps
+  };
 
   render() {
     return (

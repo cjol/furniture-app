@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { grey, mainFont, black } from "@style";
+import { whiteButtonColor, normalBoxShadow } from "@style";
 
 const AboutBidStyle = styled.div`
   display: flex;
@@ -8,10 +9,15 @@ const AboutBidStyle = styled.div`
   flex-wrap: wrap;
   font-size: 11px;
   font-family: ${mainFont};
+  background: none;
+  margin-top: 24px;
 `;
 const TagStyle = styled.div`
   display: flex;
   flex-direction: row;
+  background: ${whiteButtonColor};
+  padding: 10px;
+  box-shadow: ${normalBoxShadow};
 `;
 const LabelStyle = styled.div`
   color: ${grey};

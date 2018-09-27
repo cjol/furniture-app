@@ -43,23 +43,21 @@ export class UserCredentials extends React.PureComponent<{
     setEmail: email => alert("Inserting Email"),
     email: " ",
     setLocation: location => alert("Inserting location"),
-    location : " ",
-    setPhoneNumber : phoneNumber => alert("Inserting PhoneNumber"),
-    phoneNumber : " ",
+    location: " ",
+    setPhoneNumber: phoneNumber => alert("Inserting PhoneNumber"),
+    phoneNumber: " ",
     setPassword: password => alert("Inserting Password"),
-    password : " ",
+    password: " "
   };
 
   render() {
     return (
       <UserCredentialsStyle>
-        <UserCredentialsTitleStyle>FullName</UserCredentialsTitleStyle>
-        <UserCredentialsTitleStyle>Email Address</UserCredentialsTitleStyle>
-        <UserCredentialsTitleStyle>Location</UserCredentialsTitleStyle>
-        <UserCredentialsTitleStyle>PhoneNumber</UserCredentialsTitleStyle>
-        <UserCredentialsTitleStyle type="password">
-          Password
-        </UserCredentialsTitleStyle>
+        <UserCredentialsTitleStyle value="FullName" />
+        <UserCredentialsTitleStyle type="email" value="Email Address" />
+        <UserCredentialsTitleStyle value="Location" />
+        <UserCredentialsTitleStyle value="PhoneNumber" />
+        <UserCredentialsTitleStyle type="password" value="Password" />
       </UserCredentialsStyle>
     );
   }

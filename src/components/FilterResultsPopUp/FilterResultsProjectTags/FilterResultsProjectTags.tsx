@@ -30,16 +30,14 @@ export class FilterResultsProjectTags extends React.PureComponent<{
   };
 
   render() {
-    const ResultsProjectTags = this.props.projectTagProps.map(
-      projectTagProp => {
-        return <ProjectTag {...projectTagProp} />;
-      }
-    );
+    const projectTags = this.props.projectTagProps.map(projectTagProp => {
+      return <ProjectTag {...projectTagProp} />;
+    });
 
     return (
       <FilterResultsProjectTagsStyled>
         <ProjectTagSubHeadingStyle>ProjectTags</ProjectTagSubHeadingStyle>
-        <TagsContainer>{ResultsProjectTags}</TagsContainer>
+        <TagsContainer>{projectTags}</TagsContainer>
       </FilterResultsProjectTagsStyled>
     );
   }

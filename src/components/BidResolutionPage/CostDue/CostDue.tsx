@@ -1,4 +1,4 @@
-import { grey, mainFont } from "@style";
+import { grey, mainFont, normalBoxShadow,whiteButtonColor } from "@style";
 import * as React from "react";
 import styled from "styled-components";
 
@@ -9,6 +9,10 @@ const CostDueStyle = styled.div`
   size: 15px;
   color: ${grey};
   font-family: ${mainFont};
+  top-margin:24px;
+  background:${whiteButtonColor};
+  shadow:${normalBoxShadow};
+  padding:10px;
 `;
 
 const ProjectCostStyle = styled.div`

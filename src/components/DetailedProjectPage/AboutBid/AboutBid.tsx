@@ -22,12 +22,12 @@ const ValueStyle = styled.div`
 
 export class AboutBid extends React.PureComponent<{
   numberOfBids: number;
-  averageBidTime: string;
+  averageBidAmount: string;
   timeUntilEnd: string;
 }> {
   static defaultProps: AboutBid["props"] = {
     numberOfBids: 15,
-    averageBidTime: "20 minutes",
+    averageBidAmount: "500,000UGX",
     timeUntilEnd: "40 minutes"
   };
 
@@ -40,7 +40,7 @@ export class AboutBid extends React.PureComponent<{
         </TagStyle>
         <TagStyle>
           <LabelStyle>Average Bid: </LabelStyle>
-          <ValueStyle>{this.props.averageBidTime}</ValueStyle>
+          <ValueStyle>{this.props.averageBidAmount}</ValueStyle>
         </TagStyle>
         <TagStyle>
           <LabelStyle>Auction Closes in :</LabelStyle>

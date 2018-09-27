@@ -2,9 +2,15 @@ import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
 import { darkerGreen } from "@style";
-import { mainFont } from "@style";
+import { mainFont, greenMain,normalBoxShadow,squareButtonRadius } from "@style";
 const RectangularButtonStyle = styled.div`
   display: flex;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: ${greenMain};
+  box-shadow:${normalBoxShadow};
+  radius:${squareButtonRadius}
 `;
 const ButtonLabelStyle = styled.div`
   align-items: center;

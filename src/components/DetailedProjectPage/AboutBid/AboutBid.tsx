@@ -36,15 +36,15 @@ export class AboutBid extends React.PureComponent<{
       <AboutBidStyle>
         <TagStyle>
           <LabelStyle>Number of bids: </LabelStyle>
-          <ValueStyle>7</ValueStyle>
+          <ValueStyle>{this.props.numberOfBids}</ValueStyle>
         </TagStyle>
         <TagStyle>
           <LabelStyle>Average Bid: </LabelStyle>
-          <ValueStyle>500,000UGX</ValueStyle>
+          <ValueStyle>{this.props.averageBidTime}</ValueStyle>
         </TagStyle>
         <TagStyle>
           <LabelStyle>Auction Closes in :</LabelStyle>
-          <ValueStyle>7 days</ValueStyle>
+          <ValueStyle>{this.props.timeUntilEnd}</ValueStyle>
         </TagStyle>
       </AboutBidStyle>
     );

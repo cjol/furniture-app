@@ -19,7 +19,6 @@ const AddressStyle = styled.div`
   flex-direction: row;
   align-items: flex-start;
   color: ${grey};
-  text-decoration: underline;
 `;
 
 export class Address extends React.PureComponent<{

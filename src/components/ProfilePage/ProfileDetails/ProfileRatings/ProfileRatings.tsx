@@ -16,8 +16,15 @@ const StarStyle = styled(Star)`
 const StarBorderStyle = styled(StarBorder)`
   color: ${greenMain};
 `;
-export class ProfileRatings extends React.PureComponent<{}> {
-  static defaultProps: ProfileRatings["props"] = {};
+
+export class ProfileRatings extends React.PureComponent<{
+  onClick: (rating: number) => void;
+  rating: number;
+}> {
+  static defaultProps: ProfileRatings["props"] = {
+    onClick: rating => alert("Profile Rating"),
+    rating: 5
+  };
 
   render() {
     return (

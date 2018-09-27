@@ -35,15 +35,15 @@ const AmountStyle = styled.div`
 `;
 
 export class ProjectListing extends React.PureComponent<{
-  ProjectImagetitle:string;
-  ProjectInfoProps:ProjectInfo["props"];
-  Amounttitle:number;
-
+  projectImage: string;
+  projectInfoProps: ProjectInfo["props"];
+  amountTitle: number;
 }> {
   static defaultProps: ProjectListing["props"] = {
-    ProjectImagetitle:"Image Image",
-    ProjectInfoProps:ProjectInfo.defaultProps,
-    Amounttitle:1000,
+    projectImage: "https://tyrohq.com/apple-touch-icon.png",
+
+    projectInfoProps: ProjectInfo.defaultProps,
+    amountTitle: 1000
   };
 
   render() {

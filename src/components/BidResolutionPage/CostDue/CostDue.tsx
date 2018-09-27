@@ -48,11 +48,11 @@ export class CostDue extends React.PureComponent<{
       <CostDueStyle>
         <ProjectCostStyle>
           <LabelStyle>Price: </LabelStyle>
-          <ValueStyle>XXX</ValueStyle>
+          <ValueStyle>{this.props.price}</ValueStyle>
         </ProjectCostStyle>
         <ProjectDueStyle>
           <LabelStyle>Due: </LabelStyle>
-          <ValueStyle>XXX</ValueStyle>
+          <ValueStyle>{this.props.dueDate}</ValueStyle>
         </ProjectDueStyle>
       </CostDueStyle>
     );

@@ -8,13 +8,13 @@ import { PlainText } from "Components/PlainText/PlainText";
 import { ActiveBidsHeader } from "./ActiveBidsHeader/ActiveBidsHeader";
 import { IndividualBid } from "./IndividualBid/IndividualBid";
 import styled from "styled-components";
-import { whiteButtonColor, normalBoxShadow } from "@style";
+import { white, normalBoxShadow } from "@style";
 
 const ActiveBidsStyle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: ${whiteButtonColor};
+  background-color: ${white};
   box-shadow: ${normalBoxShadow};
 `;
 

@@ -28,23 +28,23 @@ const ProjectDescriptionFieldStyle = styled.textarea`
 
 export class ProjectDescription extends React.PureComponent<{
   description: string;
-  setDescription: (decsriptionInfo: String) => void;
+  setDescription: (decsriptionInfo: any) => void;
 }> {
   static defaultProps: ProjectDescription["props"] = {
     description:"Make sure you include what the item is and the directions",
     setDescription: descriptionInfo =>
-      alert("Enter the description of the item you want")
+      alert("Enter the description of the item you want" + descriptionInfo)
   };
 
   render() {
     return (
       <ProjectDescriptionStyle>
         <Subheading />
-        <PlainText>
+        <PlainText >
           Make sure you include what the item is and the directions{" "}
         </PlainText>
-        <ProjectDescriptionFieldStyle>
-          Description here
+        <ProjectDescriptionFieldStyle onChange={this.props.setDescription}>
+        {this.props.description}
         </ProjectDescriptionFieldStyle>
       </ProjectDescriptionStyle>
     );

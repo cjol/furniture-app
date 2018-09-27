@@ -4,9 +4,12 @@ import { BidImageAndDescription } from "./BidImageAndDescription/BidImageAndDesc
 import { Popup } from "Components/Popup/Popup";
 export class BidDetail extends React.PureComponent<{
   imageAndDescriptionProp: BidImageAndDescription["props"];
+  onClick:(supplierId:string,)=> void;
+
 }> {
   static defaultProps: BidDetail["props"] = {
-    imageAndDescriptionProp: BidImageAndDescription.defaultProps
+    imageAndDescriptionProp: BidImageAndDescription.defaultProps,
+    onClick:(supplierId)=> alert("Selecting a supplier")
   };
 
   render() {

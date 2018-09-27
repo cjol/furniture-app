@@ -10,10 +10,10 @@ const ActiveBidImageStyle = styled.div`
   border: solid;
 `;
 
-export class ActiveBidImage extends React.PureComponent<{}> {
-  static defaultProps: ActiveBidImage["props"] = {};
+export class ActiveBidImage extends React.PureComponent<{image:string;}> {
+  static defaultProps: ActiveBidImage["props"] = {image:"www.tyrohq.com/logo.png"};
 
   render() {
-    return <ActiveBidImageStyle>Image</ActiveBidImageStyle>;
+    return <ActiveBidImageStyle>{this.props.image}</ActiveBidImageStyle>;
   }
 }

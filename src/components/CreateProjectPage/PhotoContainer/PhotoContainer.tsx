@@ -30,7 +30,7 @@ export class PhotoContainer extends React.PureComponent<{
           <Subheading>Upload Photos</Subheading>
           <PlainText>Instructions go here</PlainText>
         </PhotoContainerInstructionsStyled>
-        <RoundButton>
+        <RoundButton onClick={this.props.uploadPhoto}>
           <Add />
         </RoundButton>
       </PhotoContainerStyled>

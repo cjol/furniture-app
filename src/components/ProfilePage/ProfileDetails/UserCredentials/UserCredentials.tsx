@@ -16,8 +16,9 @@ const UserCredentialsTitleStyle = styled.div`
   font: ${mainFont};
   font-size: 16px;
   margin-top: 24;
+  border: none;
   border-bottom: 2px;
-  border-style: solid;
+  border-bottom-style: solid;
   padding-bottom: 16px;
   border-color: ${greenMain};
 `;

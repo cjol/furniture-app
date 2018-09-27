@@ -8,7 +8,7 @@ import { black } from "@style";
 const ProjectInfoStyle = styled.div`
   display: flex;
   flex-direction: column;
-  margin:8px;
+  margin: 8px;
 `;
 const ProjectTitleStyle = styled.div`
   display: flex;
@@ -16,11 +16,17 @@ const ProjectTitleStyle = styled.div`
   font-size: 18px;
   color: ${black};
   font-weight: bold;
-  margin-bottom:4px;
+  margin-bottom: 4px;
 `;
 
-export class ProjectInfo extends React.PureComponent<{}> {
-  static defaultProps: ProjectInfo["props"] = {};
+export class ProjectInfo extends React.PureComponent<{
+  title: string;
+  tagsContainerProps: TagsContainer["props"];
+}> {
+  static defaultProps: ProjectInfo["props"] = {
+    title: "Project Title",
+    tagsContainerProps: TagsContainer.defaultProps
+  };
 
   render() {
     return (

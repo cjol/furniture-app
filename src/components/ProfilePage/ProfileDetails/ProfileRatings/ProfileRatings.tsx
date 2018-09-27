@@ -9,14 +9,10 @@ const RatingsStyle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top:16px;
+  margin-top: 16px;
 `;
-const StarStyle = styled(Star)`
-  color: ${greenMain};
-`;
-const StarBorderStyle = styled(StarBorder)`
-  color: ${greenMain};
-`;
+const StarStyle = styled(Star)``;
+const StarBorderStyle = styled(StarBorder)``;
 
 export class ProfileRatings extends React.PureComponent<{
   onClick: (rating: number) => void;

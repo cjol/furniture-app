@@ -4,12 +4,14 @@ import { ChevronLeft } from "@material-ui/icons";
 import { ChevronRight } from "@material-ui/icons";
 import styled from "styled-components";
 import { CheckBox } from "@material-ui/icons";
+import { grey } from "@style";
 const ImageBarStyle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: stretch;
   align-items: center;
-  margin-top: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 `;
 
 const ChevronStyle = styled.div`
@@ -24,13 +26,19 @@ const ImageStyle = styled.div<{ image: string }>`
   height: 50px;
   background-image: url(${props => props.image});
   margin: 4px;
+  height: 116px;
+  width: 116px;
+  background-size: cover;
+  border-style: solid;
+  border-width: 1px;
+  border-color: ${grey};
 `;
 
 const ChevronLeftCheckBoxStyle = styled(ChevronLeft)`
-  color: grey;
+  color: ${grey};
 `;
 const ChevronRightCheckBoxStyle = styled(ChevronRight)`
-  color: grey;
+  color: ${grey};
 `;
 
 export class ImageBar extends React.PureComponent<{

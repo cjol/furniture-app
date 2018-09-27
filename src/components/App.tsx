@@ -39,8 +39,8 @@ const AppStyle = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: stretch;
+  align-items: stretch;
 `;
 
 export default class App extends React.Component {

@@ -10,5 +10,4 @@ export const PlainText = styled.div`
   font-size: 13px;
   color: ${grey};
   text-align: justify;
-  line-spacing: 2em;
 `;

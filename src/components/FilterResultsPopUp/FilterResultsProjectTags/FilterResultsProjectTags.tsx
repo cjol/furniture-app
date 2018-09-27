@@ -15,7 +15,7 @@ const TagsContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 `;
 export class FilterResultsProjectTags extends React.PureComponent<{
   projectTagProps: ProjectTag["props"][];

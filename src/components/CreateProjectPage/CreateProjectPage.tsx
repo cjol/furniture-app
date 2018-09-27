@@ -15,7 +15,15 @@ import { TaggingProject } from "./TaggingProject/TaggingProject";
 const CreateProjectPageStyle = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 24px;
+`;
+
+const PageContents = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   background-color: ${white};
 `;
 
@@ -65,23 +73,25 @@ export class CreateProjectPage extends React.PureComponent<{
                 uploadPhotoProps={toggleUploadPopup}
               />
               <AppHeader {...this.props.appHeaderProps} />
-              <ProjectHeader />
-              <PhotoContainer uploadPhoto={toggleUploadPopup} />
-              <ImageBar
-                image={selectedPhotoUrls}
-                chevronLeft={goLeft}
-                chevronRight={goRight}
-              />
-              <ProjectDescription
-                description={description}
-                setDescription={setDescription}
-              />
-              <TaggingProject
-                filterResultsProps={{ projectTagProps: projectTags }}
-              />
-              <RectangularButton onClick={this.props.onClick}>
-                POST PROJECT
-              </RectangularButton>
+              <PageContents>
+                <ProjectHeader />
+                <PhotoContainer uploadPhoto={toggleUploadPopup} />
+                <ImageBar
+                  image={selectedPhotoUrls}
+                  chevronLeft={goLeft}
+                  chevronRight={goRight}
+                />
+                <ProjectDescription
+                  description={description}
+                  setDescription={setDescription}
+                />
+                <TaggingProject
+                  filterResultsProps={{ projectTagProps: projectTags }}
+                />
+                <RectangularButton onClick={this.props.onClick}>
+                  POST PROJECT
+                </RectangularButton>
+              </PageContents>
             </CreateProjectPageStyle>
           );
         }}

@@ -9,6 +9,11 @@ const ProjectHeaderStyle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+`;
+const UserDetailsContainer = styled.div`
   padding: 16px;
   background-color: ${greenMain};
 `;
@@ -20,7 +25,9 @@ export class ProjectHeader extends React.PureComponent<{}> {
     return (
       <ProjectHeaderStyle>
         <ProjectTitle />
-        <UserDetails />
+        <UserDetailsContainer>
+          <UserDetails />
+        </UserDetailsContainer>
       </ProjectHeaderStyle>
     );
   }

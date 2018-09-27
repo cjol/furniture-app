@@ -13,7 +13,6 @@ const UserNameStyled = styled.div`
   border-radius: 30px;
   font-size: 14px;
   font: ${mainFont};
-  color: white;
   margin-top:8px;
   margin-Bottom;8px;
 `;

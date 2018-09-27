@@ -5,7 +5,10 @@ import styled from "styled-components";
 const CostDueStyle = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-grow: 1;
+  justify-content: stretch;
+  padding-top: 12px;
+  padding-bottom: 12px;
 `;
 
 const ProjectInfoStyle = styled.div`
@@ -14,10 +17,15 @@ const ProjectInfoStyle = styled.div`
   font-size: 15px;
   color: ${grey};
   font-family: ${mainFont};
-  margin-top: 24px;
   background: ${whiteButtonColor};
   box-shadow: ${normalBoxShadow};
   padding: 10px;
+  justify-content: stretch;
+  flex-grow: 1;
+  width: 40%;
+  margin: 12px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 `;
 
 const LabelStyle = styled.div`
@@ -25,6 +33,7 @@ const LabelStyle = styled.div`
   flex-direction: row;
   color: ${grey};
   font-family: ${mainFont};
+  margin-right: 8px;
 `;
 
 const ValueStyle = styled.div`
@@ -33,6 +42,12 @@ const ValueStyle = styled.div`
   font-weight: bold;
 `;
 
+const ContentsStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-grow: 1;
+`;
 export class CostDue extends React.PureComponent<{
   price: string;
   dueDate: string;
@@ -46,12 +61,16 @@ export class CostDue extends React.PureComponent<{
     return (
       <CostDueStyle>
         <ProjectInfoStyle>
-          <LabelStyle>Price: </LabelStyle>
-          <ValueStyle>{this.props.price}</ValueStyle>
+          <ContentsStyle>
+            <LabelStyle>Price: </LabelStyle>
+            <ValueStyle>{this.props.price}</ValueStyle>
+          </ContentsStyle>
         </ProjectInfoStyle>
         <ProjectInfoStyle>
-          <LabelStyle>Due: </LabelStyle>
-          <ValueStyle>{this.props.dueDate}</ValueStyle>
+          <ContentsStyle>
+            <LabelStyle>Due: </LabelStyle>
+            <ValueStyle>{this.props.dueDate}</ValueStyle>
+          </ContentsStyle>
         </ProjectInfoStyle>
       </CostDueStyle>
     );

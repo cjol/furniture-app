@@ -16,8 +16,22 @@ const PageContentStyle = styled.div`
   flex-direction: column;
 `;
 
-export class DetailedProjectPage extends React.PureComponent<{}> {
-  static defaultProps: DetailedProjectPage["props"] = {};
+export class DetailedProjectPage extends React.PureComponent<{
+  appHeaderProps: AppHeader["props"];
+  projectHeaderProps: ProjectHeader["props"];
+  aboutBidProps: AboutBid["props"];
+  imageBarProps: ImageBar["props"];
+  activeBidsProps: ActiveBids["props"];
+  description: string;
+}> {
+  static defaultProps: DetailedProjectPage["props"] = {
+    appHeaderProps: AppHeader.defaultProps,
+    projectHeaderProps: ProjectHeader.defaultProps,
+    aboutBidProps: AboutBid.defaultProps,
+    imageBarProps: ImageBar.defaultProps,
+    activeBidsProps: ActiveBids.defaultProps,
+    description: "Project description goes here"
+  };
 
   render() {
     return (

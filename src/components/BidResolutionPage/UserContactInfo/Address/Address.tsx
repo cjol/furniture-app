@@ -32,7 +32,7 @@ export class Address extends React.PureComponent<{
     return (
       <AddressContentStyle>
         <AddressHeadingStyle>ADDRESS</AddressHeadingStyle>
-        <AddressStyle>address</AddressStyle>
+        <AddressStyle>{this.props.address}</AddressStyle>
       </AddressContentStyle>
     );
   }

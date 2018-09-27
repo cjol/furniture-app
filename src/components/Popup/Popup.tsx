@@ -19,9 +19,11 @@ const PopupContentsStyle = styled.div`
 `;
 
 export class Popup extends React.PureComponent<{
+  show: boolean;
   headerProps: Header["props"];
 }> {
   static defaultProps: Popup["props"] = {
+    show: true,
     headerProps: Header.defaultProps
   };
 

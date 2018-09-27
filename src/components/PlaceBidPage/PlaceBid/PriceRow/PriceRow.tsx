@@ -9,6 +9,7 @@ import { greenMain } from "@style";
 const RowStyle = styled.div`
   display: flex;
   flex-direction: row;
+  padding-top: 12px;
 `;
 const PriceStyle = styled.div`
   display: flex;

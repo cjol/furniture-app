@@ -1,10 +1,16 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
-import { mainFont } from "@style";
+import { mainFont, greenMain } from "@style";
 
 const PhotoUrlStyle = styled.input`
   font-family: ${mainFont};
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: ${greenMain};
+  padding-bottom: 12px;
+  padding-top: 6px;
+  margin-bottom: 12px;
 `;
 
 export class PhotoUrl extends React.PureComponent<{

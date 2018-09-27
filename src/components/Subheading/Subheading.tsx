@@ -11,4 +11,5 @@ export const Subheading = styled.div`
   font-size: 18px;
   padding-top: 12px;
   padding-bottom: 12px;
+  flex-grow: 1;
 `;

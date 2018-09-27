@@ -16,6 +16,12 @@ const ProfilePageHeaderStyle = styled.div`
   background-color: ${white};
 `;
 
+const PageContents = styled.div`
+  padding: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: ${white};
+`;
 export class ProfilePage extends React.PureComponent<{}> {
   static defaultProps: ProfilePage["props"] = {};
 
@@ -41,25 +47,27 @@ export class ProfilePage extends React.PureComponent<{}> {
           return (
             <ProfilePageHeaderStyle>
               <AppHeader />
-              <ProfileDetails
-                profileImageprops={{ image: pictureURL }}
-                userCredentialsprops={{
-                  isEditMode: true,
-                  fullName,
-                  setFullName,
-                  pictureURL,
-                  setPictureURL,
-                  email,
-                  setEmail,
-                  phoneNumber,
-                  setPhoneNumber,
-                  location,
-                  setLocation
-                }}
-              />
-              <ProfileEditSave />
-              <ActiveProjectBids />
-              <SuppliersSelected />
+              <PageContents>
+                <ProfileDetails
+                  profileImageprops={{ image: pictureURL }}
+                  userCredentialsprops={{
+                    isEditMode: true,
+                    fullName,
+                    setFullName,
+                    pictureURL,
+                    setPictureURL,
+                    email,
+                    setEmail,
+                    phoneNumber,
+                    setPhoneNumber,
+                    location,
+                    setLocation
+                  }}
+                />
+                <ProfileEditSave />
+                <ActiveProjectBids />
+                <SuppliersSelected />
+              </PageContents>
             </ProfilePageHeaderStyle>
           );
         }}

@@ -4,12 +4,17 @@ import { ProfileImage } from "./ProfileImage/ProfileImage";
 import { ProfileRatings } from "./ProfileRatings/ProfileRatings";
 import { UserCredentials } from "./UserCredentials/UserCredentials";
 import styled from "styled-components";
+import { greenMain } from "@style";
+
 const ProfileDetailsStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  padding-top: 12px;
+`;
+const RatingsContainer = styled.div`
+  color: ${greenMain};
+  padding-bottom: 12px;
 `;
 
 export class ProfileDetails extends React.PureComponent<{
@@ -27,7 +32,9 @@ export class ProfileDetails extends React.PureComponent<{
     return (
       <ProfileDetailsStyle>
         <ProfileImage />
-        <ProfileRatings />
+        <RatingsContainer>
+          <ProfileRatings />
+        </RatingsContainer>
         <UserCredentials />
       </ProfileDetailsStyle>
     );

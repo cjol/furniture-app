@@ -9,7 +9,8 @@ const AddBidDescriptionStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin-top: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 `;
 
 const DescriptionFieldStyle = styled.textarea`
@@ -27,6 +28,9 @@ const DescriptionFieldStyle = styled.textarea`
   border-bottom-color: ${greenMain};
 `;
 
+const TextContainer = styled.div`
+  padding-bottom: 8px;
+`;
 export class AddBidDescription extends React.PureComponent<{
   description: string;
   setDescription: (s: string) => void;
@@ -41,8 +45,16 @@ export class AddBidDescription extends React.PureComponent<{
     return (
       <AddBidDescriptionStyle>
         <Subheading>Bid Description</Subheading>
-        <PlainText>Description instructions go here</PlainText>
-        <DescriptionFieldStyle>Description goes here</DescriptionFieldStyle>
+        <TextContainer>
+          <PlainText>
+            Make sure your bid gets notice. Include a description of the work
+            that you’ll do and why you’re the best choice.
+          </PlainText>
+        </TextContainer>
+        <DescriptionFieldStyle>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna wirl
+        </DescriptionFieldStyle>
       </AddBidDescriptionStyle>
     );
   }

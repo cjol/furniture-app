@@ -20,7 +20,7 @@ export class BidSubmitted extends React.PureComponent<{
 
   render() {
     return (
-      <Popup>
+      <Popup {...this.props.popup}>
         <TextContainer>
           <PlainText>
             Congratulations you have successfully bid on “Project Title”. You

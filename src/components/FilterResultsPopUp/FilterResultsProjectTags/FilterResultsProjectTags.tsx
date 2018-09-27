@@ -10,6 +10,8 @@ const FilterResultsProjectTagsStyled = styled.div`
 const ProjectTagSubHeadingStyle = styled.div`
   font-size: 18px;
   color: ${black};
+  padding-bottom: 12px;
+  font-weight: bold;
 `;
 const TagsContainer = styled.div`
   display: flex;

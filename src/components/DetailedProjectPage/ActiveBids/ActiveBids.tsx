@@ -1,16 +1,11 @@
-import * as React from "react";
-import { Placeholder } from "Components/Placeholder";
-import { ArrowDropDown } from "@material-ui/icons";
-import { ArrowDropUp } from "@material-ui/icons";
+import { normalBoxShadow, white } from "@style";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
-import { Subheading } from "Components/Subheading/Subheading";
-import { PlainText } from "Components/PlainText/PlainText";
+import * as React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+
 import { ActiveBidsHeader } from "./ActiveBidsHeader/ActiveBidsHeader";
 import { IndividualBid } from "./IndividualBid/IndividualBid";
-import styled from "styled-components";
-import { white, normalBoxShadow } from "@style";
-
-import { Link } from "react-router-dom";
 
 const ActiveBidsStyle = styled.div`
   display: flex;
@@ -18,6 +13,13 @@ const ActiveBidsStyle = styled.div`
   justify-content: flex-start;
   background-color: ${white};
   box-shadow: ${normalBoxShadow};
+  padding: 24px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+`;
+
+const StyledLink = styled(Link)`
+  align-self: center;
 `;
 
 export class ActiveBids extends React.PureComponent<{
@@ -33,7 +35,7 @@ export class ActiveBids extends React.PureComponent<{
       IndividualBid.defaultProps
     ],
     activeBidProps: ActiveBidsHeader.defaultProps,
-    onClick: () => alert("Placing Bid"),
+    onClick: () => {},
     projectID: "123"
   };
 
@@ -48,11 +50,11 @@ export class ActiveBids extends React.PureComponent<{
 
         {bids}
 
-        <Link to={"/project/" + this.props.projectID + "/bid"}>
+        <StyledLink to={"/project/" + this.props.projectID + "/bid"}>
           <RectangularButton onClick={this.props.onClick}>
-            Place Bid
+            PLACE BID
           </RectangularButton>
-        </Link>
+        </StyledLink>
       </ActiveBidsStyle>
     );
   }

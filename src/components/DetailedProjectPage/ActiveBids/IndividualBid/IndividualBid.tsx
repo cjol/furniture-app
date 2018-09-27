@@ -10,9 +10,14 @@ const IndividualBidStyle = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 16px;
+  padding: 8px;
+  flex-grow: 1;
 `;
-
+const SmallButton = styled(RectangularButton)`
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 0px;
+`;
 export class IndividualBid extends React.PureComponent<{
   activeBidprops: ActiveBidImage["props"];
   bidProps: BidDetails["props"];
@@ -34,11 +39,11 @@ export class IndividualBid extends React.PureComponent<{
         <ActiveBidImage {...this.props.activeBidprops} />
         <BidDetails {...this.props.bidProps} />
         <Link to={"/project/" + this.props.projectID + "/matched"}>
-          <RectangularButton
-            onClick={() => this.props.rectangularButton(this.props.id)}
-          >
-            SELECT
-          </RectangularButton>
+        <SmallButton
+          onClick={() => this.props.rectangularButton(this.props.id)}
+        >
+          SELECT
+        </SmallButton>
         </Link>
       </IndividualBidStyle>
     );

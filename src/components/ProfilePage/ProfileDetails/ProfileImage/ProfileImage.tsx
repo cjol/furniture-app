@@ -4,8 +4,8 @@ import { Placeholder } from "Components/Placeholder";
 
 const ImageStyle = styled.div`
   display: flex;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   border-radius: 100px;
   background-image: url(https://tyrohq.com/apple-touch-icon.png);
   background-size: cover;

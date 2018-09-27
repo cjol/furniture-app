@@ -6,6 +6,7 @@ import { greenMain } from "@style";
 const TimeRowStyle = styled.div`
   display: flex;
   flex-direction: row;
+  padding-top: 12px;
 `;
 const TimeStyle = styled.div`
   display: flex;

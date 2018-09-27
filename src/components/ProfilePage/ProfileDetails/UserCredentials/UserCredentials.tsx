@@ -8,6 +8,8 @@ const UserCredentialsStyle = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-self: stretch;
+  padding-top: 12px;
+  padding-bottom: 12px;
 `;
 const UserCredentialsTitleStyle = styled.input`
   display: flex;
@@ -15,7 +17,7 @@ const UserCredentialsTitleStyle = styled.input`
   justify-content: flex-start;
   font: ${mainFont};
   font-size: 16px;
-  margin-top: 24;
+  margin-bottom: 16px;
   border: none;
   border-bottom: 2px;
   border-bottom-style: solid;
@@ -57,11 +59,11 @@ export class UserCredentials extends React.PureComponent<{
   render() {
     return (
       <UserCredentialsStyle>
-        <UserCredentialsTitleStyle value="FullName" />
+        <UserCredentialsTitleStyle value="Full Name" />
         <UserCredentialsTitleStyle value="Picture URL" />
         <UserCredentialsTitleStyle type="email" value="Email Address" />
         <UserCredentialsTitleStyle value="Location" />
-        <UserCredentialsTitleStyle value="PhoneNumber" />
+        <UserCredentialsTitleStyle value="Phone Number" />
         {/* <UserCredentialsTitleStyle type="password" value="Password" /> */}
       </UserCredentialsStyle>
     );

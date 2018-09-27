@@ -11,7 +11,8 @@ const ListingsInfoStyle = styled.div`
   flex-direction: row;
   justify-content: stretch;
   align-items: center;
-  margin-top: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 `;
 
 const ListingsTitleStyle = styled.div`
@@ -40,9 +41,9 @@ export class ListingsInfo extends React.PureComponent<{}> {
     return (
       <ListingsInfoStyle>
         <ListingsTitleStyle>Listings</ListingsTitleStyle>
-        <ArrowDropUpStyle />
+        {/* <ArrowDropUpStyle />
         <ArrowDropDownStyle />
-        <AvgBidStyle>Avg. Bid</AvgBidStyle>
+        <AvgBidStyle>Avg. Bid</AvgBidStyle> */}
       </ListingsInfoStyle>
     );
   }

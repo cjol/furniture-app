@@ -20,19 +20,27 @@ const ProjectListingStyle = styled.div`
   background-color: ${whiteButtonColor};
   box-shadow: ${normalBoxShadow};
   border-radius: ${squareButtonRadius};
+  margin-top: 6px;
+  margin-bottom: 6px;
 `;
 
 const ProjectImageStyle = styled.div`
   display: flex;
-  min-width: 50px;
-  min-height: 50px;
-  flex-grow: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-image: url(https://tyrohq.com/apple-touch-icon.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-grow: 0;
 `;
 
 const AmountStyle = styled.div`
   font-size: 18px;
   font-weight: bold;
   color: ${grey};
+  padding-right: 8px;
+  padding-left: 8px;
 `;
 
 export class ProjectListing extends React.PureComponent<{

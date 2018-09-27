@@ -31,7 +31,7 @@ export class UserDetails extends React.PureComponent<{
   profileRatingsProps: ProfileRatings["props"];
 }> {
   static defaultProps: UserDetails["props"] = {
-    image: "tyro.org/logo.png",
+    image: "https://tyrohq.com/apple-touch-icon.png",
     userName: "John Doe",
     profileRatingsProps: ProfileRatings.defaultProps
   };

@@ -6,11 +6,15 @@ import { AddBidDescription } from "./AddBidDescription/AddBidDescription";
 import { PriceRow } from "./PriceRow/PriceRow";
 import { TimeRow } from "./TimeRow/TimeRow";
 import styled from "styled-components";
-import { mainFont } from "@style";
+import { mainFont, greenMain, whiteButtonColor, normalBoxShadow } from "@style";
+
 const PlaceBidStyle = styled.div`
   display: flex;
   flex-direction: column;
-  font-size:12px;
+  font-size: 12px;
+  padding: 24px;
+  background-color: ${whiteButtonColor};
+  box-shadow: ${normalBoxShadow};
 `;
 
 const PlaceBidHeaderStyle = styled.div`
@@ -19,7 +23,9 @@ const PlaceBidHeaderStyle = styled.div`
   align-items: center;
   font-size: 24px;
   font: ${mainFont};
-  color:grey;
+  color: grey;
+  padding: 16px;
+  background-color: ${greenMain};
 `;
 
 export class PlaceBid extends React.PureComponent<{

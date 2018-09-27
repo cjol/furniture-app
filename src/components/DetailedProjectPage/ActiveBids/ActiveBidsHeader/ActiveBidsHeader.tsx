@@ -44,8 +44,8 @@ export class ActiveBidsHeader extends React.PureComponent<{
       <ActiveBidsHeaderStyle>
         <SubheadingStyled>Active Bid</SubheadingStyled>
         <ArrowsStyle>
-          <ArrowDropDownStyle />
-          <ArrowDropUpStyle />
+          <ArrowDropDownStyle  onClick={this.props.arrowDropDown}/>
+          <ArrowDropUpStyle onClick={this.props.arrowDropDown} />
         </ArrowsStyle>
       </ActiveBidsHeaderStyle>
     );

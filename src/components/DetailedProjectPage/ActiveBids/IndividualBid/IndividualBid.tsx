@@ -9,6 +9,7 @@ const IndividualBidStyle = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 16px;
 `;
 
 export class IndividualBid extends React.PureComponent<{
@@ -27,9 +28,13 @@ export class IndividualBid extends React.PureComponent<{
   render() {
     return (
       <IndividualBidStyle>
-        <ActiveBidImage {...this.props.activeBidprops}/>
-        <BidDetails {...this.props.bidProps}/>
-        <RectangularButton onClick={() => this.props.rectangularButton(this.props.id)}>SELECT</RectangularButton>
+        <ActiveBidImage {...this.props.activeBidprops} />
+        <BidDetails {...this.props.bidProps} />
+        <RectangularButton
+          onClick={() => this.props.rectangularButton(this.props.id)}
+        >
+          SELECT
+        </RectangularButton>
       </IndividualBidStyle>
     );
   }

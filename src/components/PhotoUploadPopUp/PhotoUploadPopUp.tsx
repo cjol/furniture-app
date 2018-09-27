@@ -7,7 +7,7 @@ import { PhotoUrl } from "./PhotoUrl/PhotoUrl";
 import{CheckBox} from "@material-ui/icons";
 import styled from "styled-components";
 const AddCheckBoxStyle =styled(Add)`
-color:grey;
+color:darkgrey;
 `;
 export class PhotoUploadPopUp extends React.PureComponent<{}> {
   static defaultProps: PhotoUploadPopUp["props"] = {};

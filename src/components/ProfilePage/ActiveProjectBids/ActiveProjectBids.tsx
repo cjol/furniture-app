@@ -10,8 +10,15 @@ const ActiveProjectBidsStyle = styled.div`
   align-items: strech;
 `;
 
-export class ActiveProjectBids extends React.PureComponent<{}> {
-  static defaultProps: ActiveProjectBids["props"] = {};
+export class ActiveProjectBids extends React.PureComponent<{
+  projectListingProps: ProjectListing["props"][];
+}> {
+  static defaultProps: ActiveProjectBids["props"] = {
+    projectListingProps: [
+      ProjectListing.defaultProps,
+      ProjectListing.defaultProps
+    ]
+  };
 
   render() {
     return (

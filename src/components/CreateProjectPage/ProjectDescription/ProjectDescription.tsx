@@ -25,8 +25,9 @@ const ProjectDescriptionFieldStyle = styled.textarea`
   font-size: 13px;
   color: ${black};
   text-align: justify;
-  border-block-start-style: solid;
-  border-bottom: 2px;
+  border: none;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
   border-bottom-color: ${greenMain};
   padding-bottom: 10px;
 `;

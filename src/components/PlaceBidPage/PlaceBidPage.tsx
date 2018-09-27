@@ -17,8 +17,12 @@ const PageStyle = styled.div`
   background-color: ${white};
 `;
 
-export class PlaceBidPage extends React.PureComponent<{}> {
-  static defaultProps: PlaceBidPage["props"] = {};
+export class PlaceBidPage extends React.PureComponent<{
+  placebidProps: PlaceBid["props"];
+}> {
+  static defaultProps: PlaceBidPage["props"] = {
+    placebidProps: PlaceBid.defaultProps
+  };
 
   render() {
     return (

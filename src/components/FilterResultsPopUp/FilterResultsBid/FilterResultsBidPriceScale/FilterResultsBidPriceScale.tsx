@@ -1,6 +1,16 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
+import { grey } from "@style";
+import { globalAgent } from "https";
+
+const BidPriceScaleTextStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const BidPricesRangestyle=styled.div`
+color: ${grey};
+  font-size: 11px;`;
 const FilterResultsBidPriceScaleStyle = styled.div`
   display: flex;
   flex-direction: row;
@@ -17,7 +27,7 @@ const CircleStyle = styled.div`
 const FilledBarStyle = styled.div`
   flex-grow: 1;
 `;
-
+globalAgent
 export class FilterResultsBidPriceScale extends React.PureComponent<{
   top: number;
   bottom: number;
@@ -33,11 +43,14 @@ export class FilterResultsBidPriceScale extends React.PureComponent<{
 
   render() {
     return (
-      <FilterResultsBidPriceScaleStyle>
-        <CircleStyle />
-        <FilledBarStyle />
-        <CircleStyle />
-      </FilterResultsBidPriceScaleStyle>
+      <BidPriceScaleTextStyle>
+          <BidPricesRangestyle/>
+          <FilterResultsBidPriceScaleStyle>
+            <CircleStyle />
+            <FilledBarStyle />
+            <CircleStyle />
+          </FilterResultsBidPriceScaleStyle>
+      </BidPriceScaleTextStyle>
     );
   }
 }

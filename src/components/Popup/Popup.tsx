@@ -13,8 +13,11 @@ const PopupContentsStyle = styled.div`
   flex-direction: column;
 `;
 
-export class Popup extends React.PureComponent<{}> {
+export class Popup extends React.PureComponent<{
+  headerProps: Header["props"];
+}> {
   static defaultProps: Popup["props"] = {
+    headerProps: Header.defaultProps
   };
 
   render() {

@@ -2,7 +2,7 @@ import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import { Add } from "@material-ui/icons";
 import styled from "styled-components";
-import { greenMain, white,normalBoxShadow } from "@style";
+import { greenMain, white, normalBoxShadow } from "@style";
 export const RoundButton = styled.div`
   display: flex;
   background-color: ${greenMain};
@@ -12,5 +12,5 @@ export const RoundButton = styled.div`
   border-radius: 36px;
   height: 36px;
   width: 36px;
-  shadow:${normalBoxShadow};
+  box-shadow: ${normalBoxShadow};
 `;

@@ -7,6 +7,7 @@ const FilterResultsBidPriceStyle = styled.div`
   flex-direction: row;
   font-weight:bold;
   font-size:18px;
+  margin-top:24px;
 `;
 
 export class FilterResultsBidPrice extends React.PureComponent<{}> {

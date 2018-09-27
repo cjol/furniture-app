@@ -21,7 +21,7 @@ export class FilterResultsBid extends React.PureComponent<{
     return (
       <FilterResultsBidStyle>
         <FilterResultsBidPrice />
-        <FilterResultsBidPriceScale />
+        <FilterResultsBidPriceScale {...this.props.filterResultsBidPriceScaleProps} />
       </FilterResultsBidStyle>
     );
   }

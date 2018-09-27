@@ -11,19 +11,19 @@ const InfoRowStyled = styled.div`
   flex-direction: row;
 `;
 export class InfoRow extends React.PureComponent<{
-  infoRowprops: InfoRowPicture["props"];
+  infoRowPictureProps: InfoRowPicture["props"];
   infoNameProps: InfoNameAndNumber["props"];
 }> {
   static defaultProps: InfoRow["props"] = {
-    infoRowprops: InfoRowPicture.defaultProps,
+    infoRowPictureProps: InfoRowPicture.defaultProps,
     infoNameProps: InfoNameAndNumber.defaultProps
   };
 
   render() {
     return (
       <InfoRowStyled>
-        <InfoRowPicture />
-        <InfoNameAndNumber />
+        <InfoRowPicture {...this.props.infoRowPictureProps} />
+        <InfoNameAndNumber {...this.props.infoNameProps} />
         <RoundButton>
           <Call />
         </RoundButton>

@@ -10,10 +10,13 @@ import { ClarificationBoard } from "./ClarificationBoard/ClarificationBoard";
 import { PendingQueries } from "./PendingQueries/PendingQueries";
 import { PlainText } from "Components/PlainText/PlainText";
 import styled from "styled-components";
+import { white } from "@style";
 
 const PageContentStyle = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 24px;
+  background-color: ${white};
 `;
 
 export class DetailedProjectPage extends React.PureComponent<{

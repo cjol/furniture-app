@@ -46,15 +46,15 @@ export class BidResolutionPage extends React.PureComponent<{
   render() {
     return (
       <HeaderStyled>
-        <AppHeader />
+        <AppHeader {...this.props.appHeaderProps}/>
         <MatchFoundStyled> You've Found your match!</MatchFoundStyled>
-        <PlainText>Instructions go here</PlainText>
-        <ProjectHeader />
-        <CostDue />
-        <ImageBar />
-        <UserContactInfo />
+        <PlainText >Instructions go here</PlainText>
+        <ProjectHeader {...this.props.projectHeaderProps}/>
+        <CostDue {...this.props.costDueProps} />
+        <ImageBar {...this.props.imageBarProps}/>
+        <UserContactInfo {...this.props.userContactInfoProps}/>
         <RateUserHereStyled>Rate User</RateUserHereStyled>
-        <UserDetails />
+        <UserDetails {...this.props.userDetailProps} />
       </HeaderStyled>
     );
   }

@@ -2,13 +2,15 @@ import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import { Menu } from "@material-ui/icons";
 import styled from "styled-components";
-import { greyButtonColor } from "@style";
+
 import { mainFont } from "@style";
 
 const MenuBarStyle = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: ${greyButtonColor};
+  background-color: #e0e0e0;
+  box-shadow: 4px 0px 4px, rgba(0, 0, 0, 0.24);
+  padding: 16px;
 `;
 
 const TitleStyle = styled.div`

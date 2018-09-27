@@ -34,8 +34,17 @@ const AmountStyle = styled.div`
   color: ${grey};
 `;
 
-export class ProjectListing extends React.PureComponent<{}> {
-  static defaultProps: ProjectListing["props"] = {};
+export class ProjectListing extends React.PureComponent<{
+  projectImage: string;
+  projectInfoProps: ProjectInfo["props"];
+  amountTitle: number;
+}> {
+  static defaultProps: ProjectListing["props"] = {
+    projectImage: "https://tyrohq.com/apple-touch-icon.png",
+
+    projectInfoProps: ProjectInfo.defaultProps,
+    amountTitle: 1000
+  };
 
   render() {
     return (

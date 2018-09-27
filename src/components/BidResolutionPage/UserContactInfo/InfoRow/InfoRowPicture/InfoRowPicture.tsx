@@ -12,7 +12,7 @@ const InfoRowPictureStyle = styled.div<{ image: string }>`
 `;
 export class InfoRowPicture extends React.PureComponent<{ imageUrl: string }> {
   static defaultProps: InfoRowPicture["props"] = {
-    imageUrl: "www.tyrohq.com/logo.png"
+    imageUrl: "https://tyrohq.com/apple-touch-icon.png"
   };
 
   render() {

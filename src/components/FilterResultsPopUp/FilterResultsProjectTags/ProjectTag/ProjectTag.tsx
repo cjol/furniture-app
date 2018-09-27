@@ -10,8 +10,16 @@ const ProjectTagStyle = styled.div`
 
 const ProjectTagLabelStyle = styled.div``;
 
-export class ProjectTag extends React.PureComponent<{}> {
-  static defaultProps: ProjectTag["props"] = {};
+export class ProjectTag extends React.PureComponent<{
+  projectTag: string;
+  selected: boolean;
+  toggle: () => void;
+}> {
+  static defaultProps: ProjectTag["props"] = {
+    projectTag: "Bed",
+    selected: true,
+    toggle: () => alert("Selecting tag")
+  };
 
   render() {
     return (

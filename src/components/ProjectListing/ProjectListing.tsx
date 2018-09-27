@@ -2,13 +2,16 @@ import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import { ProjectInfo } from "./ProjectInfo/ProjectInfo";
 import styled from "styled-components";
-import { mainFont, grey } from "@style";
+import { mainFont, grey, whiteButtonColor, normalBoxShadow } from "@style";
 
 const ProjectListingStyle = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   font-family: ${mainFont};
+  padding: 16px;
+  background-color: ${whiteButtonColor};
+  border-radius: ${normalBoxShadow};
 `;
 
 const ProjectImageStyle = styled.div`

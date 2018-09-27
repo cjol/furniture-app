@@ -20,7 +20,7 @@ export class PhoneLine extends React.PureComponent<{ phoneline: string }> {
   render() {
     return (
       <PhoneLine2Styled>
-        <PhoneNo2Styled>+256 Phone Number</PhoneNo2Styled>
+        <PhoneNo2Styled>{this.props.phoneline}</PhoneNo2Styled>
         <Call />
       </PhoneLine2Styled>
     );

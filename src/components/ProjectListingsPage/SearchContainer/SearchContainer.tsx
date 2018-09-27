@@ -7,9 +7,12 @@ import { Checkbox } from "@material-ui/core";
 const SearchHeaderStyle = styled.div`
   display: flex;
   flex-direction: row;
+  margin-top: 24px;
+  flex-grow: 1;
+  align-items: center;
 `;
-const SearchCheckBoxStyle =styled(Search)`
-color:grey;
+const SearchCheckBoxStyle = styled(Search)`
+  color: grey;
 `;
 export class SearchContainer extends React.PureComponent<{}> {
   static defaultProps: SearchContainer["props"] = {};
@@ -17,7 +20,7 @@ export class SearchContainer extends React.PureComponent<{}> {
   render() {
     return (
       <SearchHeaderStyle>
-        <Subheading />
+        <Subheading>Search Projects</Subheading>
         <SearchCheckBoxStyle />
       </SearchHeaderStyle>
     );

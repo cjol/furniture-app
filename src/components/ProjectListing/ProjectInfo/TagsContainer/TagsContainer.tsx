@@ -17,8 +17,13 @@ const TagStyle = styled.div`
   margin-right: 2px;
 `;
 
-export class TagsContainer extends React.PureComponent<{}> {
-  static defaultProps: TagsContainer["props"] = {};
+export class TagsContainer extends React.PureComponent<{
+  tags:string[],
+
+}> {
+  static defaultProps: TagsContainer["props"] = {
+    tags:["Bed", "Chair","Table","Desk","BedSide Table","Sofa"]
+  };
 
   render() {
     return (

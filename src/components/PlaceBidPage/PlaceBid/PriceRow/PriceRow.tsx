@@ -32,16 +32,19 @@ const PriceBidStyle = styled.input`
 `;
 export class PriceRow extends React.PureComponent<{
   price: string;
+  changeHandler:(bid:any)=>void;
 }> {
   static defaultProps: PriceRow["props"] = {
-    price: "500 Ugx"
+    price: "500 Ugx",
+    changeHandler:(bid)=>alert("Bid Price" + bid),
+
   };
 
   render() {
     return (
       <RowStyle>
         <PriceStyle> Price(UGX) </PriceStyle>
-        <PriceBidStyle value="bid" />
+        <PriceBidStyle onChange={this.props.changeHandler} />
       </RowStyle>
     );
   }

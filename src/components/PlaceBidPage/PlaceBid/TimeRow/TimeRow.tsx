@@ -13,13 +13,14 @@ const TimeStyle = styled.div`
   color: grey;
   font-weight: bold;
   font-size: 14px;
-  margin-right:16px;
+  margin-right: 16px;
 `;
 const TimeBidStyle = styled.input`
   display: flex;
   flex-direction: column;
   font-size: 12px;
   border: none;
+  background-color: transparent;
   border-color: ${greenMain};
   border-bottom-width: 2px;
   border-bottom-style: solid;

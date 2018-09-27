@@ -24,14 +24,23 @@ const TimeBidStyle = styled.input`
   border-bottom-style: solid;
 `;
 
-export class TimeRow extends React.PureComponent<{ time: string }> {
-  static defaultProps: TimeRow["props"] = { time: "4 Days" };
+export class TimeRow extends React.PureComponent<{
+  time: string;
+  changeTime: (bid: any) => void;
+}> {
+  static defaultProps: TimeRow["props"] = {
+    time: "4 Days",
+    changeTime: bid => alert("changing time")
+  };
 
   render() {
     return (
       <TimeRowStyle>
         <TimeStyle> Time To Compile (Days) </TimeStyle>
-        <TimeBidStyle value="bid" />
+        <TimeBidStyle
+          value={this.props.time}
+          onChange={this.props.changeTime}
+        />
       </TimeRowStyle>
     );
   }

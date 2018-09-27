@@ -10,6 +10,7 @@ import { mainFont } from "@style";
 const PlaceBidStyle = styled.div`
   display: flex;
   flex-direction: column;
+  font-size:12px;
 `;
 
 const PlaceBidHeaderStyle = styled.div`
@@ -18,6 +19,7 @@ const PlaceBidHeaderStyle = styled.div`
   align-items: center;
   font-size: 24px;
   font: ${mainFont};
+  color:green;
 `;
 
 export class PlaceBid extends React.PureComponent<{

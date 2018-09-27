@@ -33,7 +33,7 @@ export class PriceRow extends React.PureComponent<{
   render() {
     return (
       <RowStyle>
-        <PriceStyle> Price: </PriceStyle>
+        <PriceStyle> Price(UGX) </PriceStyle>
         <PriceBidStyle value="bid" />
       </RowStyle>
     );

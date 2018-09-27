@@ -8,7 +8,10 @@ import * as React from "react";
 import { PlaceBid } from "./PlaceBid/PlaceBid";
 import styled from "styled-components";
 
-const PageStyle = styled.div``;
+const PageStyle = styled.div`
+displa:flex;
+font-size:14px;
+`;
 
 export class PlaceBidPage extends React.PureComponent<{}> {
   static defaultProps: PlaceBidPage["props"] = {};

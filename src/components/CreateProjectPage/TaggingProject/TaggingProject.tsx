@@ -10,8 +10,12 @@ const TaggingProjectStyle = styled.div`
   flex-direction: column;
 `;
 
-export class TaggingProject extends React.PureComponent<{}> {
-  static defaultProps: TaggingProject["props"] = {};
+export class TaggingProject extends React.PureComponent<{
+  filterResultsProps: FilterResultsProjectTags["props"];
+}> {
+  static defaultProps: TaggingProject["props"] = {
+    filterResultsProps: FilterResultsProjectTags.defaultProps
+  };
 
   render() {
     return (

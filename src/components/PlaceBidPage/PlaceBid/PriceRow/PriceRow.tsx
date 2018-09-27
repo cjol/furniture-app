@@ -13,8 +13,9 @@ const PriceStyle = styled.div`
   display: flex;
   flex-direction: column;
   font-family: ${mainFont};
-  color: ${black};
+  color: ${grey};
   font-size: 14px;
+  font-weight: bold;
 `;
 const PriceBidStyle = styled.input`
   display: flex;
@@ -33,7 +34,7 @@ export class PriceRow extends React.PureComponent<{
   render() {
     return (
       <RowStyle>
-        <PriceStyle> Price: </PriceStyle>
+        <PriceStyle> Price(UGX) </PriceStyle>
         <PriceBidStyle value="bid" />
       </RowStyle>
     );

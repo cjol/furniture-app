@@ -9,10 +9,15 @@ const TimeRowStyle = styled.div`
 const TimeStyle = styled.div`
   display: flex;
   flex-direction: column;
+  color: grey;
+  font-weight: bold;
+  font-size: 14px;
 `;
 const TimeBidStyle = styled.input`
   display: flex;
   flex-direction: column;
+  color: grey;
+  font-size: 12px;
 `;
 
 export class TimeRow extends React.PureComponent<{ time: string }> {
@@ -21,7 +26,7 @@ export class TimeRow extends React.PureComponent<{ time: string }> {
   render() {
     return (
       <TimeRowStyle>
-        <TimeStyle> Time: </TimeStyle>
+        <TimeStyle> Time To Compile (Days) </TimeStyle>
         <TimeBidStyle value="bid" />
       </TimeRowStyle>
     );

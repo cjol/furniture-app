@@ -6,12 +6,12 @@ import { FilterResultsBid } from "./FilterResultsBid/FilterResultsBid";
 import { FilterResultsProjectTags } from "./FilterResultsProjectTags/FilterResultsProjectTags";
 
 export class FilterResultsPopUp extends React.PureComponent<{
-  filterResultsBid:FilterResultsBid["props"];
+  filterResultsBidProps:FilterResultsBid["props"];
   filterResultsProjectTagsProps: FilterResultsProjectTags["props"];
   onClick: () => void;
 }> {
   static defaultProps: FilterResultsPopUp["props"] = {
-    filterResultsBid:FilterResultsBid.defaultProps,
+    filterResultsBidProps:FilterResultsBid.defaultProps,
     filterResultsProjectTagsProps: FilterResultsProjectTags.defaultProps,
     onClick: () => alert("Applying Filter")
   };
@@ -19,9 +19,9 @@ export class FilterResultsPopUp extends React.PureComponent<{
   render() {
     return (
       <Popup>
-        <FilterResultsBid />
-        <FilterResultsProjectTags />
-        <RectangularButton>Apply Filter</RectangularButton>
+        <FilterResultsBid {...this.props.filterResultsBidProps}/>
+        <FilterResultsProjectTags {...this.props.filterResultsProjectTagsProps}/>
+        <RectangularButton onClick={this.props.onClick}>Apply Filter</RectangularButton>
       </Popup>
     );
   }

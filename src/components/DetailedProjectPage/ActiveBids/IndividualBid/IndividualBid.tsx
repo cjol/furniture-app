@@ -27,9 +27,9 @@ export class IndividualBid extends React.PureComponent<{
   render() {
     return (
       <IndividualBidStyle>
-        <ActiveBidImage />
-        <BidDetails />
-        <RectangularButton>SELECT</RectangularButton>
+        <ActiveBidImage {...this.props.activeBidprops}/>
+        <BidDetails {...this.props.bidProps}/>
+        <RectangularButton onClick={() => this.props.rectangularButton(this.props.id)}>SELECT</RectangularButton>
       </IndividualBidStyle>
     );
   }

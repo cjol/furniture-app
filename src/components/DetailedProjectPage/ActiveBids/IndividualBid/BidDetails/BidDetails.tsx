@@ -36,10 +36,10 @@ export class BidDetails extends React.PureComponent<{
     return (
       <BidDetailsStyled>
         <AmountAndDurationStyled>
-          <AmountStyled>Amount</AmountStyled>
-          <TimeStyled>Time</TimeStyled>
+          <AmountStyled>{this.props.amount}</AmountStyled>
+          <TimeStyled>{this.props.time}</TimeStyled>
         </AmountAndDurationStyled>
-        <PlainText>Bidder Name</PlainText>
+        <PlainText>{this.props.description}</PlainText>
       </BidDetailsStyled>
     );
   }

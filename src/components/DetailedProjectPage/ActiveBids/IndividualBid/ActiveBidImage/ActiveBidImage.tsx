@@ -10,9 +10,7 @@ const ActiveBidImageStyle = styled.div<{ image: string }>`
   height: 50px;
   width: 50px;
   border-radius: 25px;
-  background-image: url(${props => {
-    return props.image;
-  }});
+  background-image: url(${props => {    return props.image;  }});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

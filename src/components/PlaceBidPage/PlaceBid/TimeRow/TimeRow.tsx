@@ -9,14 +9,15 @@ const TimeRowStyle = styled.div`
 const TimeStyle = styled.div`
   display: flex;
   flex-direction: column;
-  color:grey;
-  font-weight:bold;
+  color: grey;
+  font-weight: bold;
+  font-size: 14px;
 `;
 const TimeBidStyle = styled.input`
   display: flex;
   flex-direction: column;
-  color:grey;
-  font-size:12px;
+  color: grey;
+  font-size: 12px;
 `;
 
 export class TimeRow extends React.PureComponent<{ time: string }> {

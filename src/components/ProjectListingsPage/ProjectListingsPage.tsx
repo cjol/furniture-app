@@ -5,9 +5,13 @@ import { AppHeader } from "Components/AppHeader/AppHeader";
 import { SearchContainer } from "./SearchContainer/SearchContainer";
 import { ListingsContainer } from "./ListingsContainer/ListingsContainer";
 import styled from "styled-components";
+import { white } from "@style";
+
 const PageStyle = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 24px;
+  background-color: ${white};
 `;
 
 export class ProjectListingsPage extends React.PureComponent<{}> {

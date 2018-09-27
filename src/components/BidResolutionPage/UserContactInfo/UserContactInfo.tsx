@@ -11,7 +11,7 @@ const UserInfoStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 2px;
+  padding: 24px;
   background-color: ${whiteButtonColor};
   box-shadow: ${normalBoxShadow};
 `;

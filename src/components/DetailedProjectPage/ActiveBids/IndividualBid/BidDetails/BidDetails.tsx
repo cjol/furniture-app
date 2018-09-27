@@ -7,6 +7,7 @@ const BidDetailsStyled = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  margin-left: 16px;
 `;
 const AmountAndDurationStyled = styled.div`
   display: flex;

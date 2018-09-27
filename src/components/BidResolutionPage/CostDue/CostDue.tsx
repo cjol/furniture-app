@@ -1,4 +1,4 @@
-import { grey, mainFont } from "@style";
+import { grey, mainFont, normalBoxShadow, whiteButtonColor } from "@style";
 import * as React from "react";
 import styled from "styled-components";
 
@@ -6,19 +6,18 @@ const CostDueStyle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  size: 15px;
-  color: ${grey};
-  font-family: ${mainFont};
 `;
 
-const ProjectCostStyle = styled.div`
+const ProjectInfoStyle = styled.div`
   display: flex;
   justify-content: flex-start;
-`;
-
-const ProjectDueStyle = styled.div`
-  display: flex;
-  justify-content: flex-end;
+  font-size: 15px;
+  color: ${grey};
+  font-family: ${mainFont};
+  margin-top: 24px;
+  background: ${whiteButtonColor};
+  box-shadow: ${normalBoxShadow};
+  padding: 10px;
 `;
 
 const LabelStyle = styled.div`
@@ -46,14 +45,14 @@ export class CostDue extends React.PureComponent<{
   render() {
     return (
       <CostDueStyle>
-        <ProjectCostStyle>
+        <ProjectInfoStyle>
           <LabelStyle>Price: </LabelStyle>
           <ValueStyle>{this.props.price}</ValueStyle>
-        </ProjectCostStyle>
-        <ProjectDueStyle>
+        </ProjectInfoStyle>
+        <ProjectInfoStyle>
           <LabelStyle>Due: </LabelStyle>
           <ValueStyle>{this.props.dueDate}</ValueStyle>
-        </ProjectDueStyle>
+        </ProjectInfoStyle>
       </CostDueStyle>
     );
   }

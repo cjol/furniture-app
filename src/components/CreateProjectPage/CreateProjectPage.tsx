@@ -8,10 +8,13 @@ import { PhotoContainer } from "./PhotoContainer/PhotoContainer";
 import { TaggingProject } from "./TaggingProject/TaggingProject";
 import { ProjectDescription } from "./ProjectDescription/ProjectDescription";
 import styled from "styled-components";
+import { whiteButtonColor } from "@style";
 
 const CreateProjectPageStyle = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 24px;
+  background-color: ${whiteButtonColor};
 `;
 
 export class CreateProjectPage extends React.PureComponent<{

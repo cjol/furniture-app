@@ -9,13 +9,18 @@ const BidDetailsStyled = styled.div`
 `;
 const AmountAndDurationStyled = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  
 `;
 const AmountStyled = styled.div`
   display: flex;
+  font-size:16px;
+  justify-content:flex-start;
 `;
 const TimeStyled = styled.div`
   display: flex;
+  font-size:12px;
+  justify-content:flex-end;
 `;
 export class BidDetails extends React.PureComponent<{
   amount: string;

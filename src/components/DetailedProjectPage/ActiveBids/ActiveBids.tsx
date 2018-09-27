@@ -14,8 +14,16 @@ const ActiveBidsStyle = styled.div`
   justify-content: flex-start;
 `;
 
-export class ActiveBids extends React.PureComponent<{}> {
-  static defaultProps: ActiveBids["props"] = {};
+export class ActiveBids extends React.PureComponent<{
+  individualBidProps: IndividualBid["props"];
+  activeBidProps: ActiveBidsHeader["props"];
+  onClick: () => void;
+}> {
+  static defaultProps: ActiveBids["props"] = {
+    individualBidProps: IndividualBid.defaultProps,
+    activeBidProps: ActiveBidsHeader.defaultProps,
+    onClick: () => alert("Placing Bid")
+  };
 
   render() {
     return (

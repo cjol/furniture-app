@@ -11,6 +11,7 @@ const ListingsInfoStyle = styled.div`
   flex-direction: row;
   justify-content: stretch;
   align-items: center;
+  margin-top: 24px;
 `;
 
 const ListingsTitleStyle = styled.div`
@@ -23,6 +24,7 @@ const AvgBidStyle = styled.div`
   font-size: 13px;
   color: ${grey};
   justify-content: flex-end;
+  margin-left: 8px;
 `;
 const ArrowDropDownStyle = styled(ArrowDropDown)`
   color: ${grey};

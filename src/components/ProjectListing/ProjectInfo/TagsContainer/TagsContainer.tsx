@@ -8,6 +8,7 @@ const TagsContainerStyle = styled.div`
   justify-content: flex-start;
   flex-grow: 1;
   font-size: 13px;
+  margin-top:4px;
 `;
 const TagsLabelStyle = styled.div``;
 const TagStyle = styled.div``;

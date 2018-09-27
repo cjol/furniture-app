@@ -6,6 +6,8 @@ import styled from "styled-components";
 const ListingsContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top:24px;
+  margin-bottom:24px;
 `;
 export class ListingsContainer extends React.PureComponent<{}> {
   static defaultProps: ListingsContainer["props"] = {};

@@ -12,6 +12,7 @@ const HeaderStyle = styled.div`
   font-weight: bold;
   color: black;
   font-size: 20px;
+  margin-bottom: 24px;
 `;
 
 const PopupTitleStyle = styled.div`

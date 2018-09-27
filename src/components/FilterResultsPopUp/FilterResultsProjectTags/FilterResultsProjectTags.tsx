@@ -4,7 +4,9 @@ import * as React from "react";
 import styled from "styled-components";
 import { black } from "@style";
 
-const FilterResultsProjectTagsStyled = styled.div``;
+const FilterResultsProjectTagsStyled = styled.div`
+  margin-top: 24px;
+`;
 const ProjectTagSubHeadingStyle = styled.div`
   font-size: 18px;
   color: ${black};

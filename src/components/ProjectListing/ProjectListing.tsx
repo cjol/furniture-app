@@ -24,12 +24,14 @@ const ProjectListingStyle = styled.div`
   margin-bottom: 6px;
 `;
 
-const ProjectImageStyle = styled.div`
+const ProjectImageStyle = styled.div<{projectImage: string}>`
   display: flex;
   width: 50px;
   height: 50px;
   border-radius: 100px;
-  background-image: url(https://tyrohq.com/apple-touch-icon.png);
+  background-image: url(${props=>{
+    return props.projectImage;
+  }});
   background-size: cover;
   background-repeat: no-repeat;
   flex-grow: 0;
@@ -61,9 +63,9 @@ export class ProjectListing extends React.PureComponent<{
     return (
       <Link to={"/project/" + this.props.id}>
         <ProjectListingStyle>
-          <ProjectImageStyle />
-          <ProjectInfo />
-          <AmountStyle>Amount</AmountStyle>
+          <ProjectImageStyle projectImage={this.props.projectImage}/>
+          <ProjectInfo {...this.props.projectInfoProps}/>
+          <AmountStyle>{this.props.amountTitle}</AmountStyle>
         </ProjectListingStyle>
       </Link>
     );

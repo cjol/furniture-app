@@ -1,18 +1,17 @@
-import { AppHeader } from "Components/AppHeader/AppHeader";
-import { ImageBar } from "Components/ImageBar/ImageBar";
-import { Placeholder } from "Components/Placeholder";
-import { ProjectHeader } from "Components/ProjectHeader/ProjectHeader";
-import { RectangularButton } from "Components/RectangularButton/RectangularButton";
-import * as React from "react";
+import { black, grey, mainFont } from "@style";
 import { PlainText } from "Components/PlainText/PlainText";
 import { Subheading } from "Components/Subheading/Subheading";
+import * as React from "react";
 import styled from "styled-components";
-import { mainFont } from "@style";
 
 const ProjectDescriptionStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  font-family: ${mainFont};
+  font-size: 16px;
+  color: ${grey};
+  text-align: justify;
 `;
 
 const ProjectDescriptionFieldStyle = styled.textarea`
@@ -21,6 +20,10 @@ const ProjectDescriptionFieldStyle = styled.textarea`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-family: ${mainFont};
+  font-size: 13px;
+  color: ${black};
+  text-align: justify;
 `;
 
 export class ProjectDescription extends React.PureComponent<{}> {

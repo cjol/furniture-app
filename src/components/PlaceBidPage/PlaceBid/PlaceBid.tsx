@@ -7,32 +7,12 @@ import { PriceRow } from "./PriceRow/PriceRow";
 import { TimeRow } from "./TimeRow/TimeRow";
 import styled from "styled-components";
 import { mainFont } from "@style";
-import {black} from "@style";
-import {grey} from "@style";
-
 const PlaceBidStyle = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-const PriceRowStyle=styled.div`
-display:flex;
-flex-direction:row;
-
-`
-
-const PriceTitleStyle=styled.div`
-font-family:${mainFont};
-color:${black};
-font-size: 14px;
-
-`
-
-const SubmitBidTitleStyle=styled.div`
-font-family:${mainFont};
-color:${grey};
-font-size: 12px;
-`
+const PriceRowStyle.div``
 
 const PlaceBidHeaderStyle = styled.div`
   display: flex;
@@ -60,11 +40,7 @@ export class PlaceBid extends React.PureComponent<{
     return (
       <PlaceBidStyle>
         <PlaceBidHeaderStyle>Place Bid</PlaceBidHeaderStyle>
-        <PriceRowStyle>
-          <PriceTitleStyle>Price(UGX)</PriceTitleStyle>
-          <SubmitBidTitleStyle>SubmitBid</SubmitBidTitleStyle>
-        </PriceRowStyle>
-        </PriceRow>
+        <PriceRow/>
         <TimeRow />
         <AddBidDescription />
         <RectangularButton />

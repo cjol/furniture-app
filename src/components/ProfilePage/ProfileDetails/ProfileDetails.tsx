@@ -8,15 +8,19 @@ const ProfileDetailsStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top:24px;
-  margin-bottom:24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 `;
 
 export class ProfileDetails extends React.PureComponent<{
   profileRatingsprops: ProfileRatings["props"];
+  profileImageprops: ProfileImage["props"];
+  userCredentialsprops: UserCredentials["props"];
 }> {
   static defaultProps: ProfileDetails["props"] = {
-    profileRatingsprops: ProfileRatings.defaultProps
+    profileRatingsprops: ProfileRatings.defaultProps,
+    profileImageprops: ProfileImage.defaultProps,
+    userCredentialsprops: UserCredentials.defaultProps
   };
 
   render() {

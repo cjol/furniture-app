@@ -10,8 +10,12 @@ const FilterResultsBidStyle = styled.div`
   justify-content: stretch;
 `;
 
-export class FilterResultsBid extends React.PureComponent<{}> {
-  static defaultProps: FilterResultsBid["props"] = {};
+export class FilterResultsBid extends React.PureComponent<{
+  filterResultsBidPriceScaleProps: FilterResultsBidPriceScale["props"];
+}> {
+  static defaultProps: FilterResultsBid["props"] = {
+    filterResultsBidPriceScaleProps: FilterResultsBidPriceScale.defaultProps
+  };
 
   render() {
     return (

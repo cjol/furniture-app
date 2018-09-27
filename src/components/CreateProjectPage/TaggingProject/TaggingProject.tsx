@@ -8,6 +8,7 @@ import styled from "styled-components";
 const TaggingProjectStyle = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 24px;
 `;
 
 export class TaggingProject extends React.PureComponent<{
@@ -22,7 +23,7 @@ export class TaggingProject extends React.PureComponent<{
       <TaggingProjectStyle>
         <Subheading>Tag Your Project</Subheading>
         <PlainText>Instructions</PlainText>
-        <FilterResultsProjectTags  {...this.props.filterResultsProps}/>
+        <FilterResultsProjectTags {...this.props.filterResultsProps} />
       </TaggingProjectStyle>
     );
   }

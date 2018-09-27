@@ -18,10 +18,18 @@ const PageStyle = styled.div`
 `;
 
 export class PlaceBidPage extends React.PureComponent<{
-  placebidProps: PlaceBid["props"];
+  appHeaderProps: AppHeader["props"];
+  projectHeaderProps: ProjectHeader["props"];
+  aboutBidProps: AboutBid["props"];
+  ImagebarProps: ImageBar["props"];
+  placeBidprops: PlaceBid["props"];
 }> {
   static defaultProps: PlaceBidPage["props"] = {
-    placebidProps: PlaceBid.defaultProps
+    appHeaderProps: AppHeader.defaultProps,
+    projectHeaderProps: ProjectHeader.defaultProps,
+    aboutBidProps: AboutBid.defaultProps,
+    ImagebarProps: ImageBar.defaultProps,
+    placeBidprops: PlaceBid.defaultProps
   };
 
   render() {

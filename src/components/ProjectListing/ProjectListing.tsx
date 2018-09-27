@@ -2,7 +2,7 @@ import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import { ProjectInfo } from "./ProjectInfo/ProjectInfo";
 import styled from "styled-components";
-import { mainFont, grey, whiteButtonColor, normalBoxShadow } from "@style";
+import { mainFont, grey, whiteButtonColor,squareButtonRadius normalBoxShadow } from "@style";
 
 const ProjectListingStyle = styled.div`
   display: flex;
@@ -11,7 +11,8 @@ const ProjectListingStyle = styled.div`
   font-family: ${mainFont};
   padding: 16px;
   background-color: ${whiteButtonColor};
-  border-radius: ${normalBoxShadow};
+  box-shadow: ${normalBoxShadow};
+  radius: ${squareButtonRadius};
 `;
 
 const ProjectImageStyle = styled.div`

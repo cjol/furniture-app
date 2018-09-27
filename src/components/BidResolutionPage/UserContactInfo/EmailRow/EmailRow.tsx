@@ -15,7 +15,7 @@ display:flex;
   color:grey;
   font-size:14px;
 `;
-const EmailCheckBoxStyle = styled(Checkbox)`
+const EmailCheckBoxStyle = styled(Email)`
 color:grey;
 `;
 
@@ -27,7 +27,7 @@ export class EmailRow extends React.PureComponent<{ email: string }> {
     return (
       <EmailStyle>
         <EmailaddressStyle>email@email.com</EmailaddressStyle>
-        <Email />
+        <EmailCheckBoxStyle />
       </EmailStyle>
     );
   }

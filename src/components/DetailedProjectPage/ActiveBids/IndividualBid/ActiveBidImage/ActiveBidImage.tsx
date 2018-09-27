@@ -7,10 +7,12 @@ const ActiveBidImageStyle = styled.div<{ image: string }>`
   flex-direction: row;
   align-items: flex-start;
   flex-grow: 0;
-  height: 50px;
-  width: 50px;
-  border-radius: 25px;
-  background-image: url(${props => {    return props.image;  }});
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  background-image: url(${props => {
+    return props.image;
+  }});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -20,7 +20,11 @@ const DescriptionFieldStyle = styled.textarea`
   font-size: 16px;
   color: ${black};
   padding-bottom: 16px;
-  border-bottom: 2px, solid, ${greenMain};
+  border: none;
+  background-color: transparent;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: ${greenMain};
 `;
 
 export class AddBidDescription extends React.PureComponent<{

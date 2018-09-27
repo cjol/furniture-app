@@ -6,9 +6,13 @@ import { ActiveProjectBids } from "./ActiveProjectBids/ActiveProjectBids";
 import { SuppliersSelected } from "./SuppliersSelected/SuppliersSelected";
 import { ProfileDetails } from "./ProfileDetails/ProfileDetails";
 import styled from "styled-components";
+import {white}from "@style";
+
 const ProfilePageHeaderStyle = styled.div`
   display: flex;
   flex-direction: column;
+  padding:24px;
+  background-color:${white};
 `;
 
 export class ProfilePage extends React.PureComponent<{}> {

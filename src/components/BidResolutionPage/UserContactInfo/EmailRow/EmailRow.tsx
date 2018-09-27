@@ -8,6 +8,8 @@ const EmailStyle = styled.div`
   flex-direction: row;
   justify-content: stretch;
   align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
 `;
 const EmailaddressStyle = styled.div`
   display: flex;

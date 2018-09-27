@@ -15,6 +15,6 @@ export class PhotoUrl extends React.PureComponent<{
   };
 
   render() {
-    return <PhotoUrlStyle value="Copy Image URL" />;
+    return <PhotoUrlStyle value={this.props.image} />;
   }
 }

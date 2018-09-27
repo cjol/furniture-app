@@ -3,7 +3,7 @@ import { Placeholder } from "Components/Placeholder";
 import { ChevronLeft } from "@material-ui/icons";
 import { ChevronRight } from "@material-ui/icons";
 import styled from "styled-components";
-
+import {CheckBox} from "@material-ui/icons";
 const ImageBarStyle = styled.div`
   display: flex;
   flex-direction: row;
@@ -22,6 +22,12 @@ const ImageStyle = styled.div`
   justify-content: center;
   height: 50px;
 `;
+const ChevronLeftCheckBoxStyle = styled(ChevronLeft)`
+color:grey;
+`;
+const ChevronRightCheckBoxStyle = styled(ChevronRight)`
+color:grey;
+`;
 export class ImageBar extends React.PureComponent<{}> {
   static defaultProps: ImageBar["props"] = {};
 
@@ -29,13 +35,13 @@ export class ImageBar extends React.PureComponent<{}> {
     return (
       <ImageBarStyle>
         <ChevronStyle>
-          <ChevronLeft />
+          <ChevronLeftCheckBoxStyle />
         </ChevronStyle>
         <ImageStyle />
         <ImageStyle />
         <ImageStyle />
         <ChevronStyle>
-          <ChevronRight />
+          <ChevronRightCheckBoxStyle />
         </ChevronStyle>
       </ImageBarStyle>
     );

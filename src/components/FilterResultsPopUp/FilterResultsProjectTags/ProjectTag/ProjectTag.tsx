@@ -3,7 +3,7 @@ import { Placeholder } from "Components/Placeholder";
 import * as React from "react";
 import styled from "styled-components";
 import { mainFont } from "@style";
-import { greenMain } from "@style";
+import { greenMain, greyButtonColor } from "@style";
 
 const CheckBoxEmptyStyle = styled(CheckBoxOutlineBlank)`
   color: ${greenMain};
@@ -21,6 +21,8 @@ const ProjectTagStyle = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 10px;
+  background-color: ${greyButtonColor};
 `;
 
 const ProjectTagLabelStyle = styled.div`
@@ -28,6 +30,7 @@ display:flex;
 font-family: ${mainFont};
 color: ${greenMain}
 font-size: 12px;
+align-items:left;
 
 `;
 

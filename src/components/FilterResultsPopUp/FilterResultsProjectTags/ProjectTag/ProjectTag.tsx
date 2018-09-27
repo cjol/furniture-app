@@ -43,21 +43,22 @@ export class ProjectTag extends React.PureComponent<{
   };
 
   render() {
-  if (this.props.selected){
-    return (
-      <ProjectTagStyle>
-        <ProjectTagLabelStyle>{this.props.projectTag}</ProjectTagLabelStyle>
-        <CheckBoxStyle onClick={this.props.toggle}/>
-        {/* <CheckBoxEmptyStyle /> */}
-      </ProjectTagStyle>
-    );
-  
-} else{
-  return (
-    <ProjectTagStyle>
-      <ProjectTagLabelStyle>{this.props.projectTag}</ProjectTagLabelStyle>
-      <CheckBoxEmptyStyle onClick={this.props.toggle}/>
-      {/* <CheckBoxStyle /> */}
-    </ProjectTagStyle>
-  );}
-}}
+    if (this.props.selected) {
+      return (
+        <ProjectTagStyle>
+          <ProjectTagLabelStyle>{this.props.projectTag}</ProjectTagLabelStyle>
+          <CheckBoxStyle onClick={this.props.toggle} />
+          {/* <CheckBoxEmptyStyle /> */}
+        </ProjectTagStyle>
+      );
+    } else {
+      return (
+        <ProjectTagStyle>
+          <ProjectTagLabelStyle>{this.props.projectTag}</ProjectTagLabelStyle>
+          <CheckBoxEmptyStyle onClick={this.props.toggle} />
+          {/* <CheckBoxStyle /> */}
+        </ProjectTagStyle>
+      );
+    }
+  }
+}

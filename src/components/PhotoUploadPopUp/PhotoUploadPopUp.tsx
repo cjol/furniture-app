@@ -4,7 +4,11 @@ import { RectangularButton } from "Components/RectangularButton/RectangularButto
 import * as React from "react";
 
 import { PhotoUrl } from "./PhotoUrl/PhotoUrl";
-
+import{CheckBox} from "@material-ui/icons";
+import styled from "styled-components";
+const AddCheckBoxStyle =styled(Add)`
+color:darkgrey;
+`;
 export class PhotoUploadPopUp extends React.PureComponent<{}> {
   static defaultProps: PhotoUploadPopUp["props"] = {};
 
@@ -14,7 +18,7 @@ export class PhotoUploadPopUp extends React.PureComponent<{}> {
         <PhotoUrl />
         <PhotoUrl />
         <PhotoUrl />
-        <Add />
+        <AddCheckBoxStyle />
         <RectangularButton />
       </Popup>
     );

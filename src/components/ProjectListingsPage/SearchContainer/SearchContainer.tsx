@@ -8,7 +8,7 @@ const SearchHeaderStyle = styled.div`
   display: flex;
   flex-direction: row;
 `;
-const SearchCheckBoxStyle =styled(Checkbox)`
+const SearchCheckBoxStyle =styled(Search)`
 color:grey;
 `;
 export class SearchContainer extends React.PureComponent<{}> {
@@ -18,7 +18,7 @@ export class SearchContainer extends React.PureComponent<{}> {
     return (
       <SearchHeaderStyle>
         <Subheading />
-        <Search />
+        <SearchCheckBoxStyle />
       </SearchHeaderStyle>
     );
   }

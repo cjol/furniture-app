@@ -17,8 +17,20 @@ const PageStyle = styled.div`
   background-color: ${white};
 `;
 
-export class PlaceBidPage extends React.PureComponent<{}> {
-  static defaultProps: PlaceBidPage["props"] = {};
+export class PlaceBidPage extends React.PureComponent<{
+  appHeaderProps: AppHeader["props"];
+  projectHeaderProps: ProjectHeader["props"];
+  aboutBidProps: AboutBid["props"];
+  ImagebarProps: ImageBar["props"];
+  placeBidprops: PlaceBid["props"];
+}> {
+  static defaultProps: PlaceBidPage["props"] = {
+    appHeaderProps: AppHeader.defaultProps,
+    projectHeaderProps: ProjectHeader.defaultProps,
+    aboutBidProps: AboutBid.defaultProps,
+    ImagebarProps: ImageBar.defaultProps,
+    placeBidprops: PlaceBid.defaultProps
+  };
 
   render() {
     return (

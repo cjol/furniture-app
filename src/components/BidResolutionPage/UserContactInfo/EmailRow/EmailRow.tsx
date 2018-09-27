@@ -13,6 +13,7 @@ const EmailaddressStyle = styled.div`
 display:flex;
   flex-grow: 1;
   color:grey;
+  font-size:14px;
 `;
 const EmailCheckBoxStyle = styled(Checkbox)`
 color:grey;

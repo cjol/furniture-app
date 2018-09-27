@@ -8,6 +8,8 @@ const ProfileDetailsStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top:24px;
+  margin-bottom:24px;
 `;
 
 export class ProfileDetails extends React.PureComponent<{

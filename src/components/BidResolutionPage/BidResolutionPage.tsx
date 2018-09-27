@@ -9,10 +9,12 @@ import { UserContactInfo } from "./UserContactInfo/UserContactInfo";
 import { UserDetails } from "Components/UserDetails/UserDetails";
 import { PlainText } from "Components/PlainText/PlainText";
 import styled from "styled-components";
-import { greenMain } from "@style";
+import { greenMain, white } from "@style";
 const HeaderStyled = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 24px;
+  background-color: ${white};
 `;
 const MatchFoundStyled = styled.div`
   display: flex;
@@ -35,12 +37,12 @@ export class BidResolutionPage extends React.PureComponent<{
   userDetailProps: UserDetails["props"];
 }> {
   static defaultProps: BidResolutionPage["props"] = {
-  appHeaderProps: AppHeader.defaultProps,
-  projectHeaderProps: ProjectHeader.defaultProps,
-  costDueProps: CostDue.defaultProps,
-  imageBarProps: ImageBar.defaultProps,
-  userContactInfoProps: UserContactInfo.defaultProps,
-  userDetailProps: UserDetails.defaultProps
+    appHeaderProps: AppHeader.defaultProps,
+    projectHeaderProps: ProjectHeader.defaultProps,
+    costDueProps: CostDue.defaultProps,
+    imageBarProps: ImageBar.defaultProps,
+    userContactInfoProps: UserContactInfo.defaultProps,
+    userDetailProps: UserDetails.defaultProps
   };
 
   render() {

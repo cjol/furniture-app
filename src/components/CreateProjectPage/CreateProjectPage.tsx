@@ -8,13 +8,13 @@ import { PhotoContainer } from "./PhotoContainer/PhotoContainer";
 import { TaggingProject } from "./TaggingProject/TaggingProject";
 import { ProjectDescription } from "./ProjectDescription/ProjectDescription";
 import styled from "styled-components";
-import { whiteButtonColor } from "@style";
+import { white } from "@style";
 
 const CreateProjectPageStyle = styled.div`
   display: flex;
   flex-direction: column;
   padding: 24px;
-  background-color: ${whiteButtonColor};
+  background-color: ${white};
 `;
 
 export class CreateProjectPage extends React.PureComponent<{
@@ -39,13 +39,15 @@ export class CreateProjectPage extends React.PureComponent<{
   render() {
     return (
       <CreateProjectPageStyle>
-        <AppHeader {...this.props.appHeaderProps}/>
+        <AppHeader {...this.props.appHeaderProps} />
         <ProjectHeader {...this.props.projectHeaderProps} />
         <PhotoContainer {...this.props.photoContainerProps} />
         <ImageBar {...this.props.imageBarProps} />
-        <ProjectDescription {...this.props.projectDescriptionProps}/>
+        <ProjectDescription {...this.props.projectDescriptionProps} />
         <TaggingProject {...this.props.taggingProjectProps} />
-        <RectangularButton onClick={this.props.onClick}>POST PROJECT</RectangularButton>
+        <RectangularButton onClick={this.props.onClick}>
+          POST PROJECT
+        </RectangularButton>
       </CreateProjectPageStyle>
     );
   }

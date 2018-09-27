@@ -23,8 +23,32 @@ const UserCredentialsTitleStyle = styled.input`
   border-color: ${greenMain};
 `;
 
-export class UserCredentials extends React.PureComponent<{}> {
-  static defaultProps: UserCredentials["props"] = {};
+export class UserCredentials extends React.PureComponent<{
+  isEditMode: boolean;
+  setFullName: (fullName: string) => void;
+  fullName: string;
+  setEmail: (email: string) => void;
+  email: string;
+  setLocation: (location: string) => void;
+  location: string;
+  setPhoneNumber: (phoneNumber: string) => void;
+  phoneNumber: string;
+  setPassword: (password: string) => void;
+  password: string;
+}> {
+  static defaultProps: UserCredentials["props"] = {
+    isEditMode: true,
+    fullName: " ",
+    setFullName: fullName => alert("Inserting FullName"),
+    setEmail: email => alert("Inserting Email"),
+    email: " ",
+    setLocation: location => alert("Inserting location"),
+    location : " ",
+    setPhoneNumber : phoneNumber => alert("Inserting PhoneNumber"),
+    phoneNumber : " ",
+    setPassword: password => alert("Inserting Password"),
+    password : " ",
+  };
 
   render() {
     return (

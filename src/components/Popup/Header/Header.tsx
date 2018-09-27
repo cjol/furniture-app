@@ -20,8 +20,10 @@ const PopupTitleStyle = styled.div`
   flex-grow: 1;
 `;
 
-export class Header extends React.PureComponent<{}> {
-  static defaultProps: Header["props"] = {};
+export class Header extends React.PureComponent<{ title: string ,
+closeFunction:()=>void}> {
+  static defaultProps: Header["props"] = {title:"Have A Question",
+ closeFunction:()=>alert("Clicked")};
 
   render() {
     return (

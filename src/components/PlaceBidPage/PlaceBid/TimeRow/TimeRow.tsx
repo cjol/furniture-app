@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
+import {greenMain} from "@style"
 
 const TimeRowStyle = styled.div`
   display: flex;
@@ -16,8 +17,10 @@ const TimeStyle = styled.div`
 const TimeBidStyle = styled.input`
   display: flex;
   flex-direction: column;
-  color: grey;
+  color: ${greenMain};
   font-size: 12px;
+  border:none;
+  border-bottom-style: solid
 `;
 
 export class TimeRow extends React.PureComponent<{ time: string }> {

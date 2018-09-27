@@ -18,6 +18,8 @@ const PriceStyle = styled.div`
   font-size: 14px;
   font-weight: bold;
   margin-right:16px;
+
+
 `;
 const PriceBidStyle = styled.input`
   display: flex;
@@ -25,7 +27,10 @@ const PriceBidStyle = styled.input`
   font-family: ${mainFont};
   color: ${greenMain};
   font-size: 12px;
-  border-bottom:2px, solid;
+  border-bottom:2px;
+  border-style:solid;
+  border:none;
+  border-bottom-style:solid;
 
 `;
 export class PriceRow extends React.PureComponent<{

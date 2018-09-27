@@ -6,11 +6,15 @@ import { AddBidDescription } from "./AddBidDescription/AddBidDescription";
 import { PriceRow } from "./PriceRow/PriceRow";
 import { TimeRow } from "./TimeRow/TimeRow";
 import styled from "styled-components";
-import { mainFont } from "@style";
+import { mainFont, greenMain, whiteButtonColor, normalBoxShadow } from "@style";
+
 const PlaceBidStyle = styled.div`
   display: flex;
   flex-direction: column;
-  font-size:12px;
+  font-size: 12px;
+  padding: 24px;
+  background-color: ${whiteButtonColor};
+  box-shadow: ${normalBoxShadow};
 `;
 
 const PlaceBidHeaderStyle = styled.div`
@@ -19,7 +23,9 @@ const PlaceBidHeaderStyle = styled.div`
   align-items: center;
   font-size: 24px;
   font: ${mainFont};
-  color:grey;
+  color: white;
+  padding: 16px;
+  background-color: ${greenMain};
 `;
 
 export class PlaceBid extends React.PureComponent<{
@@ -39,10 +45,10 @@ export class PlaceBid extends React.PureComponent<{
     return (
       <PlaceBidStyle>
         <PlaceBidHeaderStyle>Place Bid</PlaceBidHeaderStyle>
-        <PriceRow {...this.props.priceRowProps}/>
-        <TimeRow  {...this.props.timeRowProps}/>
+        <PriceRow {...this.props.priceRowProps} />
+        <TimeRow {...this.props.timeRowProps} />
         <AddBidDescription {...this.props.addBidDescriptionProps} />
-        <RectangularButton onClick={this.props.onClick}/>
+        <RectangularButton onClick={this.props.onClick} />
       </PlaceBidStyle>
     );
   }

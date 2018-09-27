@@ -11,6 +11,7 @@ const PlaceBidStyle = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 const PlaceBidHeaderStyle = styled.div`
   display: flex;
   justify-content: center;
@@ -22,15 +23,14 @@ const PlaceBidHeaderStyle = styled.div`
 export class PlaceBid extends React.PureComponent<{
   priceRowProps: PriceRow["props"];
   timeRowProps: TimeRow["props"];
-  addBidDescription:AddBidDescription["props"];
+  addBidDescription: AddBidDescription["props"];
   onClick: () => any;
 }> {
   static defaultProps: PlaceBid["props"] = {
     priceRowProps: PriceRow.defaultProps,
     timeRowProps: TimeRow.defaultProps,
-    addBidDescription:AddBidDescription.defaultProps,
+    addBidDescription: AddBidDescription.defaultProps,
     onClick: () => alert("Clicked a button to place Bid")
-    
   };
 
   render() {

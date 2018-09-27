@@ -9,10 +9,12 @@ import { UserContactInfo } from "./UserContactInfo/UserContactInfo";
 import { UserDetails } from "Components/UserDetails/UserDetails";
 import { PlainText } from "Components/PlainText/PlainText";
 import styled from "styled-components";
-import { greenMain } from "@style";
-const HeaderStyled = styled.div`
+import { greenMain, white } from "@style";
+const PageStyled = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 24px;
+  background-color: ${white};
 `;
 const MatchFoundStyled = styled.div`
   display: flex;
@@ -35,27 +37,27 @@ export class BidResolutionPage extends React.PureComponent<{
   userDetailProps: UserDetails["props"];
 }> {
   static defaultProps: BidResolutionPage["props"] = {
-  appHeaderProps: AppHeader.defaultProps,
-  projectHeaderProps: ProjectHeader.defaultProps,
-  costDueProps: CostDue.defaultProps,
-  imageBarProps: ImageBar.defaultProps,
-  userContactInfoProps: UserContactInfo.defaultProps,
-  userDetailProps: UserDetails.defaultProps
+    appHeaderProps: AppHeader.defaultProps,
+    projectHeaderProps: ProjectHeader.defaultProps,
+    costDueProps: CostDue.defaultProps,
+    imageBarProps: ImageBar.defaultProps,
+    userContactInfoProps: UserContactInfo.defaultProps,
+    userDetailProps: UserDetails.defaultProps
   };
 
   render() {
     return (
-      <HeaderStyled>
-        <AppHeader {...this.props.appHeaderProps}/>
+      <PageStyled>
+        <AppHeader {...this.props.appHeaderProps} />
         <MatchFoundStyled> You've Found your match!</MatchFoundStyled>
-        <PlainText >Instructions go here</PlainText>
-        <ProjectHeader {...this.props.projectHeaderProps}/>
+        <PlainText>Instructions go here</PlainText>
+        <ProjectHeader {...this.props.projectHeaderProps} />
         <CostDue {...this.props.costDueProps} />
-        <ImageBar {...this.props.imageBarProps}/>
-        <UserContactInfo {...this.props.userContactInfoProps}/>
+        <ImageBar {...this.props.imageBarProps} />
+        <UserContactInfo {...this.props.userContactInfoProps} />
         <RateUserHereStyled>Rate User</RateUserHereStyled>
         <UserDetails {...this.props.userDetailProps} />
-      </HeaderStyled>
+      </PageStyled>
     );
   }
 }

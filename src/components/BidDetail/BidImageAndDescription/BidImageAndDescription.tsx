@@ -14,7 +14,9 @@ const BidTextImageStyle = styled.div<{ bidImage: string }>`
     return props.bidImage;
   }});
 `;
-const BidTextStyle = styled.div``;
+const BidTextStyle = styled.div`
+  margin-left: 24px;
+`;
 
 export class BidImageAndDescription extends React.PureComponent<{
   bidImage: string;

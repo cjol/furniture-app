@@ -7,10 +7,13 @@ import { ProjectHeader } from "Components/ProjectHeader/ProjectHeader";
 import * as React from "react";
 import { PlaceBid } from "./PlaceBid/PlaceBid";
 import styled from "styled-components";
+import { white } from "@style";
 
 const PageStyle = styled.div`
-displa:flex;
-font-size:14px;
+  display: flex;
+  font-size: 14px;
+  padding: 24px;
+  background-color: ${white};
 `;
 
 export class PlaceBidPage extends React.PureComponent<{}> {

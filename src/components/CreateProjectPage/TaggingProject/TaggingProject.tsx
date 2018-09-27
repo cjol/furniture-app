@@ -22,7 +22,7 @@ export class TaggingProject extends React.PureComponent<{
       <TaggingProjectStyle>
         <Subheading>Tag Your Project</Subheading>
         <PlainText>Instructions</PlainText>
-        <FilterResultsProjectTags />
+        <FilterResultsProjectTags  {...this.props.filterResultsProps}/>
       </TaggingProjectStyle>
     );
   }

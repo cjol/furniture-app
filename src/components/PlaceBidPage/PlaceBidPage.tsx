@@ -35,12 +35,12 @@ export class PlaceBidPage extends React.PureComponent<{
   render() {
     return (
       <PageStyle>
-        <AppHeader />
-        <ProjectHeader />
-        <AboutBid />
-        <ImageBar />
+        <AppHeader {...this.props.appHeaderProps} />
+        <ProjectHeader {...this.props.appHeaderProps} />
+        <AboutBid {...this.props.appHeaderProps} />
+        <ImageBar {...this.props.ImagebarProps} />
         <PlainText>Instructions go here</PlainText>
-        <PlaceBid />
+        <PlaceBid {...this.props.placeBidprops} />
       </PageStyle>
     );
   }

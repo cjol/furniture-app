@@ -55,13 +55,17 @@ export class ImageBar extends React.PureComponent<{
 
     return (
       <ImageBarStyle>
-        <ChevronStyle onClick={this.props.chevronLeft}>
-          <ChevronLeftCheckBoxStyle />
-        </ChevronStyle>
+        {this.props.chevronLeft && (
+          <ChevronStyle onClick={this.props.chevronLeft}>
+            <ChevronLeftCheckBoxStyle />
+          </ChevronStyle>
+        )}
         {imageList}
-        <ChevronStyle onClick={this.props.chevronRight}>
-          <ChevronRightCheckBoxStyle />
-        </ChevronStyle>
+        {this.props.chevronRight && (
+          <ChevronStyle onClick={this.props.chevronRight}>
+            <ChevronRightCheckBoxStyle />
+          </ChevronStyle>
+        )}
       </ImageBarStyle>
     );
   }

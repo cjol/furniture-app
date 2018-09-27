@@ -27,13 +27,17 @@ export class PhotoUploadPopUp extends React.PureComponent<{
   };
 
   render() {
+    const urls = this.props.photoUrlProps.map(photoUrl => {
+      return <PhotoUrl {...photoUrl} />;
+    });
+
     return (
-      <Popup>
-        <PhotoUrl />
-        <PhotoUrl />
-        <PhotoUrl />
-        <AddCheckBoxStyle />
-        <RectangularButton />
+      <Popup {...this.props.popupProps}>
+        {urls}
+        <AddCheckBoxStyle onClick={this.props.addButtonProps} />
+        <RectangularButton onClick={this.props.uploadPhotoProps}>
+          Upload Photos
+        </RectangularButton>
       </Popup>
     );
   }

@@ -9,12 +9,19 @@ const PhotoUrlStyle = styled.input`
 
 export class PhotoUrl extends React.PureComponent<{
   image: string;
+  changeImage: (image: any) => void;
 }> {
   static defaultProps: PhotoUrl["props"] = {
-    image: "https://tyro.ug/logo.png"
+    image: "https://tyro.ug/logo.png",
+    changeImage: image => alert("changing image")
   };
 
   render() {
-    return <PhotoUrlStyle value={this.props.image} />;
+    return (
+      <PhotoUrlStyle
+        value={this.props.image}
+        onChange={x => this.props.changeImage(x.target.value)}
+      />
+    );
   }
 }

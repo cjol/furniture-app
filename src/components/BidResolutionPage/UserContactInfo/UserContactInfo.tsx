@@ -28,12 +28,12 @@ export class UserContactInfo extends React.PureComponent<{
   render() {
     return (
       <UserInfoStyle>
-        <InfoRow />
+        <InfoRow {...this.props.infoProps} />
 
-        <EmailRow />
-        <PhoneLine />
+        <EmailRow {...this.props.emailProps}/>
+        <PhoneLine {...this.props.phoneProps} />
 
-        <Address />
+        <Address {...this.props.addressProps}/>
       </UserInfoStyle>
     );
   }

@@ -9,6 +9,8 @@ const NameAndPhoneNumberStyle = styled.div`
   align-items: center;
   align-items: center;
   color: white;
+  margin-left: 16px;
+  margin-right: 16px;
 `;
 const NameStyle = styled.div`
   font: ${mainFont};

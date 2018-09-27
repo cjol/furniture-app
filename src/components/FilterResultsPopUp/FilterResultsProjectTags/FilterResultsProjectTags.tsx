@@ -15,8 +15,19 @@ const TagsContainer = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
 `;
-export class FilterResultsProjectTags extends React.PureComponent<{}> {
-  static defaultProps: FilterResultsProjectTags["props"] = {};
+export class FilterResultsProjectTags extends React.PureComponent<{
+  projectTagProps: ProjectTag["props"][];
+}> {
+  static defaultProps: FilterResultsProjectTags["props"] = {
+    projectTagProps: [
+      ProjectTag.defaultProps,
+      ProjectTag.defaultProps,
+      ProjectTag.defaultProps,
+      ProjectTag.defaultProps,
+      ProjectTag.defaultProps,
+      ProjectTag.defaultProps
+    ]
+  };
 
   render() {
     return (

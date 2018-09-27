@@ -20,7 +20,7 @@ export class PlaceBidPage extends React.PureComponent<{}> {
         <ProjectHeader />
         <AboutBid />
         <ImageBar />
-        <PlainText />
+        <PlainText>Instructions go here</PlainText>
         <PlaceBid />
       </PageStyle>
     );

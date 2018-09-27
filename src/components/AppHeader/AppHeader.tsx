@@ -2,12 +2,13 @@ import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import { Menu } from "@material-ui/icons";
 import styled from "styled-components";
-import { grey } from "@style";
+import { greyButtonColor } from "@style";
 import { mainFont } from "@style";
 
 const MenuBarStyle = styled.div`
   display: flex;
   flex-direction: row;
+  background-color: ${greyButtonColor};
 `;
 
 const TitleStyle = styled.div`
@@ -16,7 +17,6 @@ const TitleStyle = styled.div`
   font-family: ${mainFont};
   font-size: 20px;
   font-weight: bold;
-  background-color: ${grey};
 `;
 
 export class AppHeader extends React.PureComponent<{

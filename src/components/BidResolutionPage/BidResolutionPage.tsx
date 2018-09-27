@@ -27,7 +27,7 @@ export class BidResolutionPage extends React.PureComponent<{}> {
       <HeaderStyled>
         <AppHeader />
         <MatchFoundStyled> You've Found your match!</MatchFoundStyled>
-        <PlainText />
+        <PlainText>Instructions go here</PlainText>
         <ProjectHeader />
         <CostDue />
         <ImageBar />

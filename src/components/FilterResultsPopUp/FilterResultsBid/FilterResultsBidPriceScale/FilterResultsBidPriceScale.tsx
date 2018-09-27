@@ -19,10 +19,14 @@ const FilledBarStyle = styled.div`
 `;
 
 export class FilterResultsBidPriceScale extends React.PureComponent<{
+  top: number;
+  bottom: number;
   bidRangeSetBottom: (bottom: number) => void;
   bidRangeSetTop: (top: number) => void;
 }> {
   static defaultProps: FilterResultsBidPriceScale["props"] = {
+    top: 0,
+    bottom: 0,
     bidRangeSetBottom: bottom => alert("Lower Bid Range" + bottom),
     bidRangeSetTop: top => alert("Upper Bid Range: " + top)
   };

@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Placeholder } from "Components/Placeholder";
 import { Call, Email } from "@material-ui/icons";
+import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
 const EmailStyle = styled.div`
   display: flex;

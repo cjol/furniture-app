@@ -12,6 +12,8 @@ export class PhotoUploadPopUp extends React.PureComponent<{}> {
     return (
       <Popup>
         <PhotoUrl />
+        <PhotoUrl />
+        <PhotoUrl />
         <Add />
         <RectangularButton />
       </Popup>

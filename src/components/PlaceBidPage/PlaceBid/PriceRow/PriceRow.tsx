@@ -9,7 +9,7 @@ const PriceStyle = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const PriceBidStyle = styled.div`
+const PriceBidStyle = styled.input`
   display: flex;
   flex-direction: column;
 `;
@@ -24,7 +24,7 @@ export class PriceRow extends React.PureComponent<{
     return (
       <RowStyle>
         <PriceStyle> Price: </PriceStyle>
-        <PriceBidStyle> PriceBid: </PriceBidStyle>
+        <PriceBidStyle value="bid" />
       </RowStyle>
     );
   }

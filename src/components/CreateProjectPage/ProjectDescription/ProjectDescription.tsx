@@ -7,6 +7,7 @@ import * as React from "react";
 import { PlainText } from "Components/PlainText/PlainText";
 import { Subheading } from "Components/Subheading/Subheading";
 import styled from "styled-components";
+import { mainFont } from "@style";
 
 const ProjectDescriptionStyle = styled.div`
   display: flex;
@@ -14,7 +15,9 @@ const ProjectDescriptionStyle = styled.div`
   align-items: stretch;
 `;
 
-const ProjectDescriptionFieldStyle = styled.div`
+const ProjectDescriptionFieldStyle = styled.textarea`
+  font-family: ${mainFont};
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

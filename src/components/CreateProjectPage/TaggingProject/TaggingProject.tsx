@@ -16,8 +16,8 @@ export class TaggingProject extends React.PureComponent<{}> {
   render() {
     return (
       <TaggingProjectStyle>
-        <Subheading />
-        <PlainText />
+        <Subheading>Tag Your Project</Subheading>
+        <PlainText>Instructions</PlainText>
         <FilterResultsProjectTags />
       </TaggingProjectStyle>
     );

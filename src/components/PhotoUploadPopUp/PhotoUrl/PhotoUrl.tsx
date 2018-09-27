@@ -1,8 +1,11 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
+import { mainFont } from "@style";
 
-const PhotoUrlStyle = styled.div``;
+const PhotoUrlStyle = styled.input`
+  font-family: ${mainFont};
+`;
 
 export class PhotoUrl extends React.PureComponent<{
   image: string;
@@ -12,6 +15,6 @@ export class PhotoUrl extends React.PureComponent<{
   };
 
   render() {
-    return <PhotoUrlStyle>Copy Image URL</PhotoUrlStyle>;
+    return <PhotoUrlStyle value="Copy Image URL" />;
   }
 }

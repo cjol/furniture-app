@@ -29,7 +29,6 @@ export class DetailedProjectPage extends React.PureComponent<{}> {
         <PlainText>Project Description</PlainText>
 
         <ActiveBids />
-        <RectangularButton />
       </PageContentStyle>
     );
   }

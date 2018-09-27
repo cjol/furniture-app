@@ -8,10 +8,13 @@ import styled from "styled-components";
 const PhotoContainerStyled = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: stretch;
+  flex-grow: 1;
 `;
-const PhotoContainerPlaceholderStyled = styled.div`
+const PhotoContainerInstructionsStyled = styled.div`
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 `;
 export class PhotoContainer extends React.PureComponent<{}> {
   static defaultProps: PhotoContainer["props"] = {};
@@ -19,10 +22,10 @@ export class PhotoContainer extends React.PureComponent<{}> {
   render() {
     return (
       <PhotoContainerStyled>
-        <PhotoContainerPlaceholderStyled>
-          <Subheading />
-          <PlainText />
-        </PhotoContainerPlaceholderStyled>
+        <PhotoContainerInstructionsStyled>
+          <Subheading>Upload Photos</Subheading>
+          <PlainText>Instructions go here</PlainText>
+        </PhotoContainerInstructionsStyled>
         <RoundButton>
           <Add />
         </RoundButton>

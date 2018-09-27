@@ -5,7 +5,13 @@ import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import styled from "styled-components";
 import { mainFont } from "@style";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect
+} from "react-router-dom";
 import { ComponentPreviewer } from "./ComponentPreviewer";
 
 import { AppHeader } from "Components/AppHeader/AppHeader";
@@ -49,29 +55,25 @@ export default class App extends React.Component {
       <ApolloProvider client={client}>
         <AppStyle>
           <Router>
-            <Route
-              render={() => (
-                <ComponentPreviewer
-                  components={{
-                    AppHeader,
-                    BidDetail,
-                    BidResolutionPage,
-                    BidSubmitted,
-                    CreateProjectPage,
-                    DetailedProjectPage,
-                    PhotoUploadPopUp,
-                    PlaceBidPage,
-                    ProfilePage,
-                    ProjectHeader,
-                    ProjectListingsPage,
-                    RectangularButton,
-                    RoundButton,
-                    SubmitQuestionPopUp,
-                    FilterResultsPopUp
-                  }}
-                />
-              )}
-            />
+            <Switch>
+              <Route exact path="/" component={ProjectListingsPage} />
+              <Route exact path="/new-project" component={CreateProjectPage} />
+              <Route
+                exact
+                path="/project/:id"
+                component={DetailedProjectPage}
+              />
+              <Route exact path="/project/:id/bid" component={PlaceBidPage} />
+              <Route
+                exact
+                path="/project/:id/matched"
+                component={BidResolutionPage}
+              />
+              <Route exact path="/profile" component={ProfilePage} />
+              <Route>
+                <Redirect to="/" />
+              </Route>
+            </Switch>
           </Router>
         </AppStyle>
       </ApolloProvider>

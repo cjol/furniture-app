@@ -11,6 +11,9 @@ import { PendingQueries } from "./PendingQueries/PendingQueries";
 import { PlainText } from "Components/PlainText/PlainText";
 import styled from "styled-components";
 import { white } from "@style";
+import { RouteComponentProps } from "react-router-dom";
+import { BidSubmitted } from "Components/BidSubmitted/BidSubmitted";
+import { DetailedProjectPageState } from "./DetailedProjectPageState";
 
 const PageContentStyle = styled.div`
   display: flex;
@@ -26,6 +29,7 @@ export class DetailedProjectPage extends React.PureComponent<{
   imageBarProps: ImageBar["props"];
   activeBidsProps: ActiveBids["props"];
   description: string;
+  match: any;
 }> {
   static defaultProps: DetailedProjectPage["props"] = {
     appHeaderProps: AppHeader.defaultProps,
@@ -33,20 +37,41 @@ export class DetailedProjectPage extends React.PureComponent<{
     aboutBidProps: AboutBid.defaultProps,
     imageBarProps: ImageBar.defaultProps,
     activeBidsProps: ActiveBids.defaultProps,
-    description: "Project description goes here"
+    description: "Project description goes here",
+    match: { params: { id: "4" } }
   };
 
   render() {
     return (
-      <PageContentStyle>
-        <AppHeader {...this.props.appHeaderProps} />
-        <ProjectHeader {...this.props.projectHeaderProps} />
-        <AboutBid {...this.props.aboutBidProps} />
-        <ImageBar {...this.props.imageBarProps} />
-        <PlainText>Project Description</PlainText>
+      <DetailedProjectPageState match={this.props.match}>
+        {({ projectID, showConfirmationPopup, toggleConfirmationPopup }) => {
+          return (
+            <PageContentStyle>
+              <BidSubmitted
+                title="My Project"
+                popup={{
+                  show: showConfirmationPopup,
+                  headerProps: {
+                    closeFunction: toggleConfirmationPopup,
+                    title: "Bid Submitted"
+                  }
+                }}
+              />
+              <AppHeader title={"Place Bid"} />
+              <ProjectHeader />
+              <AboutBid
+                averageBidAmount={"5000 UGX"}
+                numberOfBids={8}
+                timeUntilEnd={"2 Days"}
+              />
+              <ImageBar image={["https://tyrohq.com/logo"]} />
+              <PlainText>{this.props.description}</PlainText>
 
-        <ActiveBids {...this.props.activeBidsProps} />
-      </PageContentStyle>
+              <ActiveBids individualBidProps={[]} projectID={projectID} />
+            </PageContentStyle>
+          );
+        }}
+      </DetailedProjectPageState>
     );
   }
 }

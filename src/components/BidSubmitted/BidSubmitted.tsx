@@ -9,17 +9,22 @@ const TextContainer = styled.div`
   margin-right: 16px;
   margin-bottom: 16px;
 `;
-export class BidSubmitted extends React.PureComponent<{}> {
-  static defaultProps: BidSubmitted["props"] = {};
+export class BidSubmitted extends React.PureComponent<{
+  title: string;
+  popup: Popup["props"];
+}> {
+  static defaultProps: BidSubmitted["props"] = {
+    title: "Project Title",
+    popup: Popup.defaultProps
+  };
 
   render() {
     return (
       <Popup>
         <TextContainer>
           <PlainText>
-            {" "}
             Congratulations you have successfully bid on “Project Title”. You
-            will be notifed when the bid has been awarded.{" "}
+            will be notifed when the bid has been awarded.
           </PlainText>
         </TextContainer>
       </Popup>

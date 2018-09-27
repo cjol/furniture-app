@@ -10,6 +10,8 @@ import { IndividualBid } from "./IndividualBid/IndividualBid";
 import styled from "styled-components";
 import { white, normalBoxShadow } from "@style";
 
+import { Link } from "react-router-dom";
+
 const ActiveBidsStyle = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,6 +24,7 @@ export class ActiveBids extends React.PureComponent<{
   individualBidProps: IndividualBid["props"][];
   activeBidProps: ActiveBidsHeader["props"];
   onClick: () => void;
+  projectID: string;
 }> {
   static defaultProps: ActiveBids["props"] = {
     individualBidProps: [
@@ -30,7 +33,8 @@ export class ActiveBids extends React.PureComponent<{
       IndividualBid.defaultProps
     ],
     activeBidProps: ActiveBidsHeader.defaultProps,
-    onClick: () => alert("Placing Bid")
+    onClick: () => alert("Placing Bid"),
+    projectID: "123"
   };
 
   render() {
@@ -44,9 +48,11 @@ export class ActiveBids extends React.PureComponent<{
 
         {bids}
 
-        <RectangularButton onClick={this.props.onClick}>
-          Place Bid
-        </RectangularButton>
+        <Link to={"/project/" + this.props.projectID + "/bid"}>
+          <RectangularButton onClick={this.props.onClick}>
+            Place Bid
+          </RectangularButton>
+        </Link>
       </ActiveBidsStyle>
     );
   }

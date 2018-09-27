@@ -5,6 +5,9 @@ import { ChevronRight } from "@material-ui/icons";
 import styled from "styled-components";
 import { CheckBox } from "@material-ui/icons";
 import { grey } from "@style";
+
+import { ImageBarState } from "./ImageBarState";
+
 const ImageBarStyle = styled.div`
   display: flex;
   flex-direction: row;
@@ -43,38 +46,40 @@ const ChevronRightCheckBoxStyle = styled(ChevronRight)`
 
 export class ImageBar extends React.PureComponent<{
   image: string[];
-  chevronLeft: () => void;
-  chevronRight: () => void;
 }> {
   static defaultProps: ImageBar["props"] = {
     image: [
       "https://tyrohq.com/apple-touch-icon.png",
       "https://tyrohq.com/apple-touch-icon.png",
       "https://tyrohq.com/apple-touch-icon.png"
-    ],
-    chevronLeft: () => alert("Previous Image"),
-    chevronRight: () => alert("Next Image")
+    ]
   };
 
   render() {
-    const imageList = this.props.image.map(image => {
-      return <ImageStyle image={image} />;
-    });
-
     return (
-      <ImageBarStyle>
-        {this.props.chevronLeft && (
-          <ChevronStyle onClick={this.props.chevronLeft}>
-            <ChevronLeftCheckBoxStyle />
-          </ChevronStyle>
-        )}
-        {imageList}
-        {this.props.chevronRight && (
-          <ChevronStyle onClick={this.props.chevronRight}>
-            <ChevronRightCheckBoxStyle />
-          </ChevronStyle>
-        )}
-      </ImageBarStyle>
+      <ImageBarState images={this.props.image}>
+        {({ goLeft, goRight, selectedPhotoUrls }) => {
+          const imageList = selectedPhotoUrls.map(image => {
+            return <ImageStyle image={image} />;
+          });
+
+          return (
+            <ImageBarStyle>
+              {goLeft && (
+                <ChevronStyle onClick={goLeft}>
+                  <ChevronLeftCheckBoxStyle />
+                </ChevronStyle>
+              )}
+              {imageList}
+              {goRight && (
+                <ChevronStyle onClick={goRight}>
+                  <ChevronRightCheckBoxStyle />
+                </ChevronStyle>
+              )}
+            </ImageBarStyle>
+          );
+        }}
+      </ImageBarState>
     );
   }
 }

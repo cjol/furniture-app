@@ -2,6 +2,7 @@ import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import { ProjectInfo } from "./ProjectInfo/ProjectInfo";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import {
   mainFont,
   grey,
@@ -35,11 +36,13 @@ const AmountStyle = styled.div`
 `;
 
 export class ProjectListing extends React.PureComponent<{
+  id: string;
   projectImage: string;
   projectInfoProps: ProjectInfo["props"];
   amountTitle: number;
 }> {
   static defaultProps: ProjectListing["props"] = {
+    id: "123",
     projectImage: "https://tyrohq.com/apple-touch-icon.png",
 
     projectInfoProps: ProjectInfo.defaultProps,
@@ -48,11 +51,13 @@ export class ProjectListing extends React.PureComponent<{
 
   render() {
     return (
-      <ProjectListingStyle>
-        <ProjectImageStyle />
-        <ProjectInfo />
-        <AmountStyle>Amount</AmountStyle>
-      </ProjectListingStyle>
+      <Link to={"/project/" + this.props.id}>
+        <ProjectListingStyle>
+          <ProjectImageStyle />
+          <ProjectInfo />
+          <AmountStyle>Amount</AmountStyle>
+        </ProjectListingStyle>
+      </Link>
     );
   }
 }

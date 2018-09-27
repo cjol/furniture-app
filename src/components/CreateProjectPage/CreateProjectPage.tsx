@@ -46,10 +46,6 @@ export class CreateProjectPage extends React.PureComponent<{
           allPhotoUrls,
           addPhotoUrl,
 
-          selectedPhotoUrls,
-          goLeft,
-          goRight,
-
           title,
           setTitle,
 
@@ -76,11 +72,7 @@ export class CreateProjectPage extends React.PureComponent<{
               <PageContents>
                 <ProjectHeader />
                 <PhotoContainer uploadPhoto={toggleUploadPopup} />
-                <ImageBar
-                  image={selectedPhotoUrls}
-                  chevronLeft={goLeft}
-                  chevronRight={goRight}
-                />
+                <ImageBar image={allPhotoUrls.map(x => x.image)} />
                 <ProjectDescription
                   description={description}
                   setDescription={setDescription}

@@ -20,7 +20,7 @@ export class CreateProjectPage extends React.PureComponent<{
   photoContainerProps: PhotoContainer["props"];
   imageBarProps: ImageBar["props"];
   projectDescriptionProps: ProjectDescription["props"];
-  taggingProject: TaggingProject["props"];
+  taggingProjectProps: TaggingProject["props"];
   onClick: () => void;
 }> {
   static defaultProps: CreateProjectPage["props"] = {
@@ -29,20 +29,20 @@ export class CreateProjectPage extends React.PureComponent<{
     photoContainerProps: PhotoContainer.defaultProps,
     imageBarProps: ImageBar.defaultProps,
     projectDescriptionProps: ProjectDescription.defaultProps,
-    taggingProject: TaggingProject.defaultProps,
+    taggingProjectProps: TaggingProject.defaultProps,
     onClick: () => alert("Posting Project")
   };
 
   render() {
     return (
       <CreateProjectPageStyle>
-        <AppHeader />
-        <ProjectHeader />
-        <PhotoContainer />
-        <ImageBar />
-        <ProjectDescription />
-        <TaggingProject />
-        <RectangularButton>POST PROJECT</RectangularButton>
+        <AppHeader {...this.props.appHeaderProps}/>
+        <ProjectHeader {...this.props.projectHeaderProps} />
+        <PhotoContainer {...this.props.photoContainerProps} />
+        <ImageBar {...this.props.imageBarProps} />
+        <ProjectDescription {...this.props.projectDescriptionProps}/>
+        <TaggingProject {...this.props.taggingProjectProps} />
+        <RectangularButton onClick={this.props.onClick}>POST PROJECT</RectangularButton>
       </CreateProjectPageStyle>
     );
   }

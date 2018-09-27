@@ -9,15 +9,22 @@ import { UserContactInfo } from "./UserContactInfo/UserContactInfo";
 import { UserDetails } from "Components/UserDetails/UserDetails";
 import { PlainText } from "Components/PlainText/PlainText";
 import styled from "styled-components";
+import { greenMain } from "@style";
 const HeaderStyled = styled.div`
   display: flex;
   flex-direction: column;
 `;
 const MatchFoundStyled = styled.div`
   display: flex;
+  color: ${greenMain};
+  font-size: 24px;
+  text-align: center;
 `;
 const RateUserHereStyled = styled.div`
   display: flex;
+  color: ${greenMain};
+  font-size: 24px;
+  text-align: center;
 `;
 export class BidResolutionPage extends React.PureComponent<{}> {
   static defaultProps: BidResolutionPage["props"] = {};

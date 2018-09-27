@@ -16,7 +16,7 @@ export class ActiveProjectBids extends React.PureComponent<{}> {
   render() {
     return (
       <ActiveProjectBidsStyle>
-        <Subheading />
+        <Subheading>Active Projects</Subheading>
         <ProjectListing />
         <ProjectListing />
       </ActiveProjectBidsStyle>

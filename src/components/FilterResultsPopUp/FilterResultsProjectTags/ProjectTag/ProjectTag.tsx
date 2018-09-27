@@ -26,12 +26,11 @@ const ProjectTagStyle = styled.div`
 `;
 
 const ProjectTagLabelStyle = styled.div`
-display:flex;
-font-family: ${mainFont};
-color: ${greenMain}
-font-size: 12px;
-align-items:left;
-
+  display: flex;
+  font-family: ${mainFont};
+  color: ${greenMain};
+  font-size: 12px;
+  align-items: left;
 `;
 
 export class ProjectTag extends React.PureComponent<{

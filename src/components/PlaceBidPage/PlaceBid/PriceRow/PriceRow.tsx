@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { mainFont } from "@style";
 import { black } from "@style";
 import { grey } from "@style";
-import{greenMain} from "@style";
+import { greenMain } from "@style";
 
 const RowStyle = styled.div`
   display: flex;
@@ -17,21 +17,18 @@ const PriceStyle = styled.div`
   color: ${grey};
   font-size: 14px;
   font-weight: bold;
-  margin-right:16px;
-
-
+  margin-right: 16px;
 `;
 const PriceBidStyle = styled.input`
   display: flex;
   flex-direction: column;
   font-family: ${mainFont};
-  color: ${greenMain};
   font-size: 12px;
-  border-bottom:2px;
-  border-style:solid;
-  border:none;
-  border-bottom-style:solid;
+  border: none;
 
+  border-bottom-width: 2px;
+  border-bottom-color: ${greenMain};
+  border-bottom-style: solid;
 `;
 export class PriceRow extends React.PureComponent<{
   price: string;

@@ -25,13 +25,13 @@ const PlaceBidHeaderStyle = styled.div`
 export class PlaceBid extends React.PureComponent<{
   priceRowProps: PriceRow["props"];
   timeRowProps: TimeRow["props"];
-  addBidDescription: AddBidDescription["props"];
+  addBidDescriptionProps: AddBidDescription["props"];
   onClick: () => any;
 }> {
   static defaultProps: PlaceBid["props"] = {
     priceRowProps: PriceRow.defaultProps,
     timeRowProps: TimeRow.defaultProps,
-    addBidDescription: AddBidDescription.defaultProps,
+    addBidDescriptionProps: AddBidDescription.defaultProps,
     onClick: () => alert("Clicked a button to place Bid")
   };
 
@@ -39,10 +39,10 @@ export class PlaceBid extends React.PureComponent<{
     return (
       <PlaceBidStyle>
         <PlaceBidHeaderStyle>Place Bid</PlaceBidHeaderStyle>
-        <PriceRow />
-        <TimeRow />
-        <AddBidDescription />
-        <RectangularButton />
+        <PriceRow {...this.props.priceRowProps}/>
+        <TimeRow  {...this.props.timeRowProps}/>
+        <AddBidDescription {...this.props.addBidDescriptionProps} />
+        <RectangularButton onClick={this.props.onClick}/>
       </PlaceBidStyle>
     );
   }

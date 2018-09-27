@@ -2,13 +2,14 @@ import { Placeholder } from "Components/Placeholder";
 import { PlainText } from "Components/PlainText/PlainText";
 import { Subheading } from "Components/Subheading/Subheading";
 import * as React from "react";
-import { mainFont, black } from "@style";
+import { mainFont, black, greenMain } from "@style";
 import styled from "styled-components";
 
 const AddBidDescriptionStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  margin-top: 24px;
 `;
 
 const DescriptionFieldStyle = styled.textarea`
@@ -18,6 +19,8 @@ const DescriptionFieldStyle = styled.textarea`
   flex-grow: 1;
   font-size: 16px;
   color: ${black};
+  padding-bottom: 16px;
+  border-bottom: 2px, solid, ${greenMain};
 `;
 
 export class AddBidDescription extends React.PureComponent<{

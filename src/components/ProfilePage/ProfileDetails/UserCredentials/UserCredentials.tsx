@@ -9,7 +9,7 @@ const UserCredentialsStyle = styled.div`
   justify-content: flex-start;
   align-self: stretch;
 `;
-const UserCredentialsTitleStyle = styled.div`
+const UserCredentialsTitleStyle = styled.input`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -33,7 +33,9 @@ export class UserCredentials extends React.PureComponent<{}> {
         <UserCredentialsTitleStyle>Email Address</UserCredentialsTitleStyle>
         <UserCredentialsTitleStyle>Location</UserCredentialsTitleStyle>
         <UserCredentialsTitleStyle>PhoneNumber</UserCredentialsTitleStyle>
-        <UserCredentialsTitleStyle>Password</UserCredentialsTitleStyle>
+        <UserCredentialsTitleStyle type="password">
+          Password
+        </UserCredentialsTitleStyle>
       </UserCredentialsStyle>
     );
   }

@@ -6,11 +6,11 @@ import styled from "styled-components";
 const BidDetailsStyled = styled.div`
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 `;
 const AmountAndDurationStyled = styled.div`
   display: flex;
   flex-direction: row;
-
   font-size: 16px;
 `;
 const AmountStyled = styled.div`

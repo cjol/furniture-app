@@ -29,7 +29,7 @@ export class DetailedProjectPage extends React.PureComponent<{
     projectHeaderProps: ProjectHeader.defaultProps,
     aboutBidProps: AboutBid.defaultProps,
     imageBarProps: ImageBar.defaultProps,
-    activeBidsProps: ActiveBids["props"],
+    activeBidsProps: ActiveBids.defaultProps,
     description: "Project description goes here"
   };
 

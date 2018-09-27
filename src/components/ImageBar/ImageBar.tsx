@@ -15,13 +15,15 @@ const ChevronStyle = styled.div`
   flex-grow: 0;
 `;
 
-const ImageStyle = styled.div`
+const ImageStyle = styled.div<{image:string}>`
   display: flex;
   flex-grow: 1;
   flex-direction: row;
   justify-content: center;
   height: 50px;
+  background-image:url(${"https://tyro.ug/logo.png"});
 `;
+
 const ChevronLeftCheckBoxStyle = styled(ChevronLeft)`
   color: grey;
 `;
@@ -45,15 +47,18 @@ export class ImageBar extends React.PureComponent<{
   };
 
   render() {
+    const imageList = this.props.image.map(image=>{
+      <ImageStyle image={image} />
+    })
+   
+
     return (
       <ImageBarStyle>
-        <ChevronStyle>
+        <ChevronStyle onClick={this.props.chevronLeft}>
           <ChevronLeftCheckBoxStyle />
-        </ChevronStyle>
-        <ImageStyle />
-        <ImageStyle />
-        <ImageStyle />
-        <ChevronStyle>
+        </ChevronStyle>        
+        {imageList}
+        <ChevronStyle onClick={this.props.chevronRight}>
           <ChevronRightCheckBoxStyle />
         </ChevronStyle>
       </ImageBarStyle>

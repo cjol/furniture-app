@@ -21,9 +21,11 @@ const TitleStyle = styled.div`
 
 export class AppHeader extends React.PureComponent<{
   Title: String;
+  menu: ()=> void;
 }> {
   static defaultProps: AppHeader["props"] = {
-    Title: "Project Listings"
+    Title: "Project Listings",
+    menu:()=> alert("Opening menu")
   };
 
   render() {

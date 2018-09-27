@@ -20,7 +20,7 @@ const TitleStyle = styled.div`
 `;
 
 export class AppHeader extends React.PureComponent<{
-  Title: String;
+  Title: string;
   menu: ()=> void;
 }> {
   static defaultProps: AppHeader["props"] = {
@@ -30,9 +30,9 @@ export class AppHeader extends React.PureComponent<{
 
   render() {
     return (
-      <MenuBarStyle>
-        <Menu />
-        <TitleStyle>MyTitle</TitleStyle>
+      <MenuBarStyle >
+        <Menu onClick={this.props.menu}/>
+        <TitleStyle>{this.props.Title}</TitleStyle>
       </MenuBarStyle>
     );
   }

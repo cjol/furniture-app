@@ -7,6 +7,8 @@ import styled from "styled-components";
 const SuppliersSelectedStyled = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top:;24px
+  margin-bottom:24px;
 `;
 export class SuppliersSelected extends React.PureComponent<{}> {
   static defaultProps: SuppliersSelected["props"] = {};

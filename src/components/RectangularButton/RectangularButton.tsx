@@ -11,12 +11,16 @@ const ButtonLabelStyle = styled.div`
   font-family: ${mainFont};
   font-size: 14px;
   color: white;
-  background-color: ${darkerGreen},
+  background-color: ${darkerGreen};
   text-align: center;
 `;
 
-export class RectangularButton extends React.PureComponent<{}> {
-  static defaultProps: RectangularButton["props"] = {};
+export class RectangularButton extends React.PureComponent<{
+  onClick: () => any;
+}> {
+  static defaultProps: RectangularButton["props"] = {
+    onClick: () => alert("Clicked a button")
+  };
 
   render() {
     return (

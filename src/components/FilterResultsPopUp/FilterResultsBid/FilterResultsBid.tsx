@@ -10,8 +10,12 @@ const FilterResultsBidStyle = styled.div`
   justify-content: stretch;
 `;
 
-export class FilterResultsBid extends React.PureComponent<{}> {
-  static defaultProps: FilterResultsBid["props"] = {};
+export class FilterResultsBid extends React.PureComponent<{
+  bidPriceScale: string;
+}> {
+  static defaultProps: FilterResultsBid["props"] = {
+    bidPriceScale: "500K-700K"
+  };
 
   render() {
     return (

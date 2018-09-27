@@ -36,13 +36,13 @@ export class DetailedProjectPage extends React.PureComponent<{
   render() {
     return (
       <PageContentStyle>
-        <AppHeader />
-        <ProjectHeader />
-        <AboutBid />
-        <ImageBar />
+        <AppHeader {...this.props.appHeaderProps} />
+        <ProjectHeader {...this.props.projectHeaderProps} />
+        <AboutBid {...this.props.aboutBidProps} />
+        <ImageBar {...this.props.imageBarProps} />
         <PlainText>Project Description</PlainText>
 
-        <ActiveBids />
+        <ActiveBids {...this.props.activeBidsProps} />
       </PageContentStyle>
     );
   }

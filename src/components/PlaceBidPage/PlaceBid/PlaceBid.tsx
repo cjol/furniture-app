@@ -1,6 +1,7 @@
 import { Placeholder } from "Components/Placeholder";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
 import * as React from "react";
+import { PlaceBidState } from "./PlaceBidState";
 
 import { AddBidDescription } from "./AddBidDescription/AddBidDescription";
 import { PriceRow } from "./PriceRow/PriceRow";
@@ -29,27 +30,30 @@ const PlaceBidHeaderStyle = styled.div`
 `;
 
 export class PlaceBid extends React.PureComponent<{
-  priceRowProps: PriceRow["props"];
-  timeRowProps: TimeRow["props"];
-  addBidDescriptionProps: AddBidDescription["props"];
   onClick: () => any;
 }> {
   static defaultProps: PlaceBid["props"] = {
-    priceRowProps: PriceRow.defaultProps,
-    timeRowProps: TimeRow.defaultProps,
-    addBidDescriptionProps: AddBidDescription.defaultProps,
     onClick: () => alert("Clicked a button to place Bid")
   };
 
   render() {
     return (
-      <PlaceBidStyle>
-        <PlaceBidHeaderStyle>Place Bid</PlaceBidHeaderStyle>
-        <PriceRow {...this.props.priceRowProps} />
-        <TimeRow {...this.props.timeRowProps} />
-        <AddBidDescription {...this.props.addBidDescriptionProps} />
-        <RectangularButton onClick={this.props.onClick} />
-      </PlaceBidStyle>
+      <PlaceBidState>
+        {({ price, setPrice, time, setTime, description, setDescription }) => {
+          return (
+            <PlaceBidStyle>
+              <PlaceBidHeaderStyle>Place Bid</PlaceBidHeaderStyle>
+              <PriceRow price={price} changeHandler={setPrice} />
+              <TimeRow time={time} changeTime={setTime} />
+              <AddBidDescription
+                description={description}
+                setDescription={setDescription}
+              />
+              <RectangularButton onClick={this.props.onClick} />
+            </PlaceBidStyle>
+          );
+        }}
+      </PlaceBidState>
     );
   }
 }

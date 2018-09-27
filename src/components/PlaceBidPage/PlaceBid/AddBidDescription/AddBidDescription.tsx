@@ -29,10 +29,12 @@ const DescriptionFieldStyle = styled.textarea`
 
 export class AddBidDescription extends React.PureComponent<{
   description: string;
+  setDescription: (s: string) => void;
 }> {
   static defaultProps: AddBidDescription["props"] = {
     description:
-      "Salut! Je vend de produits de grande qualite's et mes pris sont tres favorable. Je rends un service rapide et fiable pour tout mes clients. Faites moi cette chance et vous verrez les merveilles"
+      "Salut! Je vend de produits de grande qualite's et mes pris sont tres favorable. Je rends un service rapide et fiable pour tout mes clients. Faites moi cette chance et vous verrez les merveilles",
+    setDescription: s => alert("Changing description")
   };
 
   render() {

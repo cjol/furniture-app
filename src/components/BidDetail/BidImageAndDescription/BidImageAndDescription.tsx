@@ -5,12 +5,14 @@ const BidDetailsStyle = styled.div`
   display: flex;
   flex-direction: row;
 `;
-const BidTextImageStyle = styled.div<{bidImage:string}>`
+const BidTextImageStyle = styled.div<{ bidImage: string }>`
   justify-content: flex-start;
   width: 30px;
   height: 35px;
   background-size: cover;
-  background-image:url(${props=>{return props.bidImage;}});
+  background-image: url(${props => {
+    return props.bidImage;
+  }});
 `;
 const BidTextStyle = styled.div``;
 
@@ -19,14 +21,14 @@ export class BidImageAndDescription extends React.PureComponent<{
   bidDescriptionText: string;
 }> {
   static defaultProps: BidImageAndDescription["props"] = {
-    bidImage: "www.tyrohq.com",
+    bidImage: "https://tyrohq.com/img/tyro-logo-dark.png",
     bidDescriptionText: "Lorem ipsum dora sit ameti"
   };
 
   render() {
     return (
       <BidDetailsStyle>
-        <BidTextImageStyle bidImage={this.props.bidImage}/>
+        <BidTextImageStyle bidImage={this.props.bidImage} />
         <BidTextStyle>{this.props.bidDescriptionText}</BidTextStyle>
       </BidDetailsStyle>
     );

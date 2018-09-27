@@ -14,11 +14,17 @@ const UserNameStyled = styled.div`
   font-size: 14px;
   font: ${mainFont};
   color: white;
+  margin-top:8px;
+  margin-Bottom;8px;
 `;
 const UserPictureStyled = styled.div`
   display: flex;
   height: 50px;
   width: 50px;
+  background-image: url(https://tyrohq.com/apple-touch-icon.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
 `;
 
 const RatingStarsStyled = styled.div`

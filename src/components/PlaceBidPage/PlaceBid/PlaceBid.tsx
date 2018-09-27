@@ -19,8 +19,19 @@ const PlaceBidHeaderStyle = styled.div`
   font: ${mainFont};
 `;
 
-export class PlaceBid extends React.PureComponent<{}> {
-  static defaultProps: PlaceBid["props"] = {};
+export class PlaceBid extends React.PureComponent<{
+  priceRowProps: PriceRow["props"];
+  timeRowProps: TimeRow["props"];
+  addBidDescription:AddBidDescription["props"];
+  onClick: () => any;
+}> {
+  static defaultProps: PlaceBid["props"] = {
+    priceRowProps: PriceRow.defaultProps,
+    timeRowProps: TimeRow.defaultProps,
+    addBidDescription:AddBidDescription.defaultProps,
+    onClick: () => alert("Clicked a button to place Bid")
+    
+  };
 
   render() {
     return (

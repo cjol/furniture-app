@@ -10,8 +10,14 @@ const InfoRowStyled = styled.div`
   display: flex;
   flex-direction: row;
 `;
-export class InfoRow extends React.PureComponent<{}> {
-  static defaultProps: InfoRow["props"] = {};
+export class InfoRow extends React.PureComponent<{
+  infoRowprops: InfoRowPicture["props"];
+  infoNameProps: InfoNameAndNumber["props"];
+}> {
+  static defaultProps: InfoRow["props"] = {
+    infoRowprops: InfoRowPicture.defaultProps,
+    infoNameProps: InfoNameAndNumber.defaultProps
+  };
 
   render() {
     return (

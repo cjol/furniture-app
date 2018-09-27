@@ -22,4 +22,4 @@ query FetchDetailedProjectView($ProjID: ID!) {
     }
       }
     }
-  }
+}

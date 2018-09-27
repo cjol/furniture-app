@@ -3,6 +3,7 @@ import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
 
 import { mainFont, grey } from "@style";
+import { isDate } from "util";
 
 const CostDueStyle = styled.div`
   display: flex;
@@ -36,8 +37,14 @@ const ValueStyle = styled.div`
   font-weight: bold;
 `;
 
-export class CostDue extends React.PureComponent<{}> {
-  static defaultProps: CostDue["props"] = {};
+export class CostDue extends React.PureComponent<{
+  price: string;
+  dueDate: string;
+}> {
+  static defaultProps: CostDue["props"] = {
+    price: "600ugx",
+    dueDate: "16-Jan-2018"
+  };
 
   render() {
     return (

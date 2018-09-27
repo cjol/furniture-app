@@ -13,6 +13,7 @@ const PageStyle = styled.div`
   display: flex;
   font-size: 14px;
   padding: 24px;
+  flex-direction: column;
   background-color: ${white};
 `;
 

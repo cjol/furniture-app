@@ -12,8 +12,18 @@ const UserInfoStyle = styled.div`
   align-items: stretch;
 `;
 
-export class UserContactInfo extends React.PureComponent<{}> {
-  static defaultProps: UserContactInfo["props"] = {};
+export class UserContactInfo extends React.PureComponent<{
+  infoProps: InfoRow["props"];
+  emailProps: EmailRow["props"];
+  phoneProps: PhoneLine["props"];
+  addressProps: Address["props"];
+}> {
+  static defaultProps: UserContactInfo["props"] = {
+    infoProps: InfoRow.defaultProps,
+    emailProps: EmailRow.defaultProps,
+    phoneProps: PhoneLine.defaultProps,
+    addressProps: Address.defaultProps
+  };
 
   render() {
     return (

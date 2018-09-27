@@ -19,7 +19,7 @@ const PlaceBidHeaderStyle = styled.div`
   align-items: center;
   font-size: 24px;
   font: ${mainFont};
-  color:green;
+  color:grey;
 `;
 
 export class PlaceBid extends React.PureComponent<{

@@ -15,6 +15,7 @@ const PriceStyle = styled.div`
   font-family: ${mainFont};
   color: ${black};
   font-size: 14px;
+  font-weight: bold;
 `;
 const PriceBidStyle = styled.input`
   display: flex;

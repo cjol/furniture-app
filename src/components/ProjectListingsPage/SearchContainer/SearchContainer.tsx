@@ -7,6 +7,7 @@ import { Checkbox } from "@material-ui/core";
 const SearchHeaderStyle = styled.div`
   display: flex;
   flex-direction: row;
+  margin-top;24px;
 `;
 const SearchCheckBoxStyle =styled(Search)`
 color:grey;

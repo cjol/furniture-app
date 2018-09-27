@@ -1,9 +1,6 @@
+import { grey, mainFont } from "@style";
 import * as React from "react";
-import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
-
-import { mainFont, grey } from "@style";
-import { isDate } from "util";
 
 const CostDueStyle = styled.div`
   display: flex;

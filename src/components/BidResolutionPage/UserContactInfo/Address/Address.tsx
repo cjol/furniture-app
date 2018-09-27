@@ -1,14 +1,13 @@
 import * as React from "react";
 import { Placeholder } from "Components/Placeholder";
 import styled from "styled-components";
-import { white, grey } from "@style";
+import { white, grey, mainFont } from "@style";
 
 const AddressContentStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   font-size: 13px;
-  background-color: ${white};
 `;
 const AddressHeadingStyle = styled.div`
   color: ${grey};
@@ -19,6 +18,7 @@ const AddressStyle = styled.div`
   flex-direction: row;
   align-items: flex-start;
   color: ${grey};
+  font: ${mainFont};
 `;
 
 export class Address extends React.PureComponent<{

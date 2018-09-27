@@ -9,6 +9,6 @@ export const Subheading = styled.div`
   color: ${greenMain};
   font-family: ${mainFont};
   font-size: 18px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 `;

@@ -9,13 +9,14 @@ import {
   squareButtonRadius
 } from "@style";
 const RectangularButtonStyle = styled.div`
+  display: flex;
   margin-top: 24px;
-  margin-bottom: 24px;
   padding: 16px;
   background-color: ${greenMain};
   box-shadow: ${normalBoxShadow};
   border-radius: ${squareButtonRadius};
   flex-grow: 0;
+  align-self: center;
 `;
 const ButtonLabelStyle = styled.div`
   align-items: center;

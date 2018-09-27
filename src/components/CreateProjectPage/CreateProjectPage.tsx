@@ -13,7 +13,15 @@ import { white } from "@style";
 const CreateProjectPageStyle = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 24px;
+`;
+
+const PageContents = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   background-color: ${white};
 `;
 
@@ -40,14 +48,16 @@ export class CreateProjectPage extends React.PureComponent<{
     return (
       <CreateProjectPageStyle>
         <AppHeader {...this.props.appHeaderProps} />
-        <ProjectHeader {...this.props.projectHeaderProps} />
-        <PhotoContainer {...this.props.photoContainerProps} />
-        <ImageBar {...this.props.imageBarProps} />
-        <ProjectDescription {...this.props.projectDescriptionProps} />
-        <TaggingProject {...this.props.taggingProjectProps} />
-        <RectangularButton onClick={this.props.onClick}>
-          POST PROJECT
-        </RectangularButton>
+        <PageContents>
+          <ProjectHeader {...this.props.projectHeaderProps} />
+          <PhotoContainer {...this.props.photoContainerProps} />
+          <ImageBar {...this.props.imageBarProps} />
+          <ProjectDescription {...this.props.projectDescriptionProps} />
+          <TaggingProject {...this.props.taggingProjectProps} />
+          <RectangularButton onClick={this.props.onClick}>
+            POST PROJECT
+          </RectangularButton>
+        </PageContents>
       </CreateProjectPageStyle>
     );
   }

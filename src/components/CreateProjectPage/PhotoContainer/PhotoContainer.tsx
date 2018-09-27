@@ -10,11 +10,19 @@ const PhotoContainerStyled = styled.div`
   flex-direction: row;
   justify-content: stretch;
   flex-grow: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
 `;
 const PhotoContainerInstructionsStyled = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 export class PhotoContainer extends React.PureComponent<{
   uploadPhoto: () => void;
@@ -28,11 +36,15 @@ export class PhotoContainer extends React.PureComponent<{
       <PhotoContainerStyled>
         <PhotoContainerInstructionsStyled>
           <Subheading>Upload Photos</Subheading>
-          <PlainText>Instructions go here</PlainText>
+          <PlainText>
+            Add some photos of similar pieces to guide your supplier.
+          </PlainText>
         </PhotoContainerInstructionsStyled>
-        <RoundButton onClick={this.props.uploadPhoto}>
-          <Add />
-        </RoundButton>
+        <ButtonContainer>
+          <RoundButton onClick={this.props.uploadPhoto}>
+            <Add />
+          </RoundButton>
+        </ButtonContainer>
       </PhotoContainerStyled>
     );
   }

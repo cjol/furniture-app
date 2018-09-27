@@ -10,6 +10,7 @@ const PopupStyle = styled.div`
   padding: 24px;
   background-color: ${whiteButtonColor};
   box-shadow: ${pressedBoxShadow};
+  margin: 16px;
 `;
 
 const PopupContentsStyle = styled.div`

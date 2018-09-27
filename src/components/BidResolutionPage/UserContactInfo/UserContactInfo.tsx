@@ -11,9 +11,14 @@ const UserInfoStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 24px;
   background-color: ${whiteButtonColor};
   box-shadow: ${normalBoxShadow};
+  margin-top: 12px;
+  margin-bottom: 12px;
+`;
+
+const BoxContentsStyle = styled.div`
+  padding: 24px;
 `;
 
 export class UserContactInfo extends React.PureComponent<{
@@ -33,11 +38,12 @@ export class UserContactInfo extends React.PureComponent<{
     return (
       <UserInfoStyle>
         <InfoRow {...this.props.infoProps} />
+        <BoxContentsStyle>
+          <EmailRow {...this.props.emailProps} />
+          <PhoneLine {...this.props.phoneProps} />
 
-        <EmailRow {...this.props.emailProps}/>
-        <PhoneLine {...this.props.phoneProps} />
-
-        <Address {...this.props.addressProps}/>
+          <Address {...this.props.addressProps} />
+        </BoxContentsStyle>
       </UserInfoStyle>
     );
   }

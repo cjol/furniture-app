@@ -9,6 +9,7 @@ const ImageBarStyle = styled.div`
   flex-direction: row;
   justify-content: stretch;
   align-items: center;
+  margin-top: 24px;
 `;
 
 const ChevronStyle = styled.div`
@@ -22,6 +23,7 @@ const ImageStyle = styled.div<{ image: string }>`
   justify-content: center;
   height: 50px;
   background-image: url(${props => props.image});
+  margin: 4px;
 `;
 
 const ChevronLeftCheckBoxStyle = styled(ChevronLeft)`
@@ -38,9 +40,9 @@ export class ImageBar extends React.PureComponent<{
 }> {
   static defaultProps: ImageBar["props"] = {
     image: [
-      "https://tyro.ug/logo.png",
-      "https://tyro.ug/logo.png",
-      "https://tyro.ug/logo.png"
+      "https://tyrohq.com/apple-touch-icon.png",
+      "https://tyrohq.com/apple-touch-icon.png",
+      "https://tyrohq.com/apple-touch-icon.png"
     ],
     chevronLeft: () => alert("Previous Image"),
     chevronRight: () => alert("Next Image")
@@ -48,7 +50,7 @@ export class ImageBar extends React.PureComponent<{
 
   render() {
     const imageList = this.props.image.map(image => {
-      <ImageStyle image={image} />;
+      return <ImageStyle image={image} />;
     });
 
     return (

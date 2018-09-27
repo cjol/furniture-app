@@ -26,8 +26,22 @@ const RateUserHereStyled = styled.div`
   font-size: 24px;
   text-align: center;
 `;
-export class BidResolutionPage extends React.PureComponent<{}> {
-  static defaultProps: BidResolutionPage["props"] = {};
+export class BidResolutionPage extends React.PureComponent<{
+  appHeaderProps: AppHeader["props"];
+  projectHeaderProps: ProjectHeader["props"];
+  costDueProps: CostDue["props"];
+  imageBarProps: ImageBar["props"];
+  userContactInfoProps: UserContactInfo["props"];
+  userDetailProps: UserDetails["props"];
+}> {
+  static defaultProps: BidResolutionPage["props"] = {
+  appHeaderProps: AppHeader.defaultProps,
+  projectHeaderProps: ProjectHeader.defaultProps,
+  costDueProps: CostDue.defaultProps,
+  imageBarProps: ImageBar.defaultProps,
+  userContactInfoProps: UserContactInfo.defaultProps,
+  userDetailProps: UserDetails.defaultProps
+  };
 
   render() {
     return (

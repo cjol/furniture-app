@@ -11,10 +11,10 @@ const FilterResultsBidStyle = styled.div`
 `;
 
 export class FilterResultsBid extends React.PureComponent<{
-  bidPriceScale: string;
+  filterResultsBidPriceScaleProps: FilterResultsBidPriceScale["props"];
 }> {
   static defaultProps: FilterResultsBid["props"] = {
-    bidPriceScale: "500K-700K"
+    filterResultsBidPriceScaleProps: FilterResultsBidPriceScale.defaultProps
   };
 
   render() {

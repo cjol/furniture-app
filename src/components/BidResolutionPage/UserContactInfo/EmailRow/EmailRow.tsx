@@ -25,7 +25,7 @@ export class EmailRow extends React.PureComponent<{ email: string }> {
   render() {
     return (
       <EmailStyle>
-        <EmailaddressStyle>email@email.com</EmailaddressStyle>
+        <EmailaddressStyle>{this.props.email}</EmailaddressStyle>
         <EmailIconStyle />
       </EmailStyle>
     );

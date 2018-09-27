@@ -30,17 +30,19 @@ export class ActiveBids extends React.PureComponent<{
   };
 
   render() {
+    const bids = this.props.individualBidProps.map(individualBidProp => {
+      return <IndividualBid {...individualBidProp} />;
+    });
+
     return (
       <ActiveBidsStyle>
-        <ActiveBidsHeader />
+        <ActiveBidsHeader {...this.props.activeBidProps} />
 
-        <IndividualBid />
+        {bids}
 
-        <IndividualBid />
-
-        <IndividualBid />
-
-        <RectangularButton>Place Bid</RectangularButton>
+        <RectangularButton onClick={this.props.onClick}>
+          Place Bid
+        </RectangularButton>
       </ActiveBidsStyle>
     );
   }

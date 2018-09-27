@@ -16,8 +16,12 @@ const PhotoContainerInstructionsStyled = styled.div`
   flex-direction: column;
   flex-grow: 1;
 `;
-export class PhotoContainer extends React.PureComponent<{}> {
-  static defaultProps: PhotoContainer["props"] = {};
+export class PhotoContainer extends React.PureComponent<{
+  uploadPhoto: () => void;
+}> {
+  static defaultProps: PhotoContainer["props"] = {
+    uploadPhoto: () => alert("Uploading Image")
+  };
 
   render() {
     return (

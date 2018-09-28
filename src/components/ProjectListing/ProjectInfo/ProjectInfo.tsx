@@ -32,8 +32,8 @@ export class ProjectInfo extends React.PureComponent<{
   render() {
     return (
       <ProjectInfoStyle>
-        <ProjectTitleStyle> Project Title</ProjectTitleStyle>
-        <TagsContainer />
+        <ProjectTitleStyle>{this.props.title}</ProjectTitleStyle>
+        <TagsContainer {...this.props.tagsContainerProps}/>
       </ProjectInfoStyle>
     );
   }

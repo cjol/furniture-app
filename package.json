@@ -7,7 +7,7 @@
     "build": "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
     "clean-dist": "rm -f -r -d dist",
     "start": "npm run start-dev",
-    "start-dev": "webpack-dev-server --config=configs/webpack/dev.js",
+    "start-dev": "webpack-dev-server --config=configs/webpack/dev.js --host gitlab.tyrohq.com --port 8081",
     "gql-schema": "apollo schema:download --endpoint=https://gpkifjlowbcbbmqzr66hwl77t4.appsync-api.eu-west-1.amazonaws.com/graphql --header=\"x-api-key:da2-dmpi5qyx65fopozln7amctmvr4\"",
     "gql-types": "mkdir -p types && apollo codegen:generate --queries=\"src/**/*.gql\" --mergeInFieldsFromFragmentSpreads --schema=schema.json --target=typescript --addTypename --outputFlat types/data.ts",
     "gql": "npm run gql-schema && npm run gql-types"

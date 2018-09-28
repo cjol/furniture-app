@@ -66,10 +66,10 @@ export default class App extends React.Component {
                           path="/"
                           render={() => (
                             <ProjectListingsPage
-                            // appHeaderProps={{
-                            //   title: "Project Listings",
-                            //   menu: toggle
-                            // }}
+                              appHeaderProps={{
+                                title: "Project Listings",
+                                menu: toggle
+                              }}
                             />
                           )}
                         />
@@ -126,10 +126,10 @@ export default class App extends React.Component {
                           path="/profile"
                           render={() => (
                             <ProfilePage
-                            // appHeaderProps={{
-                            //   title: "Bid Resolution",
-                            //   menu: toggle
-                            // }}
+                              appHeaderProps={{
+                                title: "Bid Resolution",
+                                menu: toggle
+                              }}
                             />
                           )}
                         />

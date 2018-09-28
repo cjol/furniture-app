@@ -21,7 +21,7 @@ export class SuppliersSelected extends React.PureComponent<{
 
   render() {
     const listings = this.props.listingsProps.map(listingsProp => {
-      return <ListingsInfo {...listingsProp} />;
+      return <ProjectListing {...listingsProp} />;
     });
 
     return (

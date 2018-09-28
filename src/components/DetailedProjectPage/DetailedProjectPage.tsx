@@ -55,7 +55,7 @@ export class DetailedProjectPage extends React.PureComponent<{
         {({ projectID, showConfirmationPopup, toggleConfirmationPopup }) => {
           return (
             <PageContentStyle>
-              <AppHeader title={"Place Bid"} />
+              <AppHeader {...this.props.appHeaderProps} />
               <PageContentsContainer>
                 <ProjectHeader />
                 <AboutBid

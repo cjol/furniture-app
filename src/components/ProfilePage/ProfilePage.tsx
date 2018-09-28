@@ -55,7 +55,7 @@ export class ProfilePage extends React.PureComponent<{
         }) => {
           return (
             <ProfilePageHeaderStyle>
-              <AppHeader />
+              <AppHeader {...this.props.appHeaderProps} />
               <PageContents>
                 <ProfileDetails
                   profileImageprops={{ image: pictureURL }}

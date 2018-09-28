@@ -37,24 +37,17 @@ export class Menu extends React.PureComponent<{ toggle: () => void }> {
     return (
       <MenuContainer>
         <MenuStyled>
-          <Subheading>
           <Link to="/profile">
-            <Placeholder description="My Profile" />
+            <Subheading>My Profile</Subheading>
           </Link>
-         </Subheading>
-         
-         <Subheading>
+
           <Link to="/project/new">
-            <Placeholder description="Create New Project" />
+            <Subheading>Create New Project</Subheading>
           </Link>
-          </Subheading>
 
-         <Subheading>
           <Link to="/">
-            <Placeholder description="Browse Listings" />
+            <Subheading>Browse Listings</Subheading>
           </Link>
-          </Subheading>
-
         </MenuStyled>
         <MenuCloakStyle onClick={this.props.toggle} />
       </MenuContainer>

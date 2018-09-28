@@ -9,7 +9,8 @@ const MenuBarStyle = styled.div`
   display: flex;
   flex-direction: row;
   background-color: #e0e0e0;
-  box-shadow: 4px 0px 4px, rgba(0, 0, 0, 0.24);
+  box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.5);
+  z-index: 5;
   padding: 16px;
 `;
 

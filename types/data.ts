@@ -246,12 +246,19 @@ export interface PlaceBidVariables {
 // GraphQL query operation: FetchProfilePage
 // ====================================================
 
+export interface FetchProfilePage_getUser_projects_items_chosenBid {
+  __typename: "Bid";
+  id: string;
+}
+
 export interface FetchProfilePage_getUser_projects_items {
   __typename: "Project";
+  id: string;
   photos: string[];
   averageBidAmount: number;
   title: string;
   tags: string[];
+  chosenBid: FetchProfilePage_getUser_projects_items_chosenBid | null;
 }
 
 export interface FetchProfilePage_getUser_projects {

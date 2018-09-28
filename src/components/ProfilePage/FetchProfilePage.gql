@@ -1,25 +1,22 @@
-query FetchProfilePage(
-  $userID:ID!
-) {
-  
-  getUser(id: $userID){
+query FetchProfilePage($userID: ID!) {
+  getUser(id: $userID) {
     pictureURL
     rating
     name
     email
     location
     phoneNumber
-    projects{
+    projects {
       items {
+        id
         photos
         averageBidAmount
         title
         tags
-          }
+        chosenBid {
+          id
         }
-    
       }
     }
-    
-    
-  
+  }
+}

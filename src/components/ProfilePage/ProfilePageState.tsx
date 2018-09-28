@@ -4,14 +4,20 @@ import {
   Value,
   Compose as RRCompose,
   Counter,
-  Input,
+  Input as RRInput,
   List,
   Toggle
 } from "react-powerplug";
 
+const Input = RRInput as any;
 const Compose = RRCompose as any;
 
 export class ProfilePageState extends React.PureComponent<{
+  name: string;
+  picture: string;
+  email: string;
+  location: string;
+  phone: string;
   children: (
     input: {
       ownerID: string;
@@ -39,11 +45,11 @@ export class ProfilePageState extends React.PureComponent<{
       // form state
       <Compose
         components={[
-          Input, // full name
-          Input, // picture
-          Input, // email
-          Input, // location
-          Input // phone number
+          <Input initial={this.props.name} />, // full name
+          <Input initial={this.props.picture} />, // full name
+          <Input initial={this.props.email} />, // full name
+          <Input initial={this.props.location} />, // full name
+          <Input initial={this.props.phone} /> // full name
         ]}
       >
         {(

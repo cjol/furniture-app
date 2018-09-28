@@ -50,7 +50,13 @@ export class ProfilePage extends React.PureComponent<{
           if (error) return <DataError />;
 
           return (
-            <ProfilePageState>
+            <ProfilePageState
+              name={data.getUser.name}
+              picture={data.getUser.pictureURL}
+              email={data.getUser.email}
+              location={data.getUser.location}
+              phone={data.getUser.phoneNumber}
+            >
               {({
                 fullName,
                 setFullName,
@@ -72,17 +78,16 @@ export class ProfilePage extends React.PureComponent<{
                     id: item.id,
                     projectImage: item.photos[0],
                     amountTitle: item.averageBidAmount,
-                    projectInfo: {
-                      title: item.title ,
+                    projectInfoProps: {
+                      title: item.title,
                       tagsContainerProps: {
                         tags: item.tags
                       }
                     },
 
-                    chosenBid: 
-
-                  }
-                })
+                    chosenBid: item.chosenBid
+                  };
+                });
                 return (
                   <ProfilePageHeaderStyle>
                     <AppHeader {...this.props.appHeaderProps} />
@@ -103,10 +108,8 @@ export class ProfilePage extends React.PureComponent<{
                           setLocation
                         }}
                       />
-                      <ProfileEditSave  />
-                      <ActiveProjectBids
-                        projectListingProps={listings}
-                      />
+                      <ProfileEditSave />
+                      <ActiveProjectBids projectListingProps={listings} />
                       <SuppliersSelected
                         {...this.props.suppliersSelectedProps}
                       />

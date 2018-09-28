@@ -31,11 +31,11 @@ export class ProfileDetails extends React.PureComponent<{
   render() {
     return (
       <ProfileDetailsStyle>
-        <ProfileImage />
+        <ProfileImage {...this.props.profileImageprops} />
         <RatingsContainer>
-          <ProfileRatings />
+          <ProfileRatings {...this.props.profileRatingsprops} />
         </RatingsContainer>
-        <UserCredentials />
+        <UserCredentials {...this.props.userCredentialsprops} />
       </ProfileDetailsStyle>
     );
   }

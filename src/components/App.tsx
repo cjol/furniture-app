@@ -54,7 +54,7 @@ export default class App extends React.Component {
       <ApolloProvider client={client}>
         <AppContainerStyle>
           <Router>
-            <Toggle initial={true}>
+            <Toggle initial={false}>
               {({ on, toggle }) => {
                 return (
                   <React.Fragment>
@@ -124,7 +124,14 @@ export default class App extends React.Component {
                         <Route
                           exact
                           path="/profile"
-                          render={() => <ProfilePage />}
+                          render={() => (
+                            <ProfilePage
+                            // appHeaderProps={{
+                            //   title: "Bid Resolution",
+                            //   menu: toggle
+                            // }}
+                            />
+                          )}
                         />
                         <Route>
                           <Redirect to="/" />

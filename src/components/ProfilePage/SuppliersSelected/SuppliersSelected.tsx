@@ -11,11 +11,10 @@ const SuppliersSelectedStyled = styled.div`
   margin-bottom: 24px;
 `;
 export class SuppliersSelected extends React.PureComponent<{
-  chatProps:ProjectListing["props"][];
+  listingsProps: ProjectListing["props"][];
 }> {
   static defaultProps: SuppliersSelected["props"] = {
-    chatProps:[ProjectListing.defaultProps,ProjectListing.defaultProps]
-
+    listingsProps: [ProjectListing.defaultProps, ProjectListing.defaultProps]
   };
 
   render() {

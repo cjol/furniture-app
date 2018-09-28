@@ -1,13 +1,14 @@
 import * as React from "react";
 import styled from "styled-components";
 import { mainFont } from "@style";
-import { darkerGreen } from "@style";
+import { darkerGreen, white } from "@style";
 
 const ProjectTitleEditableStyle = styled.input`
   display: flex;
   flex-direction: row;
   justify-content: center;
   font: ${mainFont};
+  color: ${white};
   font-size: 24px;
   padding: 16px;
   background-color: ${darkerGreen};
@@ -25,6 +26,7 @@ const ProjectTitleStyle = styled.div`
   font-size: 24px;
   padding: 16px;
   background-color: ${darkerGreen};
+  color: ${white};
 `;
 
 export class ProjectTitle extends React.PureComponent<{

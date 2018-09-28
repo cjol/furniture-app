@@ -10,6 +10,7 @@ const ActiveBidsHeaderStyle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: stretch;
+  align-items: center;
   flex-grow: 1;
   font-family: ${mainFont};
   color: ${greenMain};
@@ -43,10 +44,10 @@ export class ActiveBidsHeader extends React.PureComponent<{
     return (
       <ActiveBidsHeaderStyle>
         <SubheadingStyled>Active Bid</SubheadingStyled>
-        <ArrowsStyle>
-          <ArrowDropDownStyle  onClick={this.props.arrowDropDown}/>
+        {/* <ArrowsStyle>
+          <ArrowDropDownStyle onClick={this.props.arrowDropDown} />
           <ArrowDropUpStyle onClick={this.props.arrowDropDown} />
-        </ArrowsStyle>
+        </ArrowsStyle> */}
       </ActiveBidsHeaderStyle>
     );
   }

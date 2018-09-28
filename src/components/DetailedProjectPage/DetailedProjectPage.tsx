@@ -11,14 +11,24 @@ import { PendingQueries } from "./PendingQueries/PendingQueries";
 import { PlainText } from "Components/PlainText/PlainText";
 import styled from "styled-components";
 import { white } from "@style";
+import { RouteComponentProps } from "react-router-dom";
+import { DetailedProjectPageState } from "./DetailedProjectPageState";
 
 const PageContentStyle = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 24px;
   background-color: ${white};
 `;
-
+const PageContentsContainer = styled.div`
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+`;
+const PlainTextContainer = styled.div`
+  padding-top: 12px;
+  padding-bottom: 12px;
+`;
 export class DetailedProjectPage extends React.PureComponent<{
   appHeaderProps: AppHeader["props"];
   projectHeaderProps: ProjectHeader["props"];
@@ -26,6 +36,7 @@ export class DetailedProjectPage extends React.PureComponent<{
   imageBarProps: ImageBar["props"];
   activeBidsProps: ActiveBids["props"];
   description: string;
+  match: any;
 }> {
   static defaultProps: DetailedProjectPage["props"] = {
     appHeaderProps: AppHeader.defaultProps,
@@ -33,20 +44,41 @@ export class DetailedProjectPage extends React.PureComponent<{
     aboutBidProps: AboutBid.defaultProps,
     imageBarProps: ImageBar.defaultProps,
     activeBidsProps: ActiveBids.defaultProps,
-    description: "Project description goes here"
+    description:
+      "I would like a rustic style kitchen table and two matching benches, similar in style to the pictures attached. It needs to be 2m x 1m. Ideally in oak or similar wood.",
+    match: { params: { id: "4" } }
   };
 
   render() {
     return (
-      <PageContentStyle>
-        <AppHeader {...this.props.appHeaderProps} />
-        <ProjectHeader {...this.props.projectHeaderProps} />
-        <AboutBid {...this.props.aboutBidProps} />
-        <ImageBar {...this.props.imageBarProps} />
-        <PlainText>Project Description</PlainText>
+      <DetailedProjectPageState match={this.props.match}>
+        {({ projectID, showConfirmationPopup, toggleConfirmationPopup }) => {
+          return (
+            <PageContentStyle>
+              <AppHeader title={"Place Bid"} />
+              <PageContentsContainer>
+                <ProjectHeader />
+                <AboutBid
+                  averageBidAmount={"5000 UGX"}
+                  numberOfBids={8}
+                  timeUntilEnd={"2 Days"}
+                />
+                <ImageBar image={["https://tyrohq.com/logo"]} />
+                <PlainTextContainer>
+                  <PlainText>{this.props.description}</PlainText>
+                </PlainTextContainer>
 
-        <ActiveBids {...this.props.activeBidsProps} />
-      </PageContentStyle>
+                <ActiveBids
+                  individualBidProps={
+                    ActiveBids.defaultProps.individualBidProps
+                  }
+                  projectID={projectID}
+                />
+              </PageContentsContainer>
+            </PageContentStyle>
+          );
+        }}
+      </DetailedProjectPageState>
     );
   }
 }

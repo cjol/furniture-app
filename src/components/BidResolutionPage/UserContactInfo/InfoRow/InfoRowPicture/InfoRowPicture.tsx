@@ -5,6 +5,8 @@ const InfoRowPictureStyle = styled.div<{ image: string }>`
   display: flex;
   height: 50px;
   width: 50px;
+  border-radius: 90px;
+  background-size: contain;
 
   background-image: url(${props => {
     return props.image;

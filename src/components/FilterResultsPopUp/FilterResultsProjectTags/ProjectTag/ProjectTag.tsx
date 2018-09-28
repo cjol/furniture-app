@@ -2,7 +2,7 @@ import { CheckBox, CheckBoxOutlineBlank } from "@material-ui/icons";
 import { Placeholder } from "Components/Placeholder";
 import * as React from "react";
 import styled from "styled-components";
-import { mainFont } from "@style";
+import { mainFont, normalBoxShadow, whiteButtonColor } from "@style";
 import { greenMain, greyButtonColor } from "@style";
 
 const CheckBoxEmptyStyle = styled(CheckBoxOutlineBlank)`
@@ -21,8 +21,11 @@ const ProjectTagStyle = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px;
-  background-color: ${greyButtonColor};
+  padding: 12px;
+  margin: 4px;
+  background-color: ${whiteButtonColor};
+  box-shadow: ${normalBoxShadow};
+  min-width: 100px;
 `;
 
 const ProjectTagLabelStyle = styled.div`
@@ -31,6 +34,8 @@ const ProjectTagLabelStyle = styled.div`
   color: ${greenMain};
   font-size: 12px;
   align-items: left;
+  margin-right: 12px;
+  flex-grow: 1;
 `;
 
 export class ProjectTag extends React.PureComponent<{

@@ -9,13 +9,17 @@ import {
   squareButtonRadius
 } from "@style";
 const RectangularButtonStyle = styled.div`
-  margin-top: 24px;
-  margin-bottom: 24px;
+  display: flex;
   padding: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 24px;
+  margin-bottom: 12px;
   background-color: ${greenMain};
   box-shadow: ${normalBoxShadow};
   border-radius: ${squareButtonRadius};
   flex-grow: 0;
+  align-self: center;
 `;
 const ButtonLabelStyle = styled.div`
   align-items: center;
@@ -27,14 +31,19 @@ const ButtonLabelStyle = styled.div`
 
 export class RectangularButton extends React.PureComponent<{
   onClick: () => any;
+  className?: string;
 }> {
   static defaultProps: RectangularButton["props"] = {
-    onClick: () => alert("Clicked a button")
+    onClick: () => alert("Clicked a button"),
+    className: ""
   };
 
   render() {
     return (
-      <RectangularButtonStyle>
+      <RectangularButtonStyle
+        className={this.props.className}
+        onClick={this.props.onClick}
+      >
         <ButtonLabelStyle>{this.props.children || "BUTTON"}</ButtonLabelStyle>
       </RectangularButtonStyle>
     );

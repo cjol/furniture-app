@@ -8,8 +8,6 @@ const EmailStyle = styled.div`
   flex-direction: row;
   justify-content: stretch;
   align-items: center;
-  margin-top: 16px;
-  margin-bottom: 16px;
 `;
 const EmailaddressStyle = styled.div`
   display: flex;
@@ -19,6 +17,9 @@ const EmailaddressStyle = styled.div`
 `;
 const EmailIconStyle = styled(Email)`
   color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export class EmailRow extends React.PureComponent<{ email: string }> {

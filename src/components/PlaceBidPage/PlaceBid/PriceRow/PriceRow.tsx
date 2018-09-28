@@ -9,6 +9,7 @@ import { greenMain } from "@style";
 const RowStyle = styled.div`
   display: flex;
   flex-direction: row;
+  padding-top: 12px;
 `;
 const PriceStyle = styled.div`
   display: flex;
@@ -24,6 +25,7 @@ const PriceBidStyle = styled.input`
   flex-direction: column;
   font-family: ${mainFont};
   font-size: 12px;
+  background-color: transparent;
   border: none;
 
   border-bottom-width: 2px;
@@ -31,20 +33,24 @@ const PriceBidStyle = styled.input`
   border-bottom-style: solid;
 `;
 export class PriceRow extends React.PureComponent<{
-  price: string;
-  changeHandler:(bid:any)=>void;
+  price: number;
+  changeHandler: (bid: any) => void;
 }> {
   static defaultProps: PriceRow["props"] = {
-    price: "500 Ugx",
-    changeHandler:(bid)=>alert("Bid Price" + bid),
-
+    price: 500,
+    changeHandler: bid => alert("Bid Price" + bid)
   };
 
   render() {
+    console.log("Received price of ", this.props.price);
     return (
       <RowStyle>
         <PriceStyle> Price(UGX) </PriceStyle>
-        <PriceBidStyle onChange={this.props.changeHandler} />
+        <PriceBidStyle
+          type="number"
+          onChange={x => this.props.changeHandler(x.target.value)}
+          value={this.props.price}
+        />
       </RowStyle>
     );
   }

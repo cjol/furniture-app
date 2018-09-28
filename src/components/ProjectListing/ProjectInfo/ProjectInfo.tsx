@@ -9,6 +9,7 @@ const ProjectInfoStyle = styled.div`
   display: flex;
   flex-direction: column;
   margin: 8px;
+  flex-grow: 1;
 `;
 const ProjectTitleStyle = styled.div`
   display: flex;

@@ -22,7 +22,10 @@ export class TaggingProject extends React.PureComponent<{
     return (
       <TaggingProjectStyle>
         <Subheading>Tag Your Project</Subheading>
-        <PlainText>Instructions</PlainText>
+        <PlainText>
+          To ensure your project is found, add tags such as “bed” or “table”
+          below.
+        </PlainText>
         <FilterResultsProjectTags {...this.props.filterResultsProps} />
       </TaggingProjectStyle>
     );

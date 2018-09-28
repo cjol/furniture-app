@@ -9,8 +9,9 @@ const AboutBidStyle = styled.div`
   flex-wrap: wrap;
   font-size: 11px;
   font-family: ${mainFont};
-  background: none;
-  margin-top: 24px;
+  flex-grow: 1;
+  margin-bottom: 0px;
+  margin-top: 0px;
 `;
 const TagStyle = styled.div`
   display: flex;
@@ -18,9 +19,14 @@ const TagStyle = styled.div`
   background: ${whiteButtonColor};
   padding: 10px;
   box-shadow: ${normalBoxShadow};
+  flex-grow: 1;
+  margin: 6px;
+  justify-content: center;
+  min-width: 100px;
 `;
 const LabelStyle = styled.div`
   color: ${grey};
+  margin-right: 8px;
 `;
 const ValueStyle = styled.div`
   font-weight: bold;

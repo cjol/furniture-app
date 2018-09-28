@@ -19,6 +19,8 @@ const TitleStyle = styled.div`
   font-family: ${mainFont};
   font-size: 20px;
   font-weight: bold;
+  margin-left: 36px;
+  margin-right: 36px;
 `;
 
 export class AppHeader extends React.PureComponent<{

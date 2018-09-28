@@ -1,0 +1,101 @@
+mutation CreateProject($project: CreateProjectInput!) {
+  createProject(input: $project) {
+    id
+    title
+    owner {
+      id
+    }
+    photos
+    description
+    tags
+    closeDate
+    bids {
+      items {
+        id
+      }
+    }
+    chosenBid {
+      id
+    }
+  }
+}
+
+# query getProjects {
+#   listProjects {
+#     items{
+#       id
+#       title
+#       description
+#       # ownerID
+#       owner {
+#         id
+#         name
+#       }
+#       bids {
+#         items {
+#           id
+#           price
+#         }
+#       }
+#       chosenBid{
+#         id
+#         price
+#       }
+#     }
+#   }
+# }
+
+# query getBids {
+#   listBids {
+#     items {
+#       id
+#       project {
+#         title
+#       }
+#       user {
+#         name
+#       }
+#     }
+#   }
+# }
+
+# query getUsers {
+#   getUser(id: "cc0ce972-7a8d-4ea4-bb87-34186d32b2b4") {
+#     name
+#   }
+#   listUsers {
+#     items {
+#       id
+#       name
+#       projects {
+#         items {
+#           id
+#         }
+#       }
+#       bids {
+#         items {
+#           id
+#           price
+#         }
+#       }
+#     }
+#   }
+# }
+
+# mutation CreateBid($bid:CreateBidInput!){
+#   createBid(input:$bid) {
+#     id
+#     price
+#     time
+#     description
+#   }
+# }
+
+# mutation ChooseBid($projectToChoose: ID!, $bidID: ID!){
+#   updateProject(input: {id: $projectToChoose, chosenBid: $bidID}) {
+#     id
+#     chosenBid {
+#       id
+#     }
+#   }
+# }

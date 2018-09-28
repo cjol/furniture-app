@@ -5,9 +5,10 @@ import styled from "styled-components";
 const FilterResultsBidPriceStyle = styled.div`
   display: flex;
   flex-direction: row;
-  font-weight:bold;
-  font-size:18px;
-  margin-top:24px;
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 `;
 
 export class FilterResultsBidPrice extends React.PureComponent<{}> {

@@ -12,35 +12,57 @@ import { white } from "@style";
 const PageStyle = styled.div`
   display: flex;
   font-size: 14px;
-  padding: 24px;
   flex-direction: column;
   background-color: ${white};
 `;
-
+const PageContents = styled.div`
+  display: flex;
+  padding: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  flex-direction: column;
+  background-color: ${white};
+`;
+const TextContainer = styled.div`
+  padding-top: 12px;
+  padding-bottom: 12px;
+`;
 export class PlaceBidPage extends React.PureComponent<{
   appHeaderProps: AppHeader["props"];
   projectHeaderProps: ProjectHeader["props"];
   aboutBidProps: AboutBid["props"];
   ImagebarProps: ImageBar["props"];
   placeBidprops: PlaceBid["props"];
+
+  match: { params: { id: string } };
 }> {
   static defaultProps: PlaceBidPage["props"] = {
     appHeaderProps: AppHeader.defaultProps,
     projectHeaderProps: ProjectHeader.defaultProps,
     aboutBidProps: AboutBid.defaultProps,
     ImagebarProps: ImageBar.defaultProps,
-    placeBidprops: PlaceBid.defaultProps
+    placeBidprops: PlaceBid.defaultProps,
+    match: { params: { id: "100" } }
   };
 
   render() {
+    const projectID = this.props.match.params.id;
     return (
       <PageStyle>
         <AppHeader {...this.props.appHeaderProps} />
-        <ProjectHeader {...this.props.appHeaderProps} />
-        <AboutBid {...this.props.appHeaderProps} />
-        <ImageBar {...this.props.ImagebarProps} />
-        <PlainText>Instructions go here</PlainText>
-        <PlaceBid {...this.props.placeBidprops} />
+        <PageContents>
+          <ProjectHeader {...this.props.appHeaderProps} />
+          <AboutBid {...this.props.appHeaderProps} />
+          <ImageBar {...this.props.ImagebarProps} />
+          <TextContainer>
+            <PlainText>
+              Description of the project. Including item, type of wood,
+              dimensions, expected time frame of delivery. Secondary line text
+              lorem ipsum dapibus, neque id cursus faucibus.{" "}
+            </PlainText>
+          </TextContainer>
+          <PlaceBid {...this.props.placeBidprops} projectID={projectID} />
+        </PageContents>
       </PageStyle>
     );
   }

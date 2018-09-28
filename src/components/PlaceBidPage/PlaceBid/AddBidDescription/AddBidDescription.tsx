@@ -9,7 +9,8 @@ const AddBidDescriptionStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin-top: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 `;
 
 const DescriptionFieldStyle = styled.textarea`
@@ -27,20 +28,32 @@ const DescriptionFieldStyle = styled.textarea`
   border-bottom-color: ${greenMain};
 `;
 
+const TextContainer = styled.div`
+  padding-bottom: 8px;
+`;
 export class AddBidDescription extends React.PureComponent<{
   description: string;
+  setDescription: (s: any) => void;
 }> {
   static defaultProps: AddBidDescription["props"] = {
     description:
-      "Salut! Je vend de produits de grande qualite's et mes pris sont tres favorable. Je rends un service rapide et fiable pour tout mes clients. Faites moi cette chance et vous verrez les merveilles"
+      "Salut! Je vend de produits de grande qualite's et mes pris sont tres favorable. Je rends un service rapide et fiable pour tout mes clients. Faites moi cette chance et vous verrez les merveilles",
+    setDescription: s => alert("Changing description")
   };
 
   render() {
     return (
       <AddBidDescriptionStyle>
         <Subheading>Bid Description</Subheading>
-        <PlainText>Description instructions go here</PlainText>
-        <DescriptionFieldStyle>Description goes here</DescriptionFieldStyle>
+        <TextContainer>
+          <PlainText>
+            Make sure your bid gets notice. Include a description of the work
+            that you’ll do and why you’re the best choice.
+          </PlainText>
+        </TextContainer>
+        <DescriptionFieldStyle onChange={this.props.setDescription}>
+          {this.props.description}
+        </DescriptionFieldStyle>
       </AddBidDescriptionStyle>
     );
   }

@@ -17,10 +17,12 @@ const AmountAndDurationStyled = styled.div`
 const AmountStyled = styled.div`
   display: flex;
   justify-content: flex-start;
+  margin-right: 8px;
 `;
 const TimeStyled = styled.div`
   display: flex;
   justify-content: flex-end;
+  margin-left: 8px;
 `;
 export class BidDetails extends React.PureComponent<{
   amount: string;
@@ -37,7 +39,7 @@ export class BidDetails extends React.PureComponent<{
     return (
       <BidDetailsStyled>
         <AmountAndDurationStyled>
-          <AmountStyled>{this.props.amount}</AmountStyled>
+          <AmountStyled>{this.props.amount}</AmountStyled>|
           <TimeStyled>{this.props.time}</TimeStyled>
         </AmountAndDurationStyled>
         <PlainText>{this.props.description}</PlainText>

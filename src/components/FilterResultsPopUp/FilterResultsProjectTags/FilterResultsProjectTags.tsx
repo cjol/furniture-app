@@ -10,12 +10,14 @@ const FilterResultsProjectTagsStyled = styled.div`
 const ProjectTagSubHeadingStyle = styled.div`
   font-size: 18px;
   color: ${black};
+  padding-bottom: 12px;
+  font-weight: bold;
 `;
 const TagsContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 `;
 export class FilterResultsProjectTags extends React.PureComponent<{
   projectTagProps: ProjectTag["props"][];

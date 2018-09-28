@@ -12,7 +12,8 @@ const ProjectDescriptionStyle = styled.div`
   font-size: 16px;
   color: ${grey};
   text-align: justify;
-  margin-top: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 `;
 
 const ProjectDescriptionFieldStyle = styled.textarea`
@@ -21,8 +22,6 @@ const ProjectDescriptionFieldStyle = styled.textarea`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: ${mainFont};
-  font-size: 13px;
   color: ${black};
   text-align: justify;
   border: none;
@@ -32,12 +31,16 @@ const ProjectDescriptionFieldStyle = styled.textarea`
   padding-bottom: 10px;
 `;
 
+const TextContainer = styled.div`
+  margin-bottom: 16px;
+`;
 export class ProjectDescription extends React.PureComponent<{
   description: string;
   setDescription: (decsriptionInfo: any) => void;
 }> {
   static defaultProps: ProjectDescription["props"] = {
-    description: "Make sure you include what the item is and the directions",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna wirl",
     setDescription: descriptionInfo =>
       alert("Enter the description of the item you want" + descriptionInfo)
   };
@@ -45,10 +48,13 @@ export class ProjectDescription extends React.PureComponent<{
   render() {
     return (
       <ProjectDescriptionStyle>
-        <Subheading />
-        <PlainText>
-          Make sure you include what the item is and the directions{" "}
-        </PlainText>
+        <Subheading> Add Project Description </Subheading>
+        <TextContainer>
+          <PlainText>
+            Make sure to include: what the item is, dimensions, and any material
+            preferences (what type of wood/finish).{" "}
+          </PlainText>
+        </TextContainer>
         <ProjectDescriptionFieldStyle onChange={this.props.setDescription}>
           {this.props.description}
         </ProjectDescriptionFieldStyle>

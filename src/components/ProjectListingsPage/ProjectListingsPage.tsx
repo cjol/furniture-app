@@ -10,10 +10,14 @@ import { white } from "@style";
 const PageStyle = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 24px;
-  background-color: ${white};
 `;
 
+const PageContents = styled.div`
+  padding: 24px;
+  background-color: ${white};
+  padding-top: 12px;
+  padding-bottom: 24px;
+`;
 export class ProjectListingsPage extends React.PureComponent<{}> {
   static defaultProps: ProjectListingsPage["props"] = {};
 
@@ -21,8 +25,10 @@ export class ProjectListingsPage extends React.PureComponent<{}> {
     return (
       <PageStyle>
         <AppHeader />
-        <SearchContainer />
-        <ListingsContainer />
+        <PageContents>
+          <SearchContainer />
+          <ListingsContainer />
+        </PageContents>
       </PageStyle>
     );
   }

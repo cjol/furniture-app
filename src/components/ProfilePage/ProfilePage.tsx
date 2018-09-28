@@ -8,6 +8,11 @@ import { ProfileDetails } from "./ProfileDetails/ProfileDetails";
 import styled from "styled-components";
 import { white } from "@style";
 import { ProfilePageState } from "./ProfilePageState";
+import { FetchProfilePage } from "./FetchProfilePage.gql";
+import { FetchProfilePage as FetchProfilePageTypes } from "@data";
+import { FetchProfilePageVariables } from "@data";
+import { Query } from "react-apollo";
+import { Loading, DataError } from "Components/Placeholder";
 
 const ProfilePageHeaderStyle = styled.div`
   display: flex;
@@ -36,51 +41,83 @@ export class ProfilePage extends React.PureComponent<{
 
   render() {
     return (
-      <ProfilePageState>
-        {({
-          fullName,
-          setFullName,
+      <Query<FetchProfilePageTypes, FetchProfilePageVariables>
+        query={FetchProfilePage}
+        variables={{ userID: "cc0ce972-7a8d-4ea4-bb87-34186d32b2b4" }}
+      >
+        {({ loading, error, data }) => {
+          if (loading) return <Loading />;
+          if (error) return <DataError />;
 
-          pictureURL,
-          setPictureURL,
-
-          email,
-          setEmail,
-
-          location,
-          setLocation,
-
-          phoneNumber,
-          setPhoneNumber
-        }) => {
           return (
-            <ProfilePageHeaderStyle>
-              <AppHeader {...this.props.appHeaderProps} />
-              <PageContents>
-                <ProfileDetails
-                  profileImageprops={{ image: pictureURL }}
-                  userCredentialsprops={{
-                    isEditMode: true,
-                    fullName,
-                    setFullName,
-                    pictureURL,
-                    setPictureURL,
-                    email,
-                    setEmail,
-                    phoneNumber,
-                    setPhoneNumber,
-                    location,
-                    setLocation
-                  }}
-                />
-                <ProfileEditSave {...this.props.profileEditSaveProps} />
-                <ActiveProjectBids {...this.props.activeProjectBidsProps} />
-                <SuppliersSelected {...this.props.suppliersSelectedProps} />
-              </PageContents>
-            </ProfilePageHeaderStyle>
+            <ProfilePageState>
+              {({
+                fullName,
+                setFullName,
+
+                pictureURL,
+                setPictureURL,
+
+                email,
+                setEmail,
+
+                location,
+                setLocation,
+
+                phoneNumber,
+                setPhoneNumber
+              }) => {
+                const listings = data.getUser.projects.items.map(item => {
+                  return {
+                    id: item.id,
+                    projectImage: item.photos[0],
+                    amountTitle: item.averageBidAmount,
+                    projectInfo: {
+                      title: item.title ,
+                      tagsContainerProps: {
+                        tags: item.tags
+                      }
+                    },
+
+                    chosenBid: 
+
+                  }
+                })
+                return (
+                  <ProfilePageHeaderStyle>
+                    <AppHeader {...this.props.appHeaderProps} />
+                    <PageContents>
+                      <ProfileDetails
+                        profileImageprops={{ image: pictureURL }}
+                        userCredentialsprops={{
+                          isEditMode: true,
+                          fullName,
+                          setFullName,
+                          pictureURL,
+                          setPictureURL,
+                          email,
+                          setEmail,
+                          phoneNumber,
+                          setPhoneNumber,
+                          location,
+                          setLocation
+                        }}
+                      />
+                      <ProfileEditSave  />
+                      <ActiveProjectBids
+                        projectListingProps={listings}
+                      />
+                      <SuppliersSelected
+                        {...this.props.suppliersSelectedProps}
+                      />
+                    </PageContents>
+                  </ProfilePageHeaderStyle>
+                );
+              }}
+            </ProfilePageState>
           );
         }}
-      </ProfilePageState>
+      </Query>
     );
   }
 }

@@ -21,8 +21,18 @@ const PageContents = styled.div`
   padding-bottom: 12px;
   background-color: ${white};
 `;
-export class ProfilePage extends React.PureComponent<{}> {
-  static defaultProps: ProfilePage["props"] = {};
+export class ProfilePage extends React.PureComponent<{
+  AppHeaderprops: AppHeader["props"];
+  ProfileEditSaveprops: ProfileEditSave["props"];
+  ActiveProjectBidsprops: ActiveProjectBids["props"];
+  SuppliersSelectedprops: SuppliersSelected["props"];
+}> {
+  static defaultProps: ProfilePage["props"] = {
+    AppHeaderprops: AppHeader.defaultProps,
+    ProfileEditSaveprops: ProfileEditSave.defaultProps,
+    ActiveProjectBidsprops: ActiveProjectBids.defaultProps,
+    SuppliersSelectedprops: SuppliersSelected.defaultProps
+  };
 
   render() {
     return (

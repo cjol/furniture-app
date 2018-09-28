@@ -12,7 +12,6 @@ import { ProfilePageState } from "./ProfilePageState";
 const ProfilePageHeaderStyle = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 24px;
   background-color: ${white};
 `;
 

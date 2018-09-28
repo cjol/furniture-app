@@ -1,36 +1,24 @@
-import * as React from "react";
+import "@assets/scss/App.scss";
 
-import { Placeholder } from "Components/Placeholder";
-import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "react-apollo";
-import styled from "styled-components";
 import { mainFont } from "@style";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect
-} from "react-router-dom";
-import { ComponentPreviewer } from "./ComponentPreviewer";
-
-import { AppHeader } from "Components/AppHeader/AppHeader";
-import { BidDetail } from "Components/BidDetail/BidDetail";
+import ApolloClient from "apollo-boost";
 import { BidResolutionPage } from "Components/BidResolutionPage/BidResolutionPage";
-import { BidSubmitted } from "Components/BidSubmitted/BidSubmitted";
 import { CreateProjectPage } from "Components/CreateProjectPage/CreateProjectPage";
 import { DetailedProjectPage } from "Components/DetailedProjectPage/DetailedProjectPage";
-import { PhotoUploadPopUp } from "Components/PhotoUploadPopUp/PhotoUploadPopUp";
 import { PlaceBidPage } from "Components/PlaceBidPage/PlaceBidPage";
 import { ProfilePage } from "Components/ProfilePage/ProfilePage";
-import { ProjectHeader } from "Components/ProjectHeader/ProjectHeader";
 import { ProjectListingsPage } from "Components/ProjectListingsPage/ProjectListingsPage";
-import { RectangularButton } from "Components/RectangularButton/RectangularButton";
-import { RoundButton } from "Components/RoundButton/RoundButton";
-import { SubmitQuestionPopUp } from "Components/SubmitQuestionPopUp/SubmitQuestionPopUp";
-import { FilterResultsPopUp } from "Components/FilterResultsPopUp/FilterResultsPopUp";
-
-import "@assets/scss/App.scss";
+import * as React from "react";
+import { ApolloProvider } from "react-apollo";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch
+} from "react-router-dom";
+import styled from "styled-components";
+import { Menu } from "Components/Menu/Menu";
+import { Toggle } from "react-powerplug";
 
 const client = new ApolloClient({
   uri:
@@ -40,12 +28,23 @@ const client = new ApolloClient({
   }
 });
 
-const AppStyle = styled.div`
+const AppContainerStyle = styled.div`
+  font-family: ${mainFont};
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  max-width: 500px;
+  overflow: hidden;
+  align-items: stretch;
+`;
+
+const AppContentsStyle = styled.div`
   font-family: ${mainFont};
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
+  max-width: 500px;
   align-items: stretch;
 `;
 
@@ -53,29 +52,91 @@ export default class App extends React.Component {
   render() {
     return (
       <ApolloProvider client={client}>
-        <AppStyle>
+        <AppContainerStyle>
           <Router>
-            <Switch>
-              <Route exact path="/" component={ProjectListingsPage} />
-              <Route exact path="/project/new" component={CreateProjectPage} />
-              <Route
-                exact
-                path="/project/:id"
-                component={DetailedProjectPage}
-              />
-              <Route exact path="/project/:id/bid" component={PlaceBidPage} />
-              <Route
-                exact
-                path="/project/:id/matched"
-                component={BidResolutionPage}
-              />
-              <Route exact path="/profile" component={ProfilePage} />
-              <Route>
-                <Redirect to="/" />
-              </Route>
-            </Switch>
+            <Toggle initial={true}>
+              {({ on, toggle }) => {
+                return (
+                  <React.Fragment>
+                    {on ? <Menu toggle={toggle} /> : null}
+                    <AppContentsStyle>
+                      <Switch>
+                        <Route
+                          exact
+                          path="/"
+                          render={() => (
+                            <ProjectListingsPage
+                            // appHeaderProps={{
+                            //   title: "Project Listings",
+                            //   menu: toggle
+                            // }}
+                            />
+                          )}
+                        />
+                        <Route
+                          exact
+                          path="/project/new"
+                          render={() => (
+                            <CreateProjectPage
+                              appHeaderProps={{
+                                title: "Create New Project",
+                                menu: toggle
+                              }}
+                            />
+                          )}
+                        />
+                        <Route
+                          exact
+                          path="/project/:id"
+                          render={() => (
+                            <DetailedProjectPage
+                              appHeaderProps={{
+                                title: "Detailed Project View",
+                                menu: toggle
+                              }}
+                            />
+                          )}
+                        />
+                        <Route
+                          exact
+                          path="/project/:id/bid"
+                          render={() => (
+                            <PlaceBidPage
+                              appHeaderProps={{
+                                title: "Place Bid",
+                                menu: toggle
+                              }}
+                            />
+                          )}
+                        />
+                        <Route
+                          exact
+                          path="/project/:id/matched"
+                          render={() => (
+                            <BidResolutionPage
+                              appHeaderProps={{
+                                title: "Bid Resolution",
+                                menu: toggle
+                              }}
+                            />
+                          )}
+                        />
+                        <Route
+                          exact
+                          path="/profile"
+                          render={() => <ProfilePage />}
+                        />
+                        <Route>
+                          <Redirect to="/" />
+                        </Route>
+                      </Switch>
+                    </AppContentsStyle>
+                  </React.Fragment>
+                );
+              }}
+            </Toggle>
           </Router>
-        </AppStyle>
+        </AppContainerStyle>
       </ApolloProvider>
     );
   }

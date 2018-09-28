@@ -1,0 +1,12 @@
+query FetchProjectListings {
+  listProjects {
+    items {
+      id
+      title
+      photos
+      averageBidAmount
+      tags
+      
+    }
+  }
+}

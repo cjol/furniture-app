@@ -3,12 +3,13 @@ import * as React from "react";
 import {
   Compose as RRCompose,
   Counter,
-  Input,
+  Input as RRInput,
   List,
   Toggle
 } from "react-powerplug";
 
 const Compose = RRCompose as any;
+const Input = RRInput as any;
 
 export class CreateProjectPageState extends React.PureComponent<{
   children: (
@@ -44,7 +45,7 @@ export class CreateProjectPageState extends React.PureComponent<{
             // form state
             <Compose
               components={[
-                Input, // Title
+                <Input initial="Set Title" />, // Title
                 List, // Images
                 Input, // Description
                 Toggle,

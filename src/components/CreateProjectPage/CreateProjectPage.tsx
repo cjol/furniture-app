@@ -75,7 +75,7 @@ export class CreateProjectPage extends React.PureComponent<{
               />
               <AppHeader {...this.props.appHeaderProps} />
               <PageContents>
-                <ProjectHeader />
+                <ProjectHeader title={{ title, setTitle, isEditable: true }} />
                 <PhotoContainer uploadPhoto={toggleUploadPopup} />
                 <ImageBar image={allPhotoUrls.map(x => x.image)} />
                 <ProjectDescription

@@ -13,6 +13,7 @@ const ProjectTitleEditableStyle = styled.input`
   padding: 16px;
   background-color: ${darkerGreen};
   border: none;
+  text-align: center;
   border-bottom-width: 2px;
   border-bottom-color: white;
   border-bottom-style: solid;
@@ -41,11 +42,15 @@ export class ProjectTitle extends React.PureComponent<{
   };
 
   render() {
-    return (
-      <ProjectTitleEditableStyle
-        value={this.props.title}
-        onChange={this.props.setTitle}
-      />
-    );
+    if (this.props.isEditable) {
+      return (
+        <ProjectTitleEditableStyle
+          value={this.props.title}
+          onChange={this.props.setTitle}
+        />
+      );
+    } else {
+      return <ProjectTitleStyle>{this.props.title}</ProjectTitleStyle>;
+    }
   }
 }

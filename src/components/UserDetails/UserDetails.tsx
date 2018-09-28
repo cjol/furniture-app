@@ -1,7 +1,7 @@
 import { ProfileRatings } from "Components/ProfilePage/ProfileDetails/ProfileRatings/ProfileRatings";
 import * as React from "react";
 import styled from "styled-components";
-import { mainFont } from "@style";
+import { mainFont, grey } from "@style";
 
 const UserDetailsStyled = styled.div`
   display: flex;
@@ -16,16 +16,18 @@ const UserNameStyled = styled.div`
   margin-top:8px;
   margin-Bottom;8px;
 `;
-const UserPictureStyled = styled.div <{image: string}>`
+const UserPictureStyled = styled.div<{ image: string }>`
   display: flex;
   height: 50px;
   width: 50px;
-  background-image: url(${props=>{
+  background-image: url(${props => {
     return props.image;
   }});
   background-position: center;
   background-size: cover;
   border-radius: 50px;
+  border-width: 1px;
+  border-color: ${grey};
 `;
 
 const RatingStarsStyled = styled.div`
@@ -48,7 +50,7 @@ export class UserDetails extends React.PureComponent<{
       <UserDetailsStyled>
         <UserPictureStyled image={this.props.image} />
         <UserNameStyled>{this.props.userName}</UserNameStyled>
-        <ProfileRatings {...this.props.profileRatingsProps}/>
+        <ProfileRatings {...this.props.profileRatingsProps} />
       </UserDetailsStyled>
     );
   }

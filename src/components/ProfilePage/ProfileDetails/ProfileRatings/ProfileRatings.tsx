@@ -20,7 +20,7 @@ export class ProfileRatings extends React.PureComponent<{
   rating: number;
 }> {
   static defaultProps: ProfileRatings["props"] = {
-    onClick: rating => alert("Profile Rating"),
+    onClick: rating => {},
     rating: 5
   };
 

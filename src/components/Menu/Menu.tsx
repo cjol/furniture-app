@@ -15,6 +15,7 @@ const MenuContainer = styled.div`
   align-items: stretch;
   justify-content: stretch;
   max-width: 500px;
+  z-index: 10;
 `;
 const MenuStyled = styled.div`
   background-color: white;

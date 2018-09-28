@@ -18,8 +18,16 @@ const PageContents = styled.div`
   padding-top: 12px;
   padding-bottom: 24px;
 `;
-export class ProjectListingsPage extends React.PureComponent<{}> {
-  static defaultProps: ProjectListingsPage["props"] = {};
+export class ProjectListingsPage extends React.PureComponent<{
+  AppHeaderprops: AppHeader["props"];
+  SearchContainerprops: SearchContainer["props"];
+  ListingsContainerprops: ListingsContainer["props"];
+}> {
+  static defaultProps: ProjectListingsPage["props"] = {
+    AppHeaderprops: AppHeader.defaultProps,
+    SearchContainerprops: SearchContainer.defaultProps,
+    ListingsContainerprops: ListingsContainer.defaultProps
+  };
 
   render() {
     return (

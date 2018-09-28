@@ -1,0 +1,28 @@
+query FetchBidResolutionQuery($projID: ID!) {
+  getProject(id: $projID) {
+    title
+    owner {
+      id
+      name
+      pictureURL
+      rating
+      phoneNumber
+      email
+      location
+    }
+    chosenBid {
+      price
+      time
+      user {
+        id
+        name
+        pictureURL
+        phoneNumber
+        email
+        location
+      }
+    }
+    description
+    photos
+  }
+}

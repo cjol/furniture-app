@@ -1,0 +1,7 @@
+query FetchCreateProjectPage($userID: ID!) {
+  getUser(id: $userID) {
+    pictureURL
+    name
+    rating
+  }
+}

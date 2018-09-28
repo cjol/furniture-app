@@ -16,11 +16,13 @@ const UserNameStyled = styled.div`
   margin-top:8px;
   margin-Bottom;8px;
 `;
-const UserPictureStyled = styled.div`
+const UserPictureStyled = styled.div <{image: string}>`
   display: flex;
   height: 50px;
   width: 50px;
-  background-image: url(https://tyrohq.com/apple-touch-icon.png);
+  background-image: url(${props=>{
+    return props.image;
+  }});
   background-position: center;
   background-size: cover;
   border-radius: 50px;
@@ -44,9 +46,9 @@ export class UserDetails extends React.PureComponent<{
   render() {
     return (
       <UserDetailsStyled>
-        <UserPictureStyled />
-        <UserNameStyled>John Doe</UserNameStyled>
-        <ProfileRatings />
+        <UserPictureStyled image={this.props.image} />
+        <UserNameStyled>{this.props.userName}</UserNameStyled>
+        <ProfileRatings {...this.props.profileRatingsProps}/>
       </UserDetailsStyled>
     );
   }

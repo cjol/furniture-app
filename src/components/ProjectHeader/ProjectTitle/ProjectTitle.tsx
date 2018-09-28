@@ -42,7 +42,7 @@ export class ProjectTitle extends React.PureComponent<{
 
   render() {
     return (
-      <ProjectTitleEditableStyle>Title Goes Here</ProjectTitleEditableStyle>
+      <ProjectTitleEditableStyle value={ this.props.title} onChange={this.props.setTitle}>Title Goes Here</ProjectTitleEditableStyle>
     );
   }
 }

@@ -18,12 +18,10 @@ const StarBorderStyle = styled(StarBorder)``;
 export class ProfileRatings extends React.PureComponent<{
   onClick: (rating: number) => void;
   rating: number;
-  
 }> {
   static defaultProps: ProfileRatings["props"] = {
     onClick: rating => alert("Profile Rating"),
-    rating: 5,
-    
+    rating: 5
   };
 
   render() {
@@ -32,7 +30,7 @@ export class ProfileRatings extends React.PureComponent<{
         <RatingsStyle>
           <StarBorderStyle onClick={() => this.props.onClick(1)} />
           <StarBorderStyle onClick={() => this.props.onClick(2)} />
-          <StarBorderStyle onClick={() => this.props.onClick(3)}/>
+          <StarBorderStyle onClick={() => this.props.onClick(3)} />
           <StarBorderStyle onClick={() => this.props.onClick(4)} />
           <StarBorderStyle onClick={() => this.props.onClick(5)} />
         </RatingsStyle>
@@ -42,52 +40,48 @@ export class ProfileRatings extends React.PureComponent<{
         <RatingsStyle>
           <StarStyle onClick={() => this.props.onClick(1)} />
           <StarBorderStyle onClick={() => this.props.onClick(2)} />
-          <StarBorderStyle onClick={() => this.props.onClick(3)}/>
+          <StarBorderStyle onClick={() => this.props.onClick(3)} />
           <StarBorderStyle onClick={() => this.props.onClick(4)} />
           <StarBorderStyle onClick={() => this.props.onClick(5)} />
         </RatingsStyle>
       );
-    } else  if(this.props.rating < 3) {
+    } else if (this.props.rating < 3) {
       return (
         <RatingsStyle>
           <StarStyle onClick={() => this.props.onClick(1)} />
           <StarStyle onClick={() => this.props.onClick(2)} />
-          <StarBorderStyle onClick={() => this.props.onClick(3)}/>
+          <StarBorderStyle onClick={() => this.props.onClick(3)} />
           <StarBorderStyle onClick={() => this.props.onClick(4)} />
           <StarBorderStyle onClick={() => this.props.onClick(5)} />
         </RatingsStyle>
       );
-    }
-    else if (this.props.rating <4) {
+    } else if (this.props.rating < 4) {
       return (
         <RatingsStyle>
           <StarStyle onClick={() => this.props.onClick(1)} />
-          <StarStyle onClick={() => this.props.onClick(2)} /> 
-          <StarStyle onClick={() => this.props.onClick(3)} /> 
+          <StarStyle onClick={() => this.props.onClick(2)} />
+          <StarStyle onClick={() => this.props.onClick(3)} />
           <StarBorderStyle onClick={() => this.props.onClick(4)} />
           <StarBorderStyle onClick={() => this.props.onClick(5)} />
         </RatingsStyle>
       );
-    }
-    else if (this.props.rating <5) {
+    } else if (this.props.rating < 5) {
       return (
         <RatingsStyle>
           <StarStyle onClick={() => this.props.onClick(1)} />
-          <StarStyle onClick={() => this.props.onClick(2)} /> 
-          <StarStyle onClick={() => this.props.onClick(3)} /> 
-          <StarStyle onClick={() => this.props.onClick(4)} /> 
+          <StarStyle onClick={() => this.props.onClick(2)} />
+          <StarStyle onClick={() => this.props.onClick(3)} />
+          <StarStyle onClick={() => this.props.onClick(4)} />
           <StarBorderStyle onClick={() => this.props.onClick(5)} />
         </RatingsStyle>
       );
-    }
-    else
-    {
+    } else {
       return (
         <RatingsStyle>
           <StarStyle onClick={() => this.props.onClick(1)} />
-          <StarStyle onClick={() => this.props.onClick(2)} /> 
-          <StarStyle onClick={() => this.props.onClick(3)} /> 
-          <StarStyle onClick={() => this.props.onClick(4)} /> 
+          <StarStyle onClick={() => this.props.onClick(2)} />
+          <StarStyle onClick={() => this.props.onClick(3)} />
+          <StarStyle onClick={() => this.props.onClick(4)} />
           <StarStyle onClick={() => this.props.onClick(5)} />
         </RatingsStyle>
       );

@@ -10,6 +10,11 @@ import { UserDetails } from "Components/UserDetails/UserDetails";
 import { PlainText } from "Components/PlainText/PlainText";
 import styled from "styled-components";
 import { greenMain, white } from "@style";
+import { FetchBidResolutionQuery } from "./FetchBidResolutionPage.gql";
+import { FetchBidResolutionQuery as FetchBidResolutionType } from "@data";
+import { FetchBidResolutionQueryVariables } from "@data";
+import { Query } from "react-apollo";
+import { Loading, DataError } from "Components/Placeholder";
 
 const PageStyled = styled.div`
   display: flex;
@@ -89,37 +94,52 @@ export class BidResolutionPage extends React.PureComponent<{
 
   render() {
     return (
-      <PageStyled>
-        <AppHeader {...this.props.appHeaderProps} />
-        <PageContents>
-          <MatchFoundStyled> You've Found Your Match!</MatchFoundStyled>
-          <TextContainer>
-            <PlainText>
-              Congratulations you’ve found your carpenter! Please contact them
-              to start the project and sort out payment and delivery! Don’t
-              forget to check back in to review the work. Contact us if there
-              are any problems.
-            </PlainText>
-          </TextContainer>
+      <Query<FetchBidResolutionType, FetchBidResolutionQueryVariables>
+        query={FetchBidResolutionQuery}
+        variables={FetchBidResolutionQuery}
+      >
+        {({ loading, error, data }) => {
+          if (loading) return <Loading />;
+          if (error) return <DataError />;
+          // if(data)
 
-          <ProjectHeader {...this.props.projectHeaderProps} />
-          <CostDue {...this.props.costDueProps} />
-          <ImageBar {...this.props.imageBarProps} />
-          <DescriptionContainer>
-            <PlainText>
-              {" "}
-              Description of the project. Including item, type of wood,
-              dimensions, expected time frame of delivery. Secondary line text
-              lorem ipsum dapibus, neque id cursus faucibus.{" "}
-            </PlainText>
-          </DescriptionContainer>
-          <UserContactInfo {...this.props.userContactInfoProps} />
-          <RateUserHereStyled>Rate User</RateUserHereStyled>
-          <UserDetailsEditable>
-            <UserDetails {...this.props.userDetailProps} />
-          </UserDetailsEditable>
-        </PageContents>
-      </PageStyled>
+          return (
+            <PageStyled>
+              <AppHeader {...this.props.appHeaderProps} />
+              <PageContents>
+                <MatchFoundStyled> You've Found Your Match!</MatchFoundStyled>
+                <TextContainer>
+                  <PlainText>
+                    Congratulations you’ve found your carpenter! Please contact
+                    them to start the project and sort out payment and delivery!
+                    Don’t forget to check back in to review the work. Contact us
+                    if there are any problems.
+                  </PlainText>
+                </TextContainer>
+
+                <ProjectHeader title={
+                  {title: data.getProject.title,
+                  isEditable:false,
+                  setTitle:()=>{}}} />
+                <CostDue price={data.getProject.chosenBid.price + "UGX"}
+                dueDate={data.getProject.chosenBid.time}
+                />
+                <ImageBar image={} />
+                <DescriptionContainer>
+                  <PlainText>
+                    { }
+                  </PlainText>
+                </DescriptionContainer>
+                <UserContactInfo addressProps={{address: data. }} emailProps={{email: }}  />
+                <RateUserHereStyled>Rate User</RateUserHereStyled>
+                <UserDetailsEditable>
+                  <UserDetails {...this.props.userDetailProps} />
+                </UserDetailsEditable>
+              </PageContents>
+            </PageStyled>
+          );
+        }}
+      </Query>
     );
   }
 }

@@ -1,7 +1,9 @@
 query FetchDetailedProjectView($ProjID: ID!) {
   getProject(id: $ProjID) {
+    id
     title
     owner {
+      id
       pictureURL
       name
       rating
@@ -11,15 +13,16 @@ query FetchDetailedProjectView($ProjID: ID!) {
     timeUntilClose
     photos
     description
-    bids {items{
-      id
+    bids {
+      items {
+        id
         price
         time
         description
-    		user {
+        user {
           pictureURL
         }
-    }
       }
     }
+  }
 }

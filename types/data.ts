@@ -129,6 +129,7 @@ export interface FetchCreateProjectPageVariables {
 
 export interface FetchDetailedProjectView_getProject_owner {
   __typename: "User";
+  id: string;
   pictureURL: string | null;
   name: string;
   rating: number;
@@ -155,6 +156,7 @@ export interface FetchDetailedProjectView_getProject_bids {
 
 export interface FetchDetailedProjectView_getProject {
   __typename: "Project";
+  id: string;
   title: string;
   owner: FetchDetailedProjectView_getProject_owner;
   numberOfBids: number;

@@ -13,6 +13,13 @@ import styled from "styled-components";
 import { white } from "@style";
 import { RouteComponentProps } from "react-router-dom";
 import { DetailedProjectPageState } from "./DetailedProjectPageState";
+import { FetchDetailedProjectView } from "./FetchDetailedProjectView.gql";
+import {
+  FetchDetailedProjectView as FetchDetailedProjectViewTypes,
+  FetchDetailedProjectViewVariables
+} from "@data";
+import { Query } from "react-apollo";
+import { Loading, DataError } from "Components/Placeholder";
 
 const PageContentStyle = styled.div`
   display: flex;
@@ -51,46 +58,83 @@ export class DetailedProjectPage extends React.PureComponent<{
 
   render() {
     return (
-      <DetailedProjectPageState match={this.props.match} ownerID={"123"}>
-        {({
-          projectID,
-          showConfirmationPopup,
-          toggleConfirmationPopup,
-          isOwner
-        }) => {
-          return (
-            <PageContentStyle>
-              <AppHeader {...this.props.appHeaderProps} />
-              <PageContentsContainer>
-                <ProjectHeader
-                  title={{
-                    isEditable: false,
-                    title: this.props.projectHeaderProps.title.title,
-                    setTitle: () => {}
-                  }}
-                />
-                <AboutBid
-                  averageBidAmount={"5000 UGX"}
-                  numberOfBids={8}
-                  timeUntilEnd={"2 Days"}
-                />
-                <ImageBar image={["https://tyrohq.com/logo"]} />
-                <PlainTextContainer>
-                  <PlainText>{this.props.description}</PlainText>
-                </PlainTextContainer>
+      <Query<FetchDetailedProjectViewTypes, FetchDetailedProjectViewVariables>
+        query={FetchDetailedProjectView}
+        variables={{ ProjID: this.props.match.params.id }}
+      >
+        {({ loading, error, data }) => {
+          if (loading) return <Loading />;
+          if (error) return <DataError />;
 
-                <ActiveBids
-                  individualBidProps={
-                    ActiveBids.defaultProps.individualBidProps
-                  }
-                  isOwner={isOwner}
-                  projectID={projectID}
-                />
-              </PageContentsContainer>
-            </PageContentStyle>
+          return (
+            <DetailedProjectPageState
+              match={this.props.match}
+              ownerID={data.getProject.owner.id}
+            >
+              {({
+                projectID,
+                showConfirmationPopup,
+                toggleConfirmationPopup,
+                isOwner
+              }) => {
+                return (
+                  <PageContentStyle>
+                    <AppHeader {...this.props.appHeaderProps} />
+                    <PageContentsContainer>
+                      <ProjectHeader
+                        title={{
+                          isEditable: false,
+                          title: data.getProject.title,
+                          setTitle: () => {}
+                        }}
+                        userDetailsProps={{
+                          image: data.getProject.owner.pictureURL,
+                          profileRatingsProps: {
+                            onClick: () => {},
+                            rating: data.getProject.owner.rating
+                          },
+                          userName: data.getProject.owner.name
+                        }}
+                      />
+                      <AboutBid
+                        averageBidAmount={
+                          data.getProject.averageBidAmount + "UGX"
+                        }
+                        numberOfBids={data.getProject.numberOfBids}
+                        timeUntilEnd={data.getProject.timeUntilClose}
+                      />
+                      <ImageBar image={data.getProject.photos} />
+                      <PlainTextContainer>
+                        <PlainText>{data.getProject.description}</PlainText>
+                      </PlainTextContainer>
+
+                      <ActiveBids
+                        individualBidProps={data.getProject.bids.items.map(
+                          bid => ({
+                            isOwner: isOwner,
+                            activeBidprops: { image: bid.user.pictureURL },
+                            bidProps: {
+                              amount: bid.price + "UGX",
+                              time: bid.time,
+                              description: bid.description
+                            },
+
+                            rectangularButton: (id: string) => {},
+                            id: bid.id,
+                            projectID: data.getProject.id
+                          })
+                        )}
+                        isOwner={isOwner}
+                        projectID={data.getProject.id}
+                      />
+                    </PageContentsContainer>
+                  </PageContentStyle>
+                );
+              }}
+            </DetailedProjectPageState>
           );
         }}
-      </DetailedProjectPageState>
+      </Query>
     );
   }
 }

@@ -88,14 +88,17 @@ export default class App extends React.Component {
                         <Route
                           exact
                           path="/project/:id"
-                          render={() => (
-                            <DetailedProjectPage
-                              appHeaderProps={{
-                                title: "Detailed Project View",
-                                menu: toggle
-                              }}
-                            />
-                          )}
+                          render={({ match }) =>
+                            console.log("Route matched", match) || (
+                              <DetailedProjectPage
+                                match={match}
+                                appHeaderProps={{
+                                  title: "Detailed Project View",
+                                  menu: toggle
+                                }}
+                              />
+                            )
+                          }
                         />
                         <Route
                           exact

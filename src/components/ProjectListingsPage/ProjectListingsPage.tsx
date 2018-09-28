@@ -19,23 +19,21 @@ const PageContents = styled.div`
   padding-bottom: 24px;
 `;
 export class ProjectListingsPage extends React.PureComponent<{
-  AppHeaderprops: AppHeader["props"];
-  SearchContainerprops: SearchContainer["props"];
-  ListingsContainerprops: ListingsContainer["props"];
+  appHeaderProps: AppHeader["props"];
+  listingsContainerProps: ListingsContainer["props"];
 }> {
   static defaultProps: ProjectListingsPage["props"] = {
-    AppHeaderprops: AppHeader.defaultProps,
-    SearchContainerprops: SearchContainer.defaultProps,
-    ListingsContainerprops: ListingsContainer.defaultProps
+    appHeaderProps: AppHeader.defaultProps,
+    listingsContainerProps: ListingsContainer.defaultProps
   };
 
   render() {
     return (
       <PageStyle>
-        <AppHeader />
+        <AppHeader {...this.props.appHeaderProps} />
         <PageContents>
           <SearchContainer />
-          <ListingsContainer />
+          <ListingsContainer {...this.props.listingsContainerProps} />
         </PageContents>
       </PageStyle>
     );

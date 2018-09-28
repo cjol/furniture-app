@@ -18,8 +18,14 @@ const UserDetailsContainer = styled.div`
   background-color: ${greenMain};
 `;
 
-export class ProjectHeader extends React.PureComponent<{}> {
-  static defaultProps: ProjectHeader["props"] = {};
+export class ProjectHeader extends React.PureComponent<{
+  title: ProjectTitle["props"];
+  userDetailsProps: UserDetails["props"];
+}> {
+  static defaultProps: ProjectHeader["props"] = {
+    title: ProjectTitle.defaultProps,
+    userDetailsProps: UserDetails.defaultProps
+  };
 
   render() {
     return (

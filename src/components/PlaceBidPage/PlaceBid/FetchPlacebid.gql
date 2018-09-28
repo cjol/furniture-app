@@ -1,0 +1,18 @@
+query FetchPlaceBid($projID: ID!) {
+  getProject(id: $projID) {
+    owner {
+      name
+      rating
+    }
+    
+    timeUntilClose
+    numberOfBids
+    averageBidAmount
+    photos
+    description
+    
+  }
+  
+  
+  
+}

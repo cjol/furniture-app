@@ -3,6 +3,7 @@ import { Placeholder } from "Components/Placeholder";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { normalBoxShadow } from "@style";
+import { Subheading } from "Components/Subheading/Subheading";
 
 const MenuContainer = styled.div`
   width: 100%;
@@ -36,15 +37,24 @@ export class Menu extends React.PureComponent<{ toggle: () => void }> {
     return (
       <MenuContainer>
         <MenuStyled>
+          <Subheading>
           <Link to="/profile">
             <Placeholder description="My Profile" />
           </Link>
+         </Subheading>
+         
+         <Subheading>
           <Link to="/project/new">
             <Placeholder description="Create New Project" />
           </Link>
+          </Subheading>
+
+         <Subheading>
           <Link to="/">
             <Placeholder description="Browse Listings" />
           </Link>
+          </Subheading>
+
         </MenuStyled>
         <MenuCloakStyle onClick={this.props.toggle} />
       </MenuContainer>

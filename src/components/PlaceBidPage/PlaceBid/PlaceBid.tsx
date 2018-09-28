@@ -2,13 +2,13 @@ import { Placeholder } from "Components/Placeholder";
 import { RectangularButton } from "Components/RectangularButton/RectangularButton";
 import * as React from "react";
 import { PlaceBidState } from "./PlaceBidState";
-import { BidSubmitted } from "Components/BidSubmitted/BidSubmitted";
 
 import { AddBidDescription } from "./AddBidDescription/AddBidDescription";
 import { PriceRow } from "./PriceRow/PriceRow";
 import { TimeRow } from "./TimeRow/TimeRow";
 import styled from "styled-components";
 import { mainFont, greenMain, whiteButtonColor, normalBoxShadow } from "@style";
+import { PlaceBidButton } from "./PlaceBidButton/PlaceBidButton";
 
 const PlaceBidStyle = styled.div`
   display: flex;
@@ -39,34 +39,20 @@ const BidContents = styled.div`
   padding-top: 12px;
   padding-bottom: 12px;
 `;
-export class PlaceBid extends React.PureComponent<{}> {
-  static defaultProps: PlaceBid["props"] = {};
+export class PlaceBid extends React.PureComponent<{
+  projectID: string;
+}> {
+  static defaultProps: PlaceBid["props"] = {
+    projectID: "123"
+  };
 
   render() {
     return (
       <PlaceBidState>
-        {({
-          price,
-          setPrice,
-          time,
-          setTime,
-          description,
-          setDescription,
-          showConfirmationPopup,
-          toggleConfirmationPopup
-        }) => {
+        {({ price, setPrice, time, setTime, description, setDescription }) => {
+          console.log("State price", price);
           return (
             <PlaceBidStyle>
-              <BidSubmitted
-                title="My Project"
-                popup={{
-                  show: showConfirmationPopup,
-                  headerProps: {
-                    closeFunction: toggleConfirmationPopup,
-                    title: "Bid Submitted"
-                  }
-                }}
-              />
               <PlaceBidHeaderStyle>Place Bid</PlaceBidHeaderStyle>
               <BidContents>
                 <PriceRow price={price} changeHandler={setPrice} />
@@ -75,7 +61,12 @@ export class PlaceBid extends React.PureComponent<{}> {
                   description={description}
                   setDescription={setDescription}
                 />
-                <RectangularButton onClick={toggleConfirmationPopup} />
+                <PlaceBidButton
+                  description={description}
+                  price={price}
+                  projectID={this.props.projectID}
+                  time={time}
+                />
               </BidContents>
             </PlaceBidStyle>
           );

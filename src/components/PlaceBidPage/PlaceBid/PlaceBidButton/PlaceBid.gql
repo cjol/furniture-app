@@ -1,0 +1,14 @@
+mutation PlaceBid($bid: CreateBidInput!) {
+  createBid(input: $bid) {
+    id
+    price
+    time
+    user {
+      id
+    }
+    description
+    project {
+      id
+    }
+  }
+}

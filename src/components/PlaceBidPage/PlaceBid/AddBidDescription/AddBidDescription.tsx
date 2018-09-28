@@ -33,7 +33,7 @@ const TextContainer = styled.div`
 `;
 export class AddBidDescription extends React.PureComponent<{
   description: string;
-  setDescription: (s: string) => void;
+  setDescription: (s: any) => void;
 }> {
   static defaultProps: AddBidDescription["props"] = {
     description:
@@ -51,9 +51,8 @@ export class AddBidDescription extends React.PureComponent<{
             that you’ll do and why you’re the best choice.
           </PlainText>
         </TextContainer>
-        <DescriptionFieldStyle>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna wirl
+        <DescriptionFieldStyle onChange={this.props.setDescription}>
+          {this.props.description}
         </DescriptionFieldStyle>
       </AddBidDescriptionStyle>
     );

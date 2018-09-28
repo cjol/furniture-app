@@ -33,16 +33,20 @@ export class PlaceBidPage extends React.PureComponent<{
   aboutBidProps: AboutBid["props"];
   ImagebarProps: ImageBar["props"];
   placeBidprops: PlaceBid["props"];
+
+  match: { params: { id: string } };
 }> {
   static defaultProps: PlaceBidPage["props"] = {
     appHeaderProps: AppHeader.defaultProps,
     projectHeaderProps: ProjectHeader.defaultProps,
     aboutBidProps: AboutBid.defaultProps,
     ImagebarProps: ImageBar.defaultProps,
-    placeBidprops: PlaceBid.defaultProps
+    placeBidprops: PlaceBid.defaultProps,
+    match: { params: { id: "100" } }
   };
 
   render() {
+    const projectID = this.props.match.params.id;
     return (
       <PageStyle>
         <AppHeader {...this.props.appHeaderProps} />
@@ -57,7 +61,7 @@ export class PlaceBidPage extends React.PureComponent<{
               lorem ipsum dapibus, neque id cursus faucibus.{" "}
             </PlainText>
           </TextContainer>
-          <PlaceBid {...this.props.placeBidprops} />
+          <PlaceBid {...this.props.placeBidprops} projectID={projectID} />
         </PageContents>
       </PageStyle>
     );

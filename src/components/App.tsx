@@ -34,7 +34,7 @@ import "@assets/scss/App.scss";
 
 const client = new ApolloClient({
   uri:
-    "https://c75qikhalrhnnf3awz3npbdspy.appsync-api.eu-west-1.amazonaws.com/graphql",
+    "https://gpkifjlowbcbbmqzr66hwl77t4.appsync-api.eu-west-1.amazonaws.com/graphql",
   headers: {
     "x-api-key": "da2-dmpi5qyx65fopozln7amctmvr4"
   }
@@ -57,7 +57,7 @@ export default class App extends React.Component {
           <Router>
             <Switch>
               <Route exact path="/" component={ProjectListingsPage} />
-              <Route exact path="/new-project" component={CreateProjectPage} />
+              <Route exact path="/project/new" component={CreateProjectPage} />
               <Route
                 exact
                 path="/project/:id"

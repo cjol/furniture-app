@@ -21,8 +21,18 @@ const PageContents = styled.div`
   padding-bottom: 12px;
   background-color: ${white};
 `;
-export class ProfilePage extends React.PureComponent<{}> {
-  static defaultProps: ProfilePage["props"] = {};
+export class ProfilePage extends React.PureComponent<{
+  appHeaderProps: AppHeader["props"];
+  profileEditSaveProps: ProfileEditSave["props"];
+  activeProjectBidsProps: ActiveProjectBids["props"];
+  suppliersSelectedProps: SuppliersSelected["props"];
+}> {
+  static defaultProps: ProfilePage["props"] = {
+    appHeaderProps: AppHeader.defaultProps,
+    profileEditSaveProps: ProfileEditSave.defaultProps,
+    activeProjectBidsProps: ActiveProjectBids.defaultProps,
+    suppliersSelectedProps: SuppliersSelected.defaultProps
+  };
 
   render() {
     return (
@@ -63,9 +73,9 @@ export class ProfilePage extends React.PureComponent<{}> {
                     setLocation
                   }}
                 />
-                <ProfileEditSave />
-                <ActiveProjectBids />
-                <SuppliersSelected />
+                <ProfileEditSave {...this.props.profileEditSaveProps} />
+                <ActiveProjectBids {...this.props.activeProjectBidsProps} />
+                <SuppliersSelected {...this.props.suppliersSelectedProps} />
               </PageContents>
             </ProfilePageHeaderStyle>
           );

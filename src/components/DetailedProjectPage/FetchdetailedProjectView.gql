@@ -1,0 +1,25 @@
+query FetchDetailedProjectView($ProjID: ID!) {
+  getProject(id: $ProjID) {
+    title
+    owner {
+      pictureURL
+      name
+      rating
+    }
+    numberOfBids
+    averageBidAmount
+    timeUntilClose
+    photos
+    description
+    bids {items{
+      id
+        price
+        time
+        description
+    		user {
+          pictureURL
+        }
+    }
+      }
+    }
+}

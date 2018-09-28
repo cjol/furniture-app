@@ -3,6 +3,8 @@ import { Placeholder } from "Components/Placeholder";
 import { ProjectListing } from "Components/ProjectListing/ProjectListing";
 import { Subheading } from "Components/Subheading/Subheading";
 import styled from "styled-components";
+import { List } from "react-powerplug";
+import { ListingsInfo } from "Components/ProjectListingsPage/ListingsContainer/ListingsInfo/ListingsInfo";
 
 const SuppliersSelectedStyled = styled.div`
   display: flex;
@@ -18,12 +20,14 @@ export class SuppliersSelected extends React.PureComponent<{
   };
 
   render() {
+    const listings = this.props.listingsProps.map(listingsProp => {
+      return <ListingsInfo {...listingsProp} />;
+    });
+
     return (
       <SuppliersSelectedStyled>
         <Subheading>Suppliers Selected</Subheading>
-        <ProjectListing />
-        <ProjectListing />
-        <ProjectListing />
+        {listings}
       </SuppliersSelectedStyled>
     );
   }

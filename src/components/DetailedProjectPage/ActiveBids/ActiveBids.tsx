@@ -25,6 +25,7 @@ const StyledLink = styled(Link)`
 export class ActiveBids extends React.PureComponent<{
   individualBidProps: IndividualBid["props"][];
   activeBidProps: ActiveBidsHeader["props"];
+  isOwner: boolean;
   onClick: () => void;
   projectID: string;
 }> {
@@ -34,6 +35,7 @@ export class ActiveBids extends React.PureComponent<{
       IndividualBid.defaultProps,
       IndividualBid.defaultProps
     ],
+    isOwner: true,
     activeBidProps: ActiveBidsHeader.defaultProps,
     onClick: () => {},
     projectID: "123"
@@ -41,8 +43,21 @@ export class ActiveBids extends React.PureComponent<{
 
   render() {
     const bids = this.props.individualBidProps.map(individualBidProp => {
-      return <IndividualBid {...individualBidProp} />;
+      return (
+        <IndividualBid isOwner={this.props.isOwner} {...individualBidProp} />
+      );
     });
+
+    let maybeBidButton;
+    if (!this.props.isOwner) {
+      maybeBidButton = (
+        <StyledLink to={"/project/" + this.props.projectID + "/bid"}>
+          <RectangularButton onClick={this.props.onClick}>
+            PLACE BID
+          </RectangularButton>
+        </StyledLink>
+      );
+    }
 
     return (
       <ActiveBidsStyle>
@@ -50,11 +65,7 @@ export class ActiveBids extends React.PureComponent<{
 
         {bids}
 
-        <StyledLink to={"/project/" + this.props.projectID + "/bid"}>
-          <RectangularButton onClick={this.props.onClick}>
-            PLACE BID
-          </RectangularButton>
-        </StyledLink>
+        {maybeBidButton}
       </ActiveBidsStyle>
     );
   }

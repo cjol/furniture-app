@@ -21,11 +21,11 @@ export class ActiveProjectBids extends React.PureComponent<{
   };
 
   render() {
-    const ActiveProjectBidsComponents = this.props.projectListingProps.map(
-      projectListingProp => {
+    const ActiveProjectBidsComponents = this.props.projectListingProps
+      .filter(listing => listing.chosenBid === null)
+      .map(projectListingProp => {
         return <ProjectListing {...projectListingProp} />;
-      }
-    );
+      });
     return (
       <ActiveProjectBidsStyle>
         <Subheading>Active Projects</Subheading>

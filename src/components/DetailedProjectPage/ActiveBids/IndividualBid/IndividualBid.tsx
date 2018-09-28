@@ -19,6 +19,7 @@ const SmallButton = styled(RectangularButton)`
   margin: 0px;
 `;
 export class IndividualBid extends React.PureComponent<{
+  isOwner: boolean;
   activeBidprops: ActiveBidImage["props"];
   bidProps: BidDetails["props"];
   rectangularButton: (id: string) => void;
@@ -26,6 +27,7 @@ export class IndividualBid extends React.PureComponent<{
   projectID: string;
 }> {
   static defaultProps: IndividualBid["props"] = {
+    isOwner: true,
     activeBidprops: ActiveBidImage.defaultProps,
     bidProps: BidDetails.defaultProps,
     rectangularButton: id => alert("Select"),
@@ -34,17 +36,23 @@ export class IndividualBid extends React.PureComponent<{
   };
 
   render() {
+    let maybeSelectButton;
+    if (this.props.isOwner) {
+      maybeSelectButton = (
+        <Link to={"/project/" + this.props.projectID + "/matched"}>
+          <SmallButton
+            onClick={() => this.props.rectangularButton(this.props.id)}
+          >
+            SELECT
+          </SmallButton>
+        </Link>
+      );
+    }
     return (
       <IndividualBidStyle>
         <ActiveBidImage {...this.props.activeBidprops} />
         <BidDetails {...this.props.bidProps} />
-        <Link to={"/project/" + this.props.projectID + "/matched"}>
-        <SmallButton
-          onClick={() => this.props.rectangularButton(this.props.id)}
-        >
-          SELECT
-        </SmallButton>
-        </Link>
+        {maybeSelectButton}
       </IndividualBidStyle>
     );
   }

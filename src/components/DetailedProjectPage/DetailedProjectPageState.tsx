@@ -13,9 +13,11 @@ const Compose = RRCompose as any;
 
 export class DetailedProjectPageState extends React.PureComponent<{
   match: { params: { id: string } };
+  ownerID: string;
   children: (
     input: {
       projectID: string;
+      isOwner: boolean;
 
       showConfirmationPopup: boolean;
       toggleConfirmationPopup: () => void;
@@ -31,6 +33,8 @@ export class DetailedProjectPageState extends React.PureComponent<{
         {({ on: showConfirmationPopup, toggle: toggleConfirmationPopup }) => {
           return this.props.children({
             projectID,
+            isOwner:
+              this.props.ownerID === "cc0ce972-7a8d-4ea4-bb87-34186d32b2b4",
 
             showConfirmationPopup,
             toggleConfirmationPopup

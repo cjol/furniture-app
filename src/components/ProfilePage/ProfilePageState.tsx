@@ -14,6 +14,7 @@ const Compose = RRCompose as any;
 export class ProfilePageState extends React.PureComponent<{
   children: (
     input: {
+      ownerID: string;
       fullName: string;
       setFullName: (x: any) => void;
 
@@ -53,6 +54,7 @@ export class ProfilePageState extends React.PureComponent<{
           { value: phoneNumber, bind: bindPhoneNumber }
         ) => {
           return this.props.children({
+            ownerID: "cc0ce972-7a8d-4ea4-bb87-34186d32b2b4",
             fullName,
             setFullName: bindFullName.onChange,
 

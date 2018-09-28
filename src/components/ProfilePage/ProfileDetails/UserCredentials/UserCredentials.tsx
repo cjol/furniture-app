@@ -59,11 +59,32 @@ export class UserCredentials extends React.PureComponent<{
   render() {
     return (
       <UserCredentialsStyle>
-        <UserCredentialsTitleStyle value={this.props.fullName} onChange={this.props.setFullName} />
-        <UserCredentialsTitleStyle  value={this.props.pictureURL} onChange={this.props.setPictureURL} />
-        <UserCredentialsTitleStyle type="email" value={this.props.email} onChange={this.props.setEmail}/>
-        <UserCredentialsTitleStyle value={this.props.location} onChange={this.props.setLocation} />
-        <UserCredentialsTitleStyle value={this.props.phoneNumber} onChange={this.props.setPhoneNumber} />
+        <UserCredentialsTitleStyle
+          placeholder="Full Name"
+          value={this.props.fullName}
+          onChange={this.props.setFullName}
+        />
+        <UserCredentialsTitleStyle
+          placeholder="Picture URL"
+          value={this.props.pictureURL}
+          onChange={this.props.setPictureURL}
+        />
+        <UserCredentialsTitleStyle
+          placeholder="Email Address"
+          type="email"
+          value={this.props.email}
+          onChange={this.props.setEmail}
+        />
+        <UserCredentialsTitleStyle
+          placeholder="Location"
+          value={this.props.location}
+          onChange={this.props.setLocation}
+        />
+        <UserCredentialsTitleStyle
+          placeholder="Phone Number"
+          value={this.props.phoneNumber}
+          onChange={this.props.setPhoneNumber}
+        />
         {/* <UserCredentialsTitleStyle type="password" value="Password" /> */}
       </UserCredentialsStyle>
     );

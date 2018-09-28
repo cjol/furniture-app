@@ -7,9 +7,7 @@ const ImageStyle = styled.div<{ image: string }>`
   height: 60px;
   width: 60px;
   border-radius: 100px;
-  background-image: url(${props => {
-    return props.image;
-  }});
+  background-image: url(${props => props.image});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

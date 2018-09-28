@@ -51,13 +51,24 @@ export class DetailedProjectPage extends React.PureComponent<{
 
   render() {
     return (
-      <DetailedProjectPageState match={this.props.match}>
-        {({ projectID, showConfirmationPopup, toggleConfirmationPopup }) => {
+      <DetailedProjectPageState match={this.props.match} ownerID={"123"}>
+        {({
+          projectID,
+          showConfirmationPopup,
+          toggleConfirmationPopup,
+          isOwner
+        }) => {
           return (
             <PageContentStyle>
               <AppHeader {...this.props.appHeaderProps} />
               <PageContentsContainer>
-                <ProjectHeader />
+                <ProjectHeader
+                  title={{
+                    isEditable: false,
+                    title: this.props.projectHeaderProps.title.title,
+                    setTitle: () => {}
+                  }}
+                />
                 <AboutBid
                   averageBidAmount={"5000 UGX"}
                   numberOfBids={8}
@@ -72,6 +83,7 @@ export class DetailedProjectPage extends React.PureComponent<{
                   individualBidProps={
                     ActiveBids.defaultProps.individualBidProps
                   }
+                  isOwner={isOwner}
                   projectID={projectID}
                 />
               </PageContentsContainer>

@@ -20,9 +20,11 @@ export class SuppliersSelected extends React.PureComponent<{
   };
 
   render() {
-    const listings = this.props.listingsProps.map(listingsProp => {
-      return <ProjectListing {...listingsProp} />;
-    });
+    const listings = this.props.listingsProps
+      .filter(listing => listing.chosenBid !== null)
+      .map(listingsProp => {
+        return <ProjectListing {...listingsProp} />;
+      });
 
     return (
       <SuppliersSelectedStyled>

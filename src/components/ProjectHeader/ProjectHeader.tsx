@@ -19,11 +19,11 @@ const UserDetailsContainer = styled.div`
 `;
 
 export class ProjectHeader extends React.PureComponent<{
-  title: string;
+  title: ProjectTitle["props"];
   userDetailsProps: UserDetails["props"];
 }> {
   static defaultProps: ProjectHeader["props"] = {
-    title: "Project Title",
+    title: ProjectTitle.defaultProps,
     userDetailsProps: UserDetails.defaultProps
   };
 

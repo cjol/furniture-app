@@ -51,7 +51,7 @@ export class PlaceBidPage extends React.PureComponent<{
       <PageStyle>
         <AppHeader {...this.props.appHeaderProps} />
         <PageContents>
-          <ProjectHeader {...this.props.appHeaderProps} />
+          <ProjectHeader {...this.props.projectHeaderProps} />
           <AboutBid {...this.props.appHeaderProps} />
           <ImageBar {...this.props.ImagebarProps} />
           <TextContainer>

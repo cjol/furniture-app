@@ -2,12 +2,14 @@ import * as React from "react";
 import styled from "styled-components";
 import { Placeholder } from "Components/Placeholder";
 
-const ImageStyle = styled.div`
+const ImageStyle = styled.div<{ image: string }>`
   display: flex;
   height: 60px;
   width: 60px;
   border-radius: 100px;
-  background-image: url(https://tyrohq.com/apple-touch-icon.png);
+  background-image: url(${props => {
+    return props.image;
+  }});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,6 +22,6 @@ export class ProfileImage extends React.PureComponent<{
   };
 
   render() {
-    return <ImageStyle />;
+    return <ImageStyle image={this.props.image} />;
   }
 }

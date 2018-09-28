@@ -7,8 +7,18 @@ const ListingsContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
 `;
-export class ListingsContainer extends React.PureComponent<{}> {
-  static defaultProps: ListingsContainer["props"] = {};
+export class ListingsContainer extends React.PureComponent<{
+  listingsInfoProps: ListingsInfo["props"];
+  projectListingProps: ProjectListing["props"][];
+}> {
+  static defaultProps: ListingsContainer["props"] = {
+    listingsInfoProps: ListingsInfo.defaultProps,
+    projectListingProps: [
+      ProjectListing.defaultProps,
+      ProjectListing.defaultProps,
+      ProjectListing.defaultProps
+    ]
+  };
 
   render() {
     return (

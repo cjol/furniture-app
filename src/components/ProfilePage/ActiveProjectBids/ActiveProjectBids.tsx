@@ -21,6 +21,7 @@ export class ActiveProjectBids extends React.PureComponent<{
   };
 
   render() {
+<<<<<<< HEAD
     const ActiveProjectBidsComponents = this.props.projectListingProps
       .filter(listing => listing.chosenBid === null)
       .map(projectListingProp => {
@@ -31,6 +32,16 @@ export class ActiveProjectBids extends React.PureComponent<{
         <Subheading>Active Projects</Subheading>
 
         {ActiveProjectBidsComponents}
+=======
+    const ActiveProjectBidsComponents = this.props.projectListingProps.map(projectListingProp =>{
+      return<ActiveProjectBidsStyle {...projectListingProp}/>;
+    });
+    return (
+      <ActiveProjectBidsStyle>
+        <Subheading>Active Projects</Subheading>
+        
+  {ActiveProjectBidsComponents}
+>>>>>>> 3.1/3.2 ProfilePage-ActiveProjectBidsComplete
       </ActiveProjectBidsStyle>
     );
   }

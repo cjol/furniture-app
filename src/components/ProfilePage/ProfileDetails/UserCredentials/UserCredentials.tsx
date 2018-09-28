@@ -27,15 +27,15 @@ const UserCredentialsTitleStyle = styled.input`
 
 export class UserCredentials extends React.PureComponent<{
   isEditMode: boolean;
-  setPictureURL: (picture: string) => void;
+  setPictureURL: (picture: any) => void;
   pictureURL: string;
-  setFullName: (fullName: string) => void;
+  setFullName: (fullName: any) => void;
   fullName: string;
-  setEmail: (email: string) => void;
+  setEmail: (email: any) => void;
   email: string;
-  setLocation: (location: string) => void;
+  setLocation: (location: any) => void;
   location: string;
-  setPhoneNumber: (phoneNumber: string) => void;
+  setPhoneNumber: (phoneNumber: any) => void;
   phoneNumber: string;
   // setPassword: (password: string) => void;
   // password: string;
@@ -59,11 +59,11 @@ export class UserCredentials extends React.PureComponent<{
   render() {
     return (
       <UserCredentialsStyle>
-        <UserCredentialsTitleStyle value="Full Name" />
-        <UserCredentialsTitleStyle value="Picture URL" />
-        <UserCredentialsTitleStyle type="email" value="Email Address" />
-        <UserCredentialsTitleStyle value="Location" />
-        <UserCredentialsTitleStyle value="Phone Number" />
+        <UserCredentialsTitleStyle value={this.props.fullName} onChange={this.props.setFullName} />
+        <UserCredentialsTitleStyle  value={this.props.pictureURL} onChange={this.props.setPictureURL} />
+        <UserCredentialsTitleStyle type="email" value={this.props.email} onChange={this.props.setEmail}/>
+        <UserCredentialsTitleStyle value={this.props.location} onChange={this.props.setLocation} />
+        <UserCredentialsTitleStyle value={this.props.phoneNumber} onChange={this.props.setPhoneNumber} />
         {/* <UserCredentialsTitleStyle type="password" value="Password" /> */}
       </UserCredentialsStyle>
     );

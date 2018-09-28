@@ -84,6 +84,31 @@ export interface PlaceBidVariables {
 /* tslint:disable */
 // This file was automatically generated and should not be edited.
 
+// ====================================================
+// GraphQL mutation operation: SaveProfile
+// ====================================================
+
+export interface SaveProfile_updateUser {
+  __typename: "User";
+  id: string;
+  name: string;
+  pictureURL: string | null;
+  email: string;
+  location: string;
+  phoneNumber: any;
+}
+
+export interface SaveProfile {
+  updateUser: SaveProfile_updateUser | null;
+}
+
+export interface SaveProfileVariables {
+  user: UpdateUserInput;
+}
+
+/* tslint:disable */
+// This file was automatically generated and should not be edited.
+
 //==============================================================
 // START Enums and Input Objects
 //==============================================================
@@ -103,6 +128,15 @@ export interface CreateProjectInput {
   description: string;
   tags: string[];
   closeDate: any;
+}
+
+export interface UpdateUserInput {
+  id: string;
+  name?: string | null;
+  pictureURL?: string | null;
+  email?: string | null;
+  location?: string | null;
+  phoneNumber?: any | null;
 }
 
 //==============================================================

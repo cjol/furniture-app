@@ -41,6 +41,8 @@ export class ProjectTitle extends React.PureComponent<{
   };
 
   render() {
-    return <ProjectTitleStyle>Title Goes Here</ProjectTitleStyle>;
+    return (
+      <ProjectTitleEditableStyle>Title Goes Here</ProjectTitleEditableStyle>
+    );
   }
 }

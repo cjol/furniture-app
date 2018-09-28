@@ -1,22 +1,11 @@
-mutation CreateProject($project: CreateProjectInput!) {
-  createProject(input: $project) {
+mutation SaveProfile($user: UpdateUserInput!) {
+  updateUser(input: $user) {
     id
-    title
-    owner {
-      id
-    }
-    photos
-    description
-    tags
-    closeDate
-    bids {
-      items {
-        id
-      }
-    }
-    chosenBid {
-      id
-    }
+    name
+    pictureURL
+    email
+    location
+    phoneNumber
   }
 }
 

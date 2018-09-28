@@ -30,9 +30,9 @@ export class ProjectHeader extends React.PureComponent<{
   render() {
     return (
       <ProjectHeaderStyle>
-        <ProjectTitle />
+        <ProjectTitle {...this.props.title} />
         <UserDetailsContainer>
-          <UserDetails />
+          <UserDetails {...this.props.userDetailsProps} />
         </UserDetailsContainer>
       </ProjectHeaderStyle>
     );

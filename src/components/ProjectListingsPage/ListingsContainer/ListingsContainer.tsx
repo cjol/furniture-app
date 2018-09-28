@@ -3,6 +3,7 @@ import { Placeholder } from "Components/Placeholder";
 import { ProjectListing } from "Components/ProjectListing/ProjectListing";
 import { ListingsInfo } from "./ListingsInfo/ListingsInfo";
 import styled from "styled-components";
+
 const ListingsContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,15 +22,16 @@ export class ListingsContainer extends React.PureComponent<{
   };
 
   render() {
+    const ProjectListingComponents = this.props.projectListingProps.map(
+      listingsProp => {
+        return <ProjectListing {...listingsProp} />;
+      }
+    );
     return (
       <ListingsContainerStyled>
-        <ListingsInfo />
+        <ListingsInfo {...this.props.listingsInfoProps} />
 
-        <ProjectListing />
-
-        <ProjectListing />
-
-        <ProjectListing />
+        {ProjectListingComponents}
       </ListingsContainerStyled>
     );
   }
